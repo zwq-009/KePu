@@ -56,33 +56,34 @@ export default {
 .Box {
 	.top {
 		.nav {
-			background-color: #0984e3;
+			background-color: #fff;
 			display: flex;
 			height: 44px;
-			color: #eee;
+			color: #353b48;
 			font-size: 16px;
 			overflow: scroll;
 			.nav-item {
 				// width: 80px;
 				flex: 1;
 				.item {
-					width: 72px;
+					width: 70px;
 					text-align: center;
 					line-height: 33px;
 					height: 33px;
 					margin-top: 10px;
 				}
 				.active {
-					color: #fff;
+					color: #2f3640;
 					font-weight: 550;
 					position: relative;
 				}
 				.active::after {
 					content: '';
 					position: absolute;
-					width: 30rpx;
-					height: 4rpx;
-					background-color: #fff;
+					top: 25px;
+					width: 55rpx;
+					height: 8rpx;
+					background-color: #74b9ff;
 					left: 0px;
 					right: 0px;
 					bottom: 0px;

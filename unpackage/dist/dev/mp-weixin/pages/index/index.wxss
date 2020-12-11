@@ -25,12 +25,12 @@
 /* 透明度 */
 /* 文章场景相关 */
 .Box .top .nav.data-v-57280228 {
-  background-color: #0984e3;
+  background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   height: 44px;
-  color: #eee;
+  color: #353b48;
   font-size: 16px;
   overflow: scroll;
 }
@@ -40,23 +40,24 @@
           flex: 1;
 }
 .Box .top .nav .nav-item .item.data-v-57280228 {
-  width: 72px;
+  width: 70px;
   text-align: center;
   line-height: 33px;
   height: 33px;
   margin-top: 10px;
 }
 .Box .top .nav .nav-item .active.data-v-57280228 {
-  color: #fff;
+  color: #2f3640;
   font-weight: 550;
   position: relative;
 }
 .Box .top .nav .nav-item .active.data-v-57280228::after {
   content: '';
   position: absolute;
-  width: 30rpx;
-  height: 4rpx;
-  background-color: #fff;
+  top: 25px;
+  width: 55rpx;
+  height: 8rpx;
+  background-color: #74b9ff;
   left: 0px;
   right: 0px;
   bottom: 0px;

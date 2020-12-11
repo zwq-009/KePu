@@ -10,11 +10,29 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/shoucang/shoucang",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的收藏",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/sorry/sorry",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "敬请期待",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
-		"navigationBarTextStyle": "white",
+		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "科普小站",
-		"navigationBarBackgroundColor": "#0984e3",
+		"navigationBarBackgroundColor": "#74b9ff",
 		"app-plus": {
 			"background": "#efeff4"
 		}
