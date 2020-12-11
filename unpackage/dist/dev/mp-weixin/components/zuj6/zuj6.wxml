@@ -1,1 +1,1 @@
-<view>组件6</view>
+<navigator><block wx:for="{{swipers}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><view class="v1"><text>{{item.title}}</text><image src="{{item.info.video_img}}"></image></view></block></navigator>
