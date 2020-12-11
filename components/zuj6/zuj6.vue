@@ -1,10 +1,10 @@
 <template>
-	<navigator>
-		<view class="v1" v-for="item in swipers" :key="item.id">
+	<view class="v1">
+		<view v-for="item in swipers" :key="item.id">
 			<text>{{item.title}}</text>
-			<image :src="item.info.video_img"></image>
+			<image :src="item.info.video_img" mode="widthFix"></image>
 		</view>
-	</navigator>
+	</view>
 </template>
 
 <script>
@@ -33,8 +33,19 @@
 
 <style lang="scss">
 	.v1 {
+		display: flex;
+		flex-direction: column;
+		text {
+			font-size: 15px;
+			margin-left: 17px;
+			font-weight: 900;
+		}
+
 		image {
-			width: 100%;
+			border-radius: 5px;
+			width: 90%;
+			margin-left: 17px;
+			margin-top: 3px;
 		}
 	}
 </style>
