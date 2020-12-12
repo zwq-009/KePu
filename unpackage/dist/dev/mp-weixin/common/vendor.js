@@ -8013,18 +8013,49 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 35:
+/***/ 30:
+/*!***************************************************************!*\
+  !*** C:/Users/huawei/Desktop/uni-app项目/KePu/utils/request.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.myRequestGet = myRequestGet;var baseUrl = "https://openapp.fatiao.pro";
+
+function myRequestGet(url, data) {
+  return new Promise(function (resolve, reject) {
+    uni.request({
+      url: baseUrl + url,
+      method: "GET",
+      data: data,
+      success: function success(res) {
+        // console.log("get请求到了数据",res)
+        resolve(res.data.data.list);
+      },
+      fail: function fail(err) {
+        console.log("没拿到数据");
+        reject(err);
+      } });
+
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 38:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 36);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 39);
 
 /***/ }),
 
-/***/ 36:
+/***/ 39:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -8055,7 +8086,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 37);
+module.exports = __webpack_require__(/*! ./runtime */ 40);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -8072,7 +8103,18 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 37:
+/***/ 4:
+/*!*********************************************************!*\
+  !*** C:/Users/huawei/Desktop/uni-app项目/KePu/pages.json ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ 40:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -8800,48 +8842,6 @@ if (hadRuntime) {
     return this || (typeof self === "object" && self);
   })() || Function("return this")()
 );
-
-
-/***/ }),
-
-/***/ 38:
-/*!***************************************************************!*\
-  !*** C:/Users/huawei/Desktop/新建文件夹 (2)/KePu/utils/request.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.myRequestGet = myRequestGet;var baseUrl = "https://openapp.fatiao.pro";
-
-function myRequestGet(url, data) {
-  return new Promise(function (resolve, reject) {
-    uni.request({
-      url: baseUrl + url,
-      method: "GET",
-      data: data,
-      success: function success(res) {
-        // console.log("get请求到了数据",res)
-        resolve(res.data.data.list);
-      },
-      fail: function fail(err) {
-        console.log("没拿到数据");
-        reject(err);
-      } });
-
-  });
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
-
-/***/ }),
-
-/***/ 4:
-/*!*********************************************************!*\
-  !*** C:/Users/huawei/Desktop/新建文件夹 (2)/KePu/pages.json ***!
-  \*********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
 
 
 /***/ })

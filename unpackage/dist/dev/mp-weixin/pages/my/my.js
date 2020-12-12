@@ -2,7 +2,7 @@
 
 /***/ 19:
 /*!*********************************************************************************!*\
-  !*** C:/Users/huawei/Desktop/新建文件夹 (2)/KePu/main.js?{"page":"pages%2Fmy%2Fmy"} ***!
+  !*** C:/Users/huawei/Desktop/uni-app项目/KePu/main.js?{"page":"pages%2Fmy%2Fmy"} ***!
   \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -18,7 +18,7 @@ createPage(_my.default);
 
 /***/ 20:
 /*!**************************************************************!*\
-  !*** C:/Users/huawei/Desktop/新建文件夹 (2)/KePu/pages/my/my.vue ***!
+  !*** C:/Users/huawei/Desktop/uni-app项目/KePu/pages/my/my.vue ***!
   \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -57,7 +57,7 @@ component.options.__file = "pages/my/my.vue"
 
 /***/ 21:
 /*!*********************************************************************************************!*\
-  !*** C:/Users/huawei/Desktop/新建文件夹 (2)/KePu/pages/my/my.vue?vue&type=template&id=0be17cc6& ***!
+  !*** C:/Users/huawei/Desktop/uni-app项目/KePu/pages/my/my.vue?vue&type=template&id=0be17cc6& ***!
   \*********************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -79,7 +79,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 22:
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/huawei/Desktop/新建文件夹 (2)/KePu/pages/my/my.vue?vue&type=template&id=0be17cc6& ***!
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/huawei/Desktop/uni-app项目/KePu/pages/my/my.vue?vue&type=template&id=0be17cc6& ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -106,7 +106,7 @@ render._withStripped = true
 
 /***/ 23:
 /*!***************************************************************************************!*\
-  !*** C:/Users/huawei/Desktop/新建文件夹 (2)/KePu/pages/my/my.vue?vue&type=script&lang=js& ***!
+  !*** C:/Users/huawei/Desktop/uni-app项目/KePu/pages/my/my.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -122,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ 24:
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/huawei/Desktop/新建文件夹 (2)/KePu/pages/my/my.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/huawei/Desktop/uni-app项目/KePu/pages/my/my.vue?vue&type=script&lang=js& ***!
   \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

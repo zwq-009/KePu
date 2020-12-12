@@ -1,1 +1,1 @@
-<view class="jiaju"><view class="fnx"><text>丰年虾的孵化方法</text><image src="../../static/xia.png" mode="widthFix"></image></view></view>
+<view class="jiaju"><block wx:for="{{swipers}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><view class="fnx"><text>{{item.title}}</text><image src="{{item.info.video_img}}" mode="widthFix"></image></view></block></view>
