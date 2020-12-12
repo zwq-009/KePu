@@ -1,8 +1,18 @@
 <template>
-	<view class="jiaju">
-		<view class="fnx" v-for="item in swipers" :key="item.id">
-			<text>{{item.title}}</text>
-			<image :src="item.info.video_img" mode="widthFix"></image>
+	<view>
+		<view class="jiaju">
+			<view class="fnx" v-for="item in swipers" :key="item.id">
+				<text>{{item.title}}</text>
+				<view class="card">
+					<image :src="item.info.video_img" mode="widthFix"></image>
+					<button class="time">02:00</button>
+				</view>
+			</view>
+		</view>
+		<view class="zoon">
+			<view class="town">
+				<text class="xzhen">动植小镇</text>
+			</view>
 		</view>
 	</view>
 </template>
@@ -40,14 +50,40 @@
 
 		.fnx {
 			flex: 1;
-
 			text {
 				display: block;
 				margin: 12px 0px;
 			}
+			.card {
+				position: relative;
+				image {
+					width: 100%;
+					border-radius: 5px;
+				}
+				.time {
+					position: absolute;
+					bottom: 11px;
+					right: 5px;
+					width: 52px;
+					height: 20px;
+					background-color: #7E7878;
+					border-radius: 40px;
+					text-align: center;
+					line-height: 20px;
+					font-size: 10px;
+				}
+			}
 
-			image {
-				width: 100%;
+		}
+	}
+
+	.zoon {
+		width: 95%;
+		margin: 3px auto;
+		.town{
+			.xzhen{
+				border-bottom: 10px solid #97B7FE;
+				font-size: 12px;
 			}
 		}
 	}

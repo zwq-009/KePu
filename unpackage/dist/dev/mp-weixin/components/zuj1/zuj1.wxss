@@ -40,7 +40,33 @@
   display: block;
   margin: 12px 0px;
 }
-.jiaju .fnx image {
+.jiaju .fnx .card {
+  position: relative;
+}
+.jiaju .fnx .card image {
   width: 100%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+.jiaju .fnx .card .time {
+  position: absolute;
+  bottom: 11px;
+  right: 5px;
+  width: 52px;
+  height: 20px;
+  background-color: #7E7878;
+  -webkit-border-radius: 40px;
+          border-radius: 40px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 10px;
+}
+.zoon {
+  width: 95%;
+  margin: 3px auto;
+}
+.zoon .town .xzhen {
+  border-bottom: 10px solid #97B7FE;
+  font-size: 12px;
 }
 
