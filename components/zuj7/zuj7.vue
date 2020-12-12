@@ -1,6 +1,7 @@
 <template>
 	<view class="Box">
 		<!-- 请在这个大Box里自行写内容 -->
+
 		<!-- 如何画美人鱼-->
 		<view class="a">
 			<text class="top">如何画美人鱼</text>
@@ -41,6 +42,7 @@
 	}
 </script>
 <style lang="scss">
+
 	.Box {
 		margin-top: 10px;
 		border-top-left-radius: 10px;
@@ -127,4 +129,5 @@
 			}
 		}
 	}
+
 </style>
