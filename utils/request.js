@@ -11,7 +11,7 @@ export function myRequestGet(url, data) {
 				resolve(res.data.data.list)
 			},
 			fail: function(err) {
-				console.log("没拿到数据")
+				//console.log("没拿到数据")
 				reject(err)
 			}
 		})
