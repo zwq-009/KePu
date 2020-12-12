@@ -1,1 +1,1 @@
-<view>苹果MAC OS X怎么按照双系统<block wx:for="{{swipers}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><image src="{{item.img}}"></image></block></view>
+<view class="Box"><view>组件2</view><view>组件2</view><view>组件2</view></view>

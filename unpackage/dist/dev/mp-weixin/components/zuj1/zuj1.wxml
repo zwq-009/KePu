@@ -1,1 +1,1 @@
-<view><view class="jiaju"><block wx:for="{{swipers}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><view class="fnx"><text>{{item.title}}</text><view class="card"><image src="{{item.info.video_img}}" mode="widthFix"></image><button class="time">02:00</button></view></view></block></view><view class="zoon"><view class="town"><text class="xzhen">动植小镇</text></view></view></view>
+<view class="Box"><view>组件1</view><view>组件1</view><view>组件1</view></view>
