@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/zuj5/zuj5":1,"components/zuj1/zuj1":1,"components/zuj2/zuj2":1,"components/zuj3/zuj3":1,"components/zuj4/zuj4":1,"components/zuj6/zuj6":1,"components/zuj7/zuj7":1};
+/******/ 		var cssChunks = {"components/uni-icons/uni-icons":1,"components/zuj5/zuj5":1,"components/zuj6/zuj6":1,"components/zuj1/zuj1":1,"components/zuj2/zuj2":1,"components/zuj3/zuj3":1,"components/zuj4/zuj4":1,"components/zuj7/zuj7":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/zuj5/zuj5":"components/zuj5/zuj5","components/zuj1/zuj1":"components/zuj1/zuj1","components/zuj2/zuj2":"components/zuj2/zuj2","components/zuj3/zuj3":"components/zuj3/zuj3","components/zuj4/zuj4":"components/zuj4/zuj4","components/zuj6/zuj6":"components/zuj6/zuj6","components/zuj7/zuj7":"components/zuj7/zuj7"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/uni-icons/uni-icons":"components/uni-icons/uni-icons","components/zuj5/zuj5":"components/zuj5/zuj5","components/zuj6/zuj6":"components/zuj6/zuj6","components/zuj1/zuj1":"components/zuj1/zuj1","components/zuj2/zuj2":"components/zuj2/zuj2","components/zuj3/zuj3":"components/zuj3/zuj3","components/zuj4/zuj4":"components/zuj4/zuj4","components/zuj7/zuj7":"components/zuj7/zuj7"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
