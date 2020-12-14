@@ -30,21 +30,103 @@
   border-top-right-radius: 10px;
   box-shadow: 0 -1px 3px 4px #f4f4f5;
 }
-.top_1 {
-  font-size: 34rpx;
+.Box .box_1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+            flex-direction: column;
 }
-.top {
-  position: relative;
+.Box .box_1 .box_2 {
+      position: relative;
 }
-.time {
-  position: absolute;
-  right: 0rpx;
-  bottom: 0rpx;
-  color: #FFFFFF;
-  background-color: #666666;
-  width: 80rpx;
-  height: 40rpx;
-  border-radius: 25%;
-  font-size: 30rpx;
+.Box .box_1 .box_2 .sp_2 {
+        color: #FFFFFF;
+        border-radius: 5px;
+        position: absolute;
+        right: 28px;
+        bottom: 30px;
+        font-size: 10px;
+        width: 40px;
+        height: 15px;
+        background-color: #333333;
+        z-index: 1;
+        text-align: center;
+        line-height: 15px;
+}
+.Box .box_1 .box_2 .sp_3 {
+        color: #FFFFFF;
+        border-radius: 5px;
+        position: absolute;
+        right: 28px;
+        bottom: 30px;
+        font-size: 10px;
+        width: 40px;
+        height: 15px;
+        background-color: #333333;
+        z-index: 1;
+        text-align: center;
+        line-height: 15px;
+}
+.Box .box_1 .box_2 .sp_1 {
+        color: #FFFFFF;
+        border-radius: 5px;
+        position: absolute;
+        right: 36px;
+        bottom: 30px;
+        font-size: 10px;
+        width: 30px;
+        height: 20px;
+        background-color: #333333;
+        z-index: 1;
+}
+.Box .box_1 .box_4 {
+      margin-top: 20px;
+}
+.Box .box_1 .box_4 .box_5 {
+        width: 100%;
+        position: relative;
+}
+.Box .box_1 .box_4 .box_5 .tubiao_1 {
+          position: absolute;
+          right: 20px;
+          bottom: 0px;
+}
+.Box .box_1 .box_4 .box_5 .box_6 {
+          clear: both;
+}
+.Box .box_1 .box_4 .box_5 image {
+          width: 250rpx;
+          float: left;
+}
+.Box .box_1 .box_4 .box_5 text {
+          font-weight: 100;
+}
+.Box .box_1 text {
+      font-size: 15px;
+      margin-left: 17px;
+      font-weight: 900;
+}
+.Box .box_1 image {
+      border-radius: 5px;
+      width: 92%;
+      margin-left: 17px;
+      margin-top: 3px;
+}
+.Box .box_1 .box_3 text {
+      font-size: 15px;
+      font-weight: 100;
+}
+.Box .box_1 .box_3 .bt {
+      font-weight: 900;
+}
+.Box .box_1 .box_3 .tubiao {
+      margin-left: 120px;
+}
+.Box .box_1 .box_3 .t1 {
+      margin-left: 130px;
+      font-weight: 100;
 }
 
