@@ -33,4 +33,65 @@
   -webkit-box-shadow: 0 -1px 3px 4px #f4f4f5;
           box-shadow: 0 -1px 3px 4px #f4f4f5;
 }
+.Box .v1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.Box .v1 .vv {
+  position: relative;
+}
+.Box .v1 .vv .v6 {
+  color: #FFFFFF;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  position: absolute;
+  right: 36px;
+  bottom: 30px;
+  font-size: 10px;
+  width: 30px;
+  height: 20px;
+  background-color: #333333;
+  z-index: 1;
+}
+.Box .v1 .v3 {
+  margin-top: 20px;
+}
+.Box .v1 .v3 .v4 {
+  width: 100%;
+}
+.Box .v1 .v3 .v4 .v5 {
+  clear: both;
+}
+.Box .v1 .v3 .v4 image {
+  width: 250rpx;
+  float: left;
+}
+.Box .v1 .v3 .v4 text {
+  margin-right: 100rpx;
+  font-weight: 100;
+}
+.Box .v1 text {
+  font-size: 15px;
+  margin-left: 17px;
+  font-weight: 900;
+}
+.Box .v1 image {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  width: 90%;
+  margin-left: 17px;
+  margin-top: 3px;
+}
+.Box .v1 .v2 text {
+  font-size: 10px;
+  font-weight: 900;
+}
+.Box .v1 .v2 .t1 {
+  margin-left: 200px;
+}
 

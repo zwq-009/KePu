@@ -33,4 +33,24 @@
   -webkit-box-shadow: 0 -1px 3px 4px #f4f4f5;
           box-shadow: 0 -1px 3px 4px #f4f4f5;
 }
+.Box .a {
+  position: relative;
+}
+.Box .a .a1 {
+  position: absolute;
+  width: 35px;
+  height: 15px;
+  right: 25rpx;
+  font-size: 17rpx;
+  background-color: #807e7f;
+  -webkit-border-radius: 25%;
+          border-radius: 25%;
+  color: white;
+  text-align: center;
+}
+.Box .b image {
+  width: 250rpx;
+  -webkit-border-radius: 5%;
+          border-radius: 5%;
+}
 

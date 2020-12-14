@@ -1,1 +1,0 @@
-<view class="{{[(spin)?'fa_spin':'',(pulse)?'fa_pulse':'',(fw)?'fa_fw':'',(right)?'fa_rotate_right':'',(down)?'fa_rotate_down':'',(left)?'fa_rotate_left':'']}}"><view class="{{['fa fa-rotate-90','fa-'+type]}}" style="{{'color:'+(color)+';'+('font-size:'+(size+'px;')+';')}}"></view></view>

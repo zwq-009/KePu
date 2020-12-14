@@ -33,4 +33,84 @@
   -webkit-box-shadow: 0 -1px 3px 4px #f4f4f5;
           box-shadow: 0 -1px 3px 4px #f4f4f5;
 }
+.Box .a {
+  border-bottom: 1px solid #89908a;
+  padding-top: 10px;
+}
+.Box .a .top {
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.Box .a .im {
+  width: 90%;
+  padding-left: 5%;
+}
+.Box .a .bto {
+  height: 60rpx;
+  text-align: right;
+  padding-right: 20px;
+}
+.Box .a .bto .btoa {
+  padding-left: 20px;
+  float: left;
+}
+.Box .a .bto image {
+  opacity: 0.5;
+  width: 30rpx;
+  height: 30rpx;
+  padding: 0 5px;
+}
+.Box .ab {
+  padding-top: 10px;
+  border-bottom: 1px solid #89908a;
+}
+.Box .ab .aba {
+  padding-left: 10px;
+}
+.Box .ab .aba image {
+  width: 160px;
+  height: 120px;
+  -webkit-border-radius: 20%;
+          border-radius: 20%;
+  float: left;
+  display: inline-block;
+}
+.Box .ab .aba .abr {
+  height: 120px;
+}
+.Box .ab .aba .abr .abrt {
+  padding: 10px 10px 30px;
+  font-weight: 400;
+}
+.Box .ab .aba .abr .abto {
+  bottom: 0;
+  height: 60rpx;
+  text-align: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.Box .ab .aba .abr .abto .abtot {
+  -webkit-box-flex: 10;
+  -webkit-flex: 10;
+          flex: 10;
+  font-size: 10px;
+  font-weight: 1000;
+  display: inline-block;
+}
+.Box .ab .aba .abr .abto .ac {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+          flex: 3;
+  margin: 0;
+  width: 30rpx;
+  height: 30rpx;
+  padding-right: 10px;
+  display: inline-block;
+}
+.Box .ab .aba .abr .abto .ac text {
+  font-weight: 10;
+  font-size: 5px;
+}
 
