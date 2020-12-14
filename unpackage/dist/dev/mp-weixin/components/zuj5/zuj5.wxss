@@ -27,7 +27,7 @@
 .Box {
   color: #353b48;
   width: 750rpx;
-  height: 800px;
+  height: auto;
   margin-top: 20rpx;
   -webkit-border-top-left-radius: 20rpx;
           border-top-left-radius: 20rpx;
@@ -98,9 +98,93 @@
   color: #a4b0be;
   font-size: 14px;
 }
+.Box .box .videos .channel .interact .zan .num1 {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.Box .box .videos .channel .interact .zan .num2 {
+  margin-left: 4px;
+}
 .Box .box .videos .channel .interact .share {
   display: inline-block;
-  margin-left: 80rpx;
+  margin-left: 10rpx;
+  font-size: 14px;
+  font-weight: bold;
+  color: #747d8c;
+}
+.Box .box2 {
+  width: 702rpx;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+}
+.Box .box2 .box2_item {
+  height: 64px;
+  padding-top: 12px;
+  padding-bottom: 8px;
+  position: relative;
+  border-bottom: 1px solid #ecf0f1;
+}
+.Box .box2 .box2_item .img {
+  display: inline-block;
+}
+.Box .box2 .box2_item .img image {
+  width: 230rpx;
+  -webkit-border-radius: 6px;
+          border-radius: 6px;
+}
+.Box .box2 .box2_item .right {
+  display: inline-block;
+  width: 460rpx;
+  height: 132rpx;
+  position: absolute;
+  top: 25rpx;
+  margin-left: 10rpx;
+}
+.Box .box2 .box2_item .right .title {
+  width: 100%;
+  float: left;
+}
+.Box .box2 .box2_item .right .channel {
+  position: absolute;
+  bottom: 2px;
+  float: left;
+  width: 100%;
+}
+.Box .box2 .box2_item .right .channel .author {
+  display: inline-block;
+  float: left;
+  font-size: 12px;
+  font-weight: bolder;
+  position: relative;
+}
+.Box .box2 .box2_item .right .channel .author::after {
+  content: '';
+  background-color: #74b9ff;
+  width: 97rpx;
+  height: 4rpx;
+  position: absolute;
+  left: 0px;
+  top: 30rpx;
+}
+.Box .box2 .box2_item .right .channel .interact {
+  float: right;
+  margin-top: -6rpx;
+}
+.Box .box2 .box2_item .right .channel .interact .zan {
+  display: inline-block;
+  color: #a4b0be;
+  font-size: 14px;
+}
+.Box .box2 .box2_item .right .channel .interact .zan .num1 {
+  margin-left: 3px;
+  margin-right: 4px;
+}
+.Box .box2 .box2_item .right .channel .interact .zan .num2 {
+  margin-left: 3px;
+}
+.Box .box2 .box2_item .right .channel .interact .share {
+  display: inline-block;
+  margin-left: 10rpx;
   font-size: 14px;
   font-weight: bold;
   color: #747d8c;
