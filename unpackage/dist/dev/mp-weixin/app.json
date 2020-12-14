@@ -27,5 +27,8 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons"
+  },
+  "sitemapLocation": "sitemap22.json"
 }
