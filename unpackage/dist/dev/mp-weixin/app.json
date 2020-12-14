@@ -1,13 +1,15 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/shoucang/shoucang",
+    "pages/sorry/sorry"
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "科普小站",
-    "navigationBarBackgroundColor": "#0984e3"
+    "navigationBarBackgroundColor": "#74b9ff"
   },
   "tabBar": {
     "list": [
@@ -25,6 +27,8 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons"
+  },
+  "sitemapLocation": "sitemap22.json"
 }

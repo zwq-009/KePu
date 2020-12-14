@@ -182,6 +182,7 @@
 				</view>
 			</view>
 			<view class="box3"></view>
+
 		</view>
 	</view>
 </template>
