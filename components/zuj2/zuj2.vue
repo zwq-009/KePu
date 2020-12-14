@@ -1,6 +1,7 @@
 <template>
 	<view class="Box">
 		<!-- 请在这个大Box里自行写内容 -->
+
 		<view class="a" v-for="item in swipers" :key="item.id">
 			<text>{{item.title}}</text>
 			<image :src="item.info.video_img" mode="widthFix"></image>
@@ -40,6 +41,7 @@
 					'/api/v1/fatiao/article/list?id=4&p=1&notchannel=27&order=1&limit=6&channel_id=4')
 				this.pinguos = result
 			},
+
 		}
 	}
 </script>
@@ -75,4 +77,5 @@
 			}
 		}
 	}
+
 </style>

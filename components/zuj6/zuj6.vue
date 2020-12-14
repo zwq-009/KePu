@@ -63,7 +63,6 @@
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 		box-shadow: 0 -1px 3px 4px #f4f4f5;
-
 		.v1 {
 		
 			.vv{
@@ -104,13 +103,11 @@
 			}
 			display: flex;
 			flex-direction: column;
-
 			text {
 				font-size: 15px;
 				margin-left: 17px;
 				font-weight: 900;
 			}
-
 			image {
 				border-radius: 5px;
 				width: 90%;
