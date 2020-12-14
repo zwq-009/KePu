@@ -26,11 +26,102 @@
 /* 文章场景相关 */
 .Box {
   margin-top: 10px;
-  -webkit-border-top-left-radius: 10px;
-          border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-          border-top-right-radius: 10px;
-  -webkit-box-shadow: 0 -1px 3px 4px #f4f4f5;
-          box-shadow: 0 -1px 3px 4px #f4f4f5;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 -1px 3px 4px #f4f4f5;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.Box .a {
+    position: relative;
+}
+.Box .a image {
+      width: 370px;
+}
+.Box .a .aa {
+      margin-left: 10rpx;
+      padding-top: 30rpx;
+      font-size: 20px;
+}
+.Box .a .a1 {
+      position: absolute;
+      width: 45px;
+      height: 15px;
+      bottom: 30px;
+      right: 20px;
+      font-size: 8rpx;
+      background-color: #807e7f;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      color: white;
+      text-align: center;
+      line-height: 15px;
+}
+.Box .a .aaa2 {
+      position: absolute;
+      right: 15px;
+      bottom: 0px;
+      font-size: 13px;
+      color: #c7c7c7;
+      margin-left: 10px;
+}
+.Box .a .aaa2 .fx {
+        font-weight: 800;
+        color: #656a73;
+}
+.Box .a .aaa2 .aa2 {
+        margin-left: 10px;
+}
+.Box .a .aaa {
+      font-size: 13px;
+      font-weight: 700;
+      border-bottom: 5px solid #74b9ff;
+      width: 68px;
+}
+.Box .b {
+    position: relative;
+}
+.Box .b .b2 {
+      font-size: 13px;
+      color: #c7c7c7;
+      position: absolute;
+      bottom: 20rpx;
+      right: 20rpx;
+}
+.Box .b .b2 .aa2 {
+        right: -20px;
+}
+.Box .b .b2 .fx {
+        font-weight: 800;
+        color: #656a73;
+        font-size: 13px;
+}
+.Box .b .b2 .bb {
+        font-size: 13px;
+        font-weight: 700;
+        border-bottom: 5px solid #74b9ff;
+        width: 68px;
+        left: 0;
+}
+.Box .b .b1 {
+      clear: both;
+}
+.Box .b image {
+      margin-top: 10px;
+      width: 250rpx;
+      border-radius: 5%;
+      float: left;
+}
+.Box .b text {
+      margin-top: 10px;
+      margin-left: 10px;
+      font-size: 17px;
+      color: #3b3b3b;
+}
+.Box .c {
+    margin-top: 10px;
+    border: 1rpx solid #f4f4f4;
 }
 
