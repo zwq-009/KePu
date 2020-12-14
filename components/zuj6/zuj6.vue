@@ -3,7 +3,7 @@
 		<scroll-view scroll-y class="v1">
 			<!-- 请在这个大Box里自行写内容 -->
 			<view>
-				<view v-for="item in swipers" :key="item.id">
+				<view v-for="(item,index) in swipers" :key="item.id">
 					<text>{{item.title}}</text>
 					<view class="vv">
 						<image :src="item.info.video_img" mode="widthFix"></image>
@@ -21,7 +21,7 @@
 					</view>
 				</view>
 			</view>
-			<view v-for="item in swiperss" :key="item.id" class="v3">
+			<view v-for="item in swiperss" :key="item.id" class="v3" @click="goDetail(item)">
 				<view class="v4">
 					<image :src="item.info.cover_img" mode="widthFix"></image>
 					<text>{{item.title}}</text>
@@ -52,7 +52,7 @@
 					</view>
 				</view>
 			</view>
-			<view v-for="item in swiperssss" :key="item.id" class="v3">
+			<view v-for="item in swiperssss" :key="item.id" class="v3" @click="goDetail(item)">
 				<view class="v4">
 					<image :src="item.info.cover_img" mode="widthFix"></image>
 					<text>{{item.title}}</text>
@@ -83,7 +83,7 @@
 					</view>
 				</view>
 			</view>
-			<view v-for="item in shjj" :key="item.id" class="v3">
+			<view v-for="item in shjj" :key="item.id" class="v3" @click="goDetail(item)">
 				<view class="v4">
 					<image :src="item.info.cover_img" mode="widthFix"></image>
 					<text class="yz">{{item.title}}</text>
@@ -113,7 +113,9 @@
 				swipersss: {},
 				swiperssss: {},
 				shj: {},
-				shjj: {}
+				shjj: {},
+				id: "",
+				//list:""
 			};
 		},
 		created() {
@@ -130,11 +132,14 @@
 				const res = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=1¬channel=27&order=1&limit=1&channel_id=1')
 				//console.log(res)
 				this.swipers = res
+
 			},
 			async getSwiperss() {
 				const ress = await myRequestGet('/api/v1/fatiao/article/list?id=1&p=1¬channel=27&order=1&limit=6&channel_id=1')
 				//console.log(ress)
 				this.swiperss = ress
+				//this.id=ress.data
+				//console.log(ress.data.list[0])
 			},
 			async getSwipersss() {
 				const resss = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=2&notchannel=27&order=1&limit=1&channel_id=1')
@@ -156,9 +161,14 @@
 				const rew = await myRequestGet('/api/v1/fatiao/article/list?id=1&p=3&notchannel=27&order=1&limit=6&channel_id=1')
 				//console.log(rew)
 				this.shjj = rew
+			},
+			goDetail(item) {
+				uni.navigateTo({
+					url: `/pages/z6xq/z6xq?id=${item.id}`
+				})
 			}
 		}
-	};
+	}
 </script>
 
 <style lang="scss">

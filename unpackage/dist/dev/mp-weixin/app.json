@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/my/my",
     "pages/shoucang/shoucang",
-    "pages/sorry/sorry"
+    "pages/sorry/sorry",
+    "pages/z6xq/z6xq"
   ],
   "subPackages": [],
   "window": {
@@ -27,5 +28,8 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons"
+  },
+  "sitemapLocation": "sitemap32.json"
 }

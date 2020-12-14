@@ -28,6 +28,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/z6xq/z6xq",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

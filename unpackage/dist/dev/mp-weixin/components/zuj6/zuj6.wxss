@@ -109,6 +109,7 @@
   position: absolute;
   right: 320rpx;
   bottom: 0px;
+  font-weight: 900;
 }
 .Box .v1 .v3 .v4 .ttt1 {
   position: absolute;

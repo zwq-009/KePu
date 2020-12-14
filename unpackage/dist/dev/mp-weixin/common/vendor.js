@@ -8024,7 +8024,38 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 46:
+/***/ 47:
+/*!**********************************************************!*\
+  !*** C:/Users/14346/Desktop/新建文件夹/KePu/utils/request.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.myRequestGet = myRequestGet;var baseUrl = "https://openapp.fatiao.pro";
+
+function myRequestGet(url, data) {
+  return new Promise(function (resolve, reject) {
+    uni.request({
+      url: baseUrl + url,
+      method: "GET",
+      data: data,
+      success: function success(res) {
+        // console.log("get请求到了数据",res)
+        resolve(res.data.data.list);
+      },
+      fail: function fail(err) {
+        console.log("没拿到数据");
+        reject(err);
+      } });
+
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+
+/***/ 53:
 /*!***********************************************************************!*\
   !*** C:/Users/14346/Desktop/新建文件夹/KePu/components/uni-icons/icons.js ***!
   \***********************************************************************/
@@ -8166,18 +8197,18 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 82:
+/***/ 89:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 83);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 90);
 
 /***/ }),
 
-/***/ 83:
+/***/ 90:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -8208,7 +8239,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 84);
+module.exports = __webpack_require__(/*! ./runtime */ 91);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -8225,7 +8256,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 84:
+/***/ 91:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -8954,37 +8985,6 @@ if (hadRuntime) {
   })() || Function("return this")()
 );
 
-
-/***/ }),
-
-/***/ 85:
-/*!**********************************************************!*\
-  !*** C:/Users/14346/Desktop/新建文件夹/KePu/utils/request.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.myRequestGet = myRequestGet;var baseUrl = "https://openapp.fatiao.pro";
-
-function myRequestGet(url, data) {
-  return new Promise(function (resolve, reject) {
-    uni.request({
-      url: baseUrl + url,
-      method: "GET",
-      data: data,
-      success: function success(res) {
-        // console.log("get请求到了数据",res)
-        resolve(res.data.data.list);
-      },
-      fail: function fail(err) {
-        console.log("没拿到数据");
-        reject(err);
-      } });
-
-  });
-}
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 
