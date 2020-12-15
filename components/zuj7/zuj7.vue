@@ -1,7 +1,6 @@
 <template>
 	<view class="Box">
-		<!-- 请在这个大Box里自行写内容 -->
-		<view>
+
 			<!-- 如何画美人鱼-->
 			<view class="a" v-for="item in swipers" :key="item.id">
 				<text class="top">{{item.title}}</text>
@@ -9,11 +8,11 @@
 				<view class="atim">{{item.video_length}}</view>
 				<view class="bto">
 					<text class="btoa">兴趣爱好</text>
-					<uni-icons type="hand-thumbsup" size="18" color="#a4b0be">fgsh</uni-icons>
+					<uni-icons type="hand-thumbsup" size="14" color="#a4b0be">fgsh</uni-icons>
 					<text>{{item.praise_num}}</text>
-					<uni-icons type="eye" size="18" color="#a4b0be"></uni-icons>
+					<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
 					<text>{{item.play_num}}</text>
-					<uni-icons type="weixin" size="18" color="#00aa00"></uni-icons>
+					<uni-icons type="weixin" size="14" color="#00aa00"></uni-icons>
 					<text class="fen">分享</text>
 				</view>
 			</view>
@@ -30,17 +29,15 @@
 							<view>{{item.praise_num}}</view>
 							<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
 							<view>7234</view>
-							<uni-icons type="weixin" size="18" color="#00aa00"></uni-icons>
-							<view>分享</view>
+							<uni-icons type="weixin" size="15" color="#00aa00"></uni-icons>
+							<view class="fen">分享</view>
 						</view>
 					</view>
 				</view>
 			</view>
-		</view>
 
-		<view>
-			<!-- 如何画美人鱼-->
-			<view class="ba" v-for="item in swiperss" :key="item.id">
+			<!-- 如何画蛇-->
+			<view class="a" v-for="item in swipers2" :key="item.id">
 				<text class="top">{{item.title}}</text>
 				<image class="im" :src="item.info.video_img" mode="widthFix"></image>
 				<view class="atim">{{item.video_length}}</view>
@@ -54,7 +51,58 @@
 					<text class="fen">分享</text>
 				</view>
 			</view>
-		</view>
+			<!-- 画蛇列表 -->
+			<view class="ab" v-for="item in swipers3" :key="item.id">
+				<view class="aba">
+					<image :src="item.info.cover_img" mode="widthFix"></image>
+					<view class="abr">
+						<view class="abrt">{{item.title}}</view>
+						<view class="abto">
+							<view class="abtot">兴趣爱好</view>
+							<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>
+							<view>{{item.praise_num}}</view>
+							<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
+							<view>7234</view>
+							<uni-icons type="weixin" size="18" color="#00aa00"></uni-icons>
+							<view>分享</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<!-- 如何画花朵-->
+			<view class="a" v-for="item in swipers4" :key="item.id">
+				<text class="top">{{item.title}}</text>
+				<image class="im" :src="item.info.video_img" mode="widthFix"></image>
+				<view class="atim">{{item.video_length}}</view>
+				<view class="bto">
+					<text class="btoa">兴趣爱好</text>
+					<uni-icons type="hand-thumbsup" size="18" color="#a4b0be">fgsh</uni-icons>
+					<text>{{item.praise_num}}</text>
+					<uni-icons type="eye" size="18" color="#a4b0be"></uni-icons>
+					<text>{{item.play_num}}</text>
+					<uni-icons type="weixin" size="18" color="#00aa00"></uni-icons>
+					<text class="fen">分享</text>
+				</view>
+			</view>
+			<!-- 玉米钓青鱼列表 -->
+			<view class="ab" v-for="item in swipers5" :key="item.id">
+				<view class="aba">
+					<image :src="item.info.cover_img" mode="widthFix"></image>
+					<view class="abr">
+						<view class="abrt">{{item.title}}</view>
+						<view class="abto">
+							<view class="abtot">兴趣爱好</view>
+							<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>
+							<view>{{item.praise_num}}</view>
+							<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
+							<view>7234</view>
+							<uni-icons type="weixin" size="18" color="#00aa00"></uni-icons>
+							<view>分享</view>
+						</view>
+					</view>
+				</view>
+			</view>
 
 	</view>
 </template>
@@ -66,28 +114,88 @@
 	export default {
 		data() {
 			return {
-				swipers: {},
-				swipers1: {},
-				swiperss: {}
+				swipers: [],
+				swipers1: [],
+				swipers2: [],
+				swipers3: [],
+				swipers4: [],
+				swipers5: [],
 			};
 		},
 		created() {
 			this.getSwipers();
 			this.getSwipers1();
-			this.getSwiperss();
+			this.getSwipers2();
+			this.getSwipers3();
+			this.getSwipers4();
+			this.getSwipers5();
 		},
 		methods: {
 			async getSwipers() {
-				const res = await myRequestGet('/api/v1/fatiao/index/list?id=37&p=1¬channel=27&order=1&limit=1&channel_id=37')
-				this.swipers = res
+				let result = await myRequestGet('/api/v1/fatiao/index/list',{
+					id:37,
+					p:1,
+					notchannel:27,
+					order:1,
+					limit:1,
+					channel_id:37
+				})
+				this.swipers = result;
 			},
 			async getSwipers1() {
-				const ress = await myRequestGet('/api/v1/fatiao/article/list?id=37&p=1¬channel=27&order=1&limit=6&channel_id=37')
-				this.swipers1 = ress
+				let result = await myRequestGet('/api/v1/fatiao/article/list',{
+					id:37,
+					p:1,
+					notchannel:27,
+					order:1,
+					limit:6,
+					channel_id:37
+				});
+				this.swipers1 = result;
 			},
-			async getSwiperss() {
-				const ress = await myRequestGet('/api/v1/fatiao/index/list?id=37&p=2¬channel=27&order=1&limit=1&channel_id=37')
-				this.swiperss = ress
+			async getSwipers2() {
+				let result = await myRequestGet('/api/v1/fatiao/index/list',{
+					id:37,
+					p:2,
+					notchannel:27,
+					order:1,
+					limit:1,
+					channel_id:37
+				});
+				this.swipers2 = result;
+			},
+			async getSwipers3() {
+				let result = await myRequestGet('/api/v1/fatiao/article/list',{
+					id:37,
+					p:2,
+					notchannel:27,
+					order:1,
+					limit:6,
+					channel_id:37,
+				})
+				this.swipers3 = result;
+			},
+			async getSwipers4() {
+				let result = await myRequestGet('/api/v1/fatiao/index/list',{
+					id:37,
+					p:3,
+					notchannel:27,
+					order:1,
+					limit:1,
+					channel_id:37,
+				})
+				this.swipers4 = result;
+			},
+			async getSwipers5() {
+				let result = await myRequestGet('/api/v1/fatiao/article/list',{
+					id:37,
+					p:3,
+					notchannel:27,
+					order:1,
+					limit:6,
+					channel_id:37,
+				})
+				this.swipers5 = result;
 			}
 
 		}
@@ -107,13 +215,13 @@
 
 			.top {
 				padding-left: 20rpx;
-				font-size: 35rpx;
-				font-weight: 500;
+				font-size: 40rpx;
+				font-weight: 540;
 			}
 
 			.im {
 				width: 94%;
-				margin: 0 3%;
+				margin:15rpx 23rpx 0;
 				border-radius: 20rpx;
 			}
 
@@ -134,24 +242,22 @@
 				padding: 5rpx 20rpx 0 0;
 
 				.btoa {
-					font-size: 23rpx;
+					font-size: 28rpx;
 					font-weight: 700;
+					color: #000007;
 					padding-left: 20rpx;
 					float: left;
 				}
-
-				uni-icons {
-					margin-right: 30rpx;
-				}
-
 				text {
 					opacity: 0.8;
+					font-size: 18rpx;
 					color: #736c79;
-					font-weight: 600;
+					font-weight: 650;
 					padding-right: 15rpx;
 				}
 
 				.fen {
+					font-size: 20rpx;
 					color: #060607;
 
 				}
@@ -167,7 +273,7 @@
 				padding-left: 10rpx;
 
 				image {
-					width: 160px;
+					width: 260rpx;
 					margin-right: 15rpx;
 					border-radius: 20rpx;
 					float: left;
@@ -175,30 +281,26 @@
 
 				.abr {
 					.abrt {
-						margin-left: 20px;
-						padding: 0 0 100rpx;
+						font-size: 35rpx;
+						padding: 0 0 50rpx;
 						font-weight: 400;
 					}
 
 					.abto {
-						bottom: 0;
 						text-align: left;
-
+						padding: 0 0 5rpx;
 						.abtot {
 							font-size: 19rpx;
 							font-weight: 600;
 							display: inline-block;
 							padding-right: 40rpx;
-						}
-
-						uni-icons {
-							display: inline-block;
-						}
-
+						}					
 						view {
-							font-size: 19rpx;
+							font-weight: 550;
+							opacity: 0.6;
+							font-size: 17rpx;
 							display: inline-block;
-							padding-right: 10rpx;
+							padding-right: 5rpx;
 						}
 					}
 				}
