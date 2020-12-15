@@ -1,103 +1,199 @@
 <template>
 	<view class="Box">
-		<scroll-view scroll-y class="v1">
-			<!-- 请在这个大Box里自行写内容 -->
-			<view>
-				<view v-for="item in swipers" :key="item.id">
-					<text>{{item.title}}</text>
-					<view class="spbt">
-						<image :src="item.info.video_img" mode="widthFix"></image>
-						<view class="jump_2">
-							<view class="bt">{{item.channel.name}}
-								<view class="bjcolor"></view>
-								<view class="tt1">
-									<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-									<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-									<uni-icons type="weixin" size="16" color="green"></uni-icons>分享
+		<!-- 视频部分 -->
+		<view class="box">
+			<view class="videos" v-for="item in video1" :key="item.id" @click="goVideoDetail(item)">
+				<!-- 视频封面上的标题 -->
+				<text class="videos_title">{{ item.title }}</text>
+				<view class="imgbox">
+					<!-- 视频封面 -->
+					<image class="videos_img" :src="item.info.video_img" mode="widthFix"></image>
+					<view class="videos_length">{{ item.video_length }}</view>
+				</view>
+				<!-- 来源 -->
+				<view class="channel">
+					<!-- 作者名 -->
+					<view class="author">{{ item.channel.name }}</view>
+					<view class="interact">
+						<!-- 点赞按钮 -->
+						<view class="zan">
+							<uni-icons class="diannzan" type="hand-thumbsup" size="28rpx" color="#a4b0be"></uni-icons>
+							<text class="num1">{{ item.praise_num }}</text>
+							<uni-icons class="watch" type="eye" size="28rpx" color="#a4b0be"></uni-icons>
+							<text class="num2">{{ item.play_num }}</text>
+						</view>
+						<!-- 转发 -->
+						<view class="share" @click.stop="open">
+							<uni-icons type="redo" size="30rpx" color="#636e72"></uni-icons>
+							<text @click="shareOn">分享</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 文章部分 -->
+		<view class="box2">
+			<view class="box2_item" v-for="item in article1" :key="item.id" @click="goArticleDetail(item)">
+				<view class="item-content">
+					<view class="img">
+						<image :src="item.info.cover_img" mode="widthFix"></image>
+					</view>
+					<view class="right">
+						<view class="title">{{ item.title }}</view>
+						<!-- 来源 -->
+						<view class="channel">
+							<!-- 作者名 -->
+							<view class="author">{{ item.channel.name }}</view>
+							<view class="interact">
+								<!-- 点赞按钮 -->
+								<!-- 点击后的字体图标<uni-icons type="hand-thumbsup-filled" size="14" color="#7bed9f"> -->
+								<view class="zan">
+									<uni-icons class="dianzan" type="hand-thumbsup" size="28rpx" color="#a4b0be"></uni-icons>
+									<text class="num1">{{ item.praise_num }}</text>
+									<uni-icons class="watch" type="eye" size="28rpx" color="#a4b0be"></uni-icons>
+									<text class="num2">{{ item.play_num }}</text>
+								</view>
+								<!-- 转发 -->
+								<view class="share" @click.stop="open">
+									<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>
+									<text>分享</text>
 								</view>
 							</view>
 						</view>
-						<view class="jump_6">{{item.video_length}}</view>
 					</view>
 				</view>
 			</view>
-			<view v-for="item in swiperss" :key="item.id" class="jump_3">
-				<view class="jump_4">
-					<image :src="item.info.cover_img" mode="widthFix"></image>
-					<text class="top">{{item.title}}</text>
-					<view class="jump_5"></view>
-					<text class="yzz">{{item.channel.name}}</text>
-					<view class="smallbtcolor"></view>
-					<view class="ttt1">
-						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-						<uni-icons type="weixin" size="16" color="green"></uni-icons><text class="fx">分享</text>
+		</view>
+		<!-- 视频部分 -->
+		<view class="box">
+			<view class="videos" v-for="item in video2" :key="item.id" @click="goVideoDetail(item)">
+				<!-- 视频封面上的标题 -->
+				<text class="videos_title">{{ item.title }}</text>
+				<view class="imgbox">
+					<!-- 视频封面 -->
+					<image class="videos_img" :src="item.info.video_img" mode="widthFix"></image>
+					<view class="videos_length">{{ item.video_length }}</view>
+				</view>
+				<!-- 来源 -->
+				<view class="channel">
+					<!-- 作者名 -->
+					<view class="author">{{ item.channel.name }}</view>
+					<view class="interact">
+						<!-- 点赞按钮 -->
+						<view class="zan">
+							<uni-icons class="diannzan" type="hand-thumbsup" size="28rpx" color="#a4b0be"></uni-icons>
+							<text class="num1">{{ item.praise_num }}</text>
+							<uni-icons class="watch" type="eye" size="28rpx" color="#a4b0be"></uni-icons>
+							<text class="num2">{{ item.play_num }}</text>
+						</view>
+						<!-- 转发 -->
+						<view class="share" @click.stop="open">
+							<uni-icons type="redo" size="30rpx" color="#636e72"></uni-icons>
+							<text>分享</text>
+						</view>
 					</view>
 				</view>
 			</view>
-			<view v-for="item in swipersss" :key="item.id" class="jump_3">
-				<view class="spbt">
-					<text>{{item.title}}</text>
-					<image :src="item.info.video_img" mode="widthFix"></image>
-					<view class="jump_8">{{item.video_length}}</view>
-					<view class="jump_2">
-						<view class="bt">{{item.channel.name}}
-						<view class="bjcolor"></view>
-							<view class="tt1">
-								<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-								<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-								<uni-icons type="weixin" size="16" color="green"></uni-icons>分享
+		</view>
+		<!-- 文章部分 -->
+		<view class="box2">
+			<view class="box2_item" v-for="item in article2" :key="item.id" @click="goArticleDetail(item)">
+				<view class="item-content">
+					<view class="img">
+						<image :src="item.info.cover_img" mode="widthFix"></image>
+					</view>
+					<view class="right">
+						<view class="title">{{ item.title }}</view>
+						<!-- 来源 -->
+						<view class="channel">
+							<!-- 作者名 -->
+							<view class="author">{{ item.channel.name }}</view>
+							<view class="interact">
+								<!-- 点赞按钮 -->
+								<view class="zan">
+									<uni-icons class="dianzan" type="hand-thumbsup" size="28rpx" color="#a4b0be"></uni-icons>
+									<text class="num1">{{ item.praise_num }}</text>
+									<uni-icons class="watch" type="eye" size="28rpx" color="#a4b0be"></uni-icons>
+									<text class="num2">{{ item.play_num }}</text>
+								</view>
+								<!-- 转发 -->
+								<view class="share" @click.stop="open">
+									<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>
+									<text>分享</text>
+								</view>
 							</view>
 						</view>
 					</view>
 				</view>
 			</view>
-			<view v-for="item in swiperssss" :key="item.id" class="jump_3">
-				<view class="jump_4">
-					<image :src="item.info.cover_img" mode="widthFix"></image>
-					<text class="main">{{item.title}}</text>
-					<view class="jump_5"></view>
-					<text class="yzz">{{item.channel.name}}</text>
-					<view class="smallbtcolor"></view>
-					<view class="ttt1">
-						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-						<uni-icons type="weixin" size="16" color="green"></uni-icons><text class="fx">分享</text>
+		</view>
+		<!-- 视频部分 -->
+		<view class="box">
+			<view class="videos" v-for="item in video3" :key="item.id" @click="goVideoDetail(item)">
+				<!-- 视频封面上的标题 -->
+				<text class="videos_title">{{ item.title }}</text>
+				<view class="imgbox">
+					<!-- 视频封面 -->
+					<image class="videos_img" :src="item.info.video_img" mode="widthFix"></image>
+					<view class="videos_length">{{ item.video_length }}</view>
+				</view>
+				<!-- 来源 -->
+				<view class="channel">
+					<!-- 作者名 -->
+					<view class="author">{{ item.channel.name }}</view>
+					<view class="interact">
+						<!-- 点赞按钮 -->
+						<view class="zan">
+							<uni-icons class="diannzan" type="hand-thumbsup" size="28rpx" color="#a4b0be"></uni-icons>
+							<text class="num1">{{ item.praise_num }}</text>
+							<uni-icons class="watch" type="eye" size="28rpx" color="#a4b0be"></uni-icons>
+							<text class="num2">{{ item.play_num }}</text>
+						</view>
+						<!-- 转发 -->
+						<view class="share" @click.stop="open">
+							<uni-icons type="redo" size="30rpx" color="#636e72"></uni-icons>
+							<text>分享</text>
+						</view>
 					</view>
 				</view>
 			</view>
-			<view v-for="item in shj" :key="item.id" class="jump_3">
-				<view class="spbt">
-					<text>{{item.title}}</text>
-					<image :src="item.info.video_img" mode="widthFix"></image>
-					<view class="jump_9">{{item.video_length}}</view>
-					<view class="jump_2">
-						<view class="bt">{{item.channel.name}}
-						<view class="bjcolor"></view>
-							<view class="tt1">
-								<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-								<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-								<uni-icons type="weixin" size="16" color="green"></uni-icons>分享
+		</view>
+		<!-- 文章部分 -->
+		<view class="box2">
+			<view class="box2_item" v-for="item in article3" :key="item.id" @click="goArticleDetail(item)">
+				<view class="item-content">
+					<view class="img">
+						<image :src="item.info.cover_img" mode="widthFix"></image>
+					</view>
+					<view class="right">
+						<view class="title">{{ item.title }}</view>
+						<!-- 来源 -->
+						<view class="channel">
+							<!-- 作者名 -->
+							<view class="author">{{ item.channel.name }}</view>
+							<view class="interact">
+								<!-- 点赞按钮 -->
+								<view class="zan">
+									<uni-icons class="dianzan" type="hand-thumbsup" size="28rpx" color="#a4b0be"></uni-icons>
+									<text class="num1">{{ item.praise_num }}</text>
+									<uni-icons class="watch" type="eye" size="28rpx" color="#a4b0be"></uni-icons>
+									<text class="num2">{{ item.play_num }}</text>
+								</view>
+								<!-- 分享到微信 -->
+								<!-- @click.stop阻止父级的点击事件 -->
+								<view class="share" @click.stop="open">
+									<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>
+									<text>分享</text>
+								</view>
 							</view>
 						</view>
 					</view>
 				</view>
 			</view>
-			<view v-for="item in shjj" :key="item.id" class="jump_3">
-				<view class="jump_4">
-					<image :src="item.info.cover_img" mode="widthFix"></image>
-					<text class="smallbt">{{item.title}}</text>
-					<view class="jump_5"></view>
-					<text class="yzz">{{item.channel.name}}</text>
-					<view class="smallbtcolor"></view>
-					<view class="ttt1">
-						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-						<uni-icons type="weixin" size="16" color="green"></uni-icons><text class="fx">分享</text>
-					</view>
-				</view>
-			</view>
-		</scroll-view>
+		</view>
+		<uni-popup ref="sharepopup" type="bottom">
+			<share-btn :sharedataTemp="sharedata"></share-btn>
+		</uni-popup>
 	</view>
 </template>
 
@@ -105,212 +201,321 @@
 	import {
 		myRequestGet
 	} from '@/utils/request.js';
+	import uniPopup from '..//uni-popup/uni-popup.vue';
+	import shareBtn from '../share-btn/share-btn.vue';
+	
 	export default {
 		data() {
 			return {
-				swipers: {},
-				swiperss: {},
-				swipersss: {},
-				swiperssss: {},
-				shj: {},
-				shjj: {}
+				sharedata: '',
+				video1: [],
+				article1: [],
+				video2: [],
+				article2: [],
+				video3: [],
+				article3: []
 			};
 		},
 		created() {
-			this.getSwipers();
-			this.getSwiperss();
-			this.getSwipersss();
-			this.getSwiperssss();
-			this.getshj();
-			this.getshjj()
+			this.getVideos1();
+			this.getArticle1();
+			this.getVideos2();
+			this.getArticle2();
+			this.getVideos3();
+			this.getArticle3();
 		},
+		
 		methods: {
-			async getSwipers() {
-				const res = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=1¬channel=27&order=1&limit=1&channel_id=6')
-				this.swipers = res
+           shareOn(){
+			   this.$refs.sharepopup.open();
+		   },
+			
+			// 点击进入文章详情页
+			goArticleDetail(item) {
+				uni.navigateTo({
+					url: `/pages/detail03/detail03?id=${item.id}`
+				});
 			},
-			async getSwiperss() {
-				const ress = await myRequestGet('/api/v1/fatiao/article/list?id=1&p=1¬channel=27&order=1&limit=6&channel_id=6')
-				this.swiperss = ress
+			// 点击进入视频详情页
+			goVideoDetail(item) {
+				uni.navigateTo({
+					url: `/pages/vdetail03/vdetail03?id=${item.id}`
+				});
 			},
-			async getSwipersss() {
-				const resss = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=2&notchannel=27&order=1&limit=1&channel_id=6')
-				this.swipersss = resss
+			async getVideos1() {
+				let result = await myRequestGet('/api/v1/fatiao/index/list', {
+					id: 6,
+					p: 1,
+					order: 1,
+					limit: 1,
+					channel_id: 6
+				});
+				console.log(result);
+				this.video1 = result;
 			},
-			async getSwiperssss() {
-				const ressss = await myRequestGet(
-					'/api/v1/fatiao/article/list?id=1&p=2&notchannel=27&order=1&limit=6&channel_id=6')
-				this.swiperssss = ressss
+			async getArticle1() {
+				let result = await myRequestGet('/api/v1/fatiao/article/list', {
+					id: 6,
+					p: 1,
+					order: 1,
+					limit: 6,
+					channel_id: 6
+				});
+				console.log(result);
+				this.article1 = result;
 			},
-			async getshj() {
-				const re = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=3&notchannel=27&order=1&limit=1&channel_id=6')
-				this.shj = re
+			async getVideos2() {
+				let result = await myRequestGet('/api/v1/fatiao/index/list', {
+					id: 6,
+					p: 2,
+					order: 1,
+					limit: 1,
+					channel_id: 6
+				});
+				console.log(result);
+				this.video2 = result;
 			},
-			async getshjj() {
-				const rew = await myRequestGet('/api/v1/fatiao/article/list?id=1&p=3&notchannel=27&order=1&limit=6&channel_id=6')
-				this.shjj = rew
+			async getArticle2() {
+				let result = await myRequestGet('/api/v1/fatiao/article/list', {
+					id: 6,
+					p: 2,
+					order: 1,
+					limit: 6,
+					channel_id: 6
+				});
+				console.log(result);
+				this.article2 = result;
+			},
+			async getVideos3() {
+				let result = await myRequestGet('/api/v1/fatiao/index/list', {
+					id: 6,
+					p: 3,
+					order: 1,
+					limit: 1,
+					channel_id: 6
+				});
+				console.log(result);
+				this.video3 = result;
+			},
+			async getArticle3() {
+				let result = await myRequestGet('/api/v1/fatiao/article/list', {
+					id: 6,
+					p: 3,
+					order: 1,
+					limit: 6,
+					channel_id: 6
+				});
+				console.log(result);
+				this.article3 = result;
+			},
+			open: function() {
+				this.$refs.sharepopup.open();
 			}
-		}
+		},
+	
+	components: {
+		uniPopup,
+		shareBtn
+	}
 	};
 </script>
 
 <style lang="scss">
 	.Box {
-		margin-top: 10px;
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-		box-shadow: 0 -1px 3px 4px #f4f4f5;
-		margin-bottom: 30rpx;
-		.v1 {
-			.spbt {
-				position: relative;
-				.jump_8 {
-					color: #FFFFFF;
-					border-radius: 5px;
-					position: absolute;
-					right: 56rpx;
-					bottom: 70rpx;
-					font-size: 20rpx;
-					width: 80rpx;
-					height: 30rpx;
-					background-color: #333333;
-					z-index: 1;
-					text-align: center;
-					line-height: 30rpx;
-				}
-				.jump_9 {
-					color: #FFFFFF;
-					border-radius: 10rpx;
-					position: absolute;
-					right: 56rpx;
-					bottom: 70rpx;
-					font-size: 20rpx;
-					width: 80rpx;
-					height: 30rpx;
-					background-color: #333333;
-					z-index: 1;
-					text-align: center;
-					line-height: 30rpx;
-				}
+		font-size: 30rpx;
+		color: #353b48;
+		width: 100%;
+		height: auto;
+		margin-top: 20rpx;
+		border-top-left-radius: 20rpx;
+		border-top-right-radius: 20rpx;
+		box-shadow: 0 -2rpx 6rpx 8rpx #f4f4f5;
+		padding-top: 12rpx;
 
-				.jump_6 {
-					color: #FFFFFF;
-					border-radius: 10rpx;
-					position: absolute;
-					right: 56rpx;
-					bottom: 60rpx;
-					font-size: 20rpx;
-					width: 80rpx;
-					height: 30rpx;
-					background-color: #333333;
-					z-index: 1;
-					text-align: center;
-					line-height: 30rpx;
-				}
-			}
+		// padding-left: 24rpx;
+		// padding-right: 24rpx;
+		.box {
+			// 颜色为了看位置
+			// background-color: #eee;
+			width: auto;
+			margin-top: 20rpx;
+			margin-left: 24rpx;
+			margin-right: 24rpx;
 
-			.jump_3 {
-				margin-top: 40rpx;
+			.videos {
+				padding: 0;
 
-				.jump_4 {
+				.imgbox {
+					position: relative;
+					margin-top: 16rpx;
 					width: 100%;
 					position: relative;
 
-					.smallbtcolor {
-						position: absolute;
-						right: 320rpx;
-						bottom: 0px;
-						height: 16rpx;
-						width: 120rpx;
-						background-color: #007AFF;
-						opacity: 0.5;
+					.videos_img {
+						border-radius: 10rpx;
+						width: 100%;
 					}
 
-					.yzz {
+					.videos_length {
+						font-size: 18rpx;
+						width: 70rpx;
+						background-color: rgba($color: #2d3436, $alpha: 0.6);
+						text-align: center;
+						color: #ffffff;
+						border-radius: 14rpx;
 						position: absolute;
-						right: 320rpx;
-						bottom: 0px;
-						font-weight: 900;
+						right: 8rpx;
+						bottom: 18rpx;
 					}
-					.smallbt{
-						font-weight: 600;
-						font-size: 34rpx;
+				}
+
+				.channel {
+					height: 60rpx;
+					line-height: 60rpx;
+					padding-bottom: 14rpx;
+					border-bottom: 2rpx solid #ecf0f1;
+
+					.author {
+						float: left;
+						font-size: 24rpx;
+						font-weight: bolder;
+						position: relative;
 					}
-					.top{
-						font-weight: 600;
-						font-size: 34rpx;
-					}
-					.main{
-						font-weight: 600;
-						font-size: 34rpx;
-					}
-					.ttt1 {
+
+					.author::after {
+						content: '';
+						background-color: #74b9ff;
+						width: 97rpx;
+						height: 8rpx;
 						position: absolute;
-						right: 30rpx;
-						bottom: 0px;
-						font-size: 12px;
-						color: #DCDFE6;
-						.fx {
-							font-weight: 900;
-							color: #3B4144;
-							font-size: 11px;
+						left: 0rpx;
+						top: 44rpx;
+					}
+
+					.interact {
+						float: right;
+
+						.zan {
+							display: inline-block;
+							color: #a4b0be;
+							font-size: 28rpx;
+
+							.num1 {
+								margin-left: 8rpx;
+								margin-right: 8rpx;
+							}
+
+							.num2 {
+								margin-left: 8rpx;
+							}
+						}
+
+						.share {
+							display: inline-block;
+							margin-left: 10rpx;
+							font-size: 28rpx;
+							font-weight: bold;
+							color: #747d8c;
 						}
 					}
-					.jump_5 {
-						clear: both;
-					}
-					image {
-						width: 250rpx;
-						float: left;
-					}
-					text {
-						font-weight: 100;
-						margin-left: 2px;
-					}
 				}
 			}
-			display: flex;
-			flex-direction: column;
-			text {
-				font-size: 30rpx;
-				margin-left: 34rpx;
-				font-weight: 900;
-			}
-			image {
-				border-radius: 10rpx;
-				width: 92%;
-				margin-left: 34rpx;
-				margin-top: 6rpx;
-			}
-			.jump_2 {
-				text {
-					font-size: 30rpx;
-					font-weight: 100;
-				}
-				.bt {
-					font-weight: 900;
-					margin-left: 40rpx;
-					position: relative;
-					z-index: 1;
-					.bjcolor {
-						position: absolute;
-						left: 0;
-						bottom: 2px;
-						height: 28rpx;
-						width: 148rpx;
-						background-color: #007AFF;
-						opacity: 0.5;
+		}
+
+		.box2 {
+			width: auto;
+			margin-left: 24rpx;
+			margin-right: 24rpx;
+
+			.box2_item {
+				// background-color: pink;
+				height: auto;
+				padding-top: 24rpx;
+				padding-bottom: 24rpx;
+				position: relative;
+				border-bottom: 2rpx solid #ecf0f1;
+
+				.item-content {
+					height: 100%;
+
+					.img {
+						display: inline-block;
+						width: 32.76%;
+
+						image {
+							width: 100%;
+							border-radius: 12rpx;
+						}
 					}
-				}
-				.tt1 {
-					margin-left: 260rpx;
-					margin-top: -40rpx;
-					/* font-weight: 100;
-					font-size: 20rpx; */
-				}
-				.t1 {
-					margin-left: 260rpx;
-					font-weight: 100;
+
+					.right {
+						display: inline-block;
+						width: 65.52%;
+						height: 135.32rpx;
+						position: relative;
+						margin-left: 10rpx;
+
+						.title {
+							position: absolute;
+							top: 4rpx;
+							left: 0;
+							width: 100%;
+						}
+
+						.channel {
+							position: absolute;
+							bottom: 4rpx;
+							left: 0;
+							width: 100%;
+
+							.author {
+								display: inline-block;
+								float: left;
+								font-size: 24rpx;
+								font-weight: bolder;
+								position: relative;
+							}
+
+							.author::after {
+								content: '';
+								background-color: #74b9ff;
+								width: 97rpx;
+								height: 4rpx;
+								position: absolute;
+								left: 0px;
+								top: 30rpx;
+							}
+
+							.interact {
+								// margin-left: 198rpx;
+								float: right;
+								margin-top: -6rpx;
+
+								.zan {
+									display: inline-block;
+									color: #a4b0be;
+									font-size: 28rpx;
+
+									.num1 {
+										margin-left: 6rpx;
+										margin-right: 8rpx;
+									}
+
+									.num2 {
+										margin-left: 6rpx;
+									}
+								}
+
+								.share {
+									display: inline-block;
+									margin-left: 10rpx;
+									font-size: 14px;
+									font-weight: bold;
+									color: #747d8c;
+								}
+							}
+						}
+					}
 				}
 			}
 		}

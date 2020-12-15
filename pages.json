@@ -28,6 +28,10 @@
             }
             
         }
+        ,{
+            "path" : "pages/detail03/detail03",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
