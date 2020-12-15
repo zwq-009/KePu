@@ -1,7 +1,7 @@
 <template>
 	<view class="Box">
 		<view class="content">
-			<view class="box1" v-for="item in videos1" :key="item.id">
+			<view class="box1" @click="goVideos4(item)" v-for="item in videos1" :key="item.id">
 				<!-- 视频页面的标题 -->
 				<input type="text" value="初到新家爱宠如何饲养" />
 				<!-- 视频封面 -->
@@ -25,14 +25,14 @@
 							<text>{{item.play_num}}</text>
 						</view>
 						<!-- 转发 -->
-						<view class="share">
-							<uni-icons type="weixin" size="15" color="#00b894"></uni-icons>
+						<view class="share" @click.stop="open">
+							<uni-icons type="redo" size="15" color="#00b894"></uni-icons>
 							<text>分享</text>
 						</view>
 					</view>
 				</view>
 			</view>
-			<view class="box2" v-for="item in lists1" :key="item.id">
+			<view class="box2" @click="goLists4(item)" v-for="item in lists1" :key="item.id">
 				<!-- 列表介绍 -->
 				<view class="classify">
 					<image class="cover_img" :src="item.info.cover_img" mode="widthFix"></image>
@@ -50,8 +50,8 @@
 									<text>{{item.play_num}}</text>
 								</view>
 								<!-- 转发 -->
-								<view class="share">
-									<uni-icons type="weixin" size="15" color="#00b894"></uni-icons>
+								<view class="share" @click.stop="open">
+									<uni-icons type="redo" size="15" color="#00b894"></uni-icons>
 									<text>分享</text>
 								</view>
 							</view>
@@ -62,7 +62,7 @@
 			<view class="box3"></view>
 		</view>
 		<view class="content">
-			<view class="box1" v-for="item in videos2" :key="item.id">
+			<view class="box1" @click="goVideos4(item)" v-for="item in videos2" :key="item.id">
 				<!-- 视频页面的标题 -->
 				<input type="text" value="如何给犬猫接种疫苗" />
 				<!-- 视频封面 -->
@@ -86,14 +86,14 @@
 							<text>{{item.play_num}}</text>
 						</view>
 						<!-- 转发 -->
-						<view class="share">
-							<uni-icons type="weixin" size="15" color="#00b894"></uni-icons>
+						<view class="share" @click.stop="open">
+							<uni-icons type="redo" size="15" color="#00b894"></uni-icons>
 							<text>分享</text>
 						</view>
 					</view>
 				</view>
 			</view>
-			<view class="box2" v-for="item in lists2" :key="item.id">
+			<view class="box2" @click="goLists4(item)" v-for="item in lists2" :key="item.id">
 				<!-- 列表介绍 -->
 				<view class="classify">
 					<image class="cover_img" :src="item.info.cover_img" mode="widthFix"></image>
@@ -111,8 +111,8 @@
 									<text>{{item.play_num}}</text>
 								</view>
 								<!-- 转发 -->
-								<view class="share">
-									<uni-icons type="weixin" size="15" color="#00b894"></uni-icons>
+								<view class="share" @click.stop="open">
+									<uni-icons type="redo" size="15" color="#00b894"></uni-icons>
 									<text>分享</text>
 								</view>
 							</view>
@@ -123,7 +123,7 @@
 			<view class="box3"></view>
 		</view>
 		<view class="content">
-			<view class="box1" v-for="item in videos3" :key="item.id">
+			<view class="box1" @click="goVideos4(item)" v-for="item in videos3" :key="item.id">
 				<!-- 视频页面的标题 -->
 				<input type="text" value="宠物还容易感染什么疾病呢" />
 				<!-- 视频封面 -->
@@ -147,14 +147,14 @@
 							<text>{{item.play_num}}</text>
 						</view>
 						<!-- 转发 -->
-						<view class="share">
-							<uni-icons type="weixin" size="15" color="#00b894"></uni-icons>
+						<view class="share" @click.stop="open">
+							<uni-icons type="redo" size="15" color="#00b894"></uni-icons>
 							<text>分享</text>
 						</view>
 					</view>
 				</view>
 			</view>
-			<view class="box2" v-for="item in lists3" :key="item.id">
+			<view class="box2" @click="goLists4(item)" v-for="item in lists3" :key="item.id">
 				<!-- 列表介绍 -->
 				<view class="classify">
 					<image class="cover_img" :src="item.info.cover_img" mode="widthFix"></image>
@@ -172,8 +172,8 @@
 									<text>{{item.play_num}}</text>
 								</view>
 								<!-- 转发 -->
-								<view class="share">
-									<uni-icons type="weixin" size="15" color="#00b894"></uni-icons>
+								<view class="share" @click.stop="open">
+									<uni-icons type="redo" size="15" color="#00b894"></uni-icons>
 									<text>分享</text>
 								</view>
 							</view>
@@ -182,8 +182,13 @@
 				</view>
 			</view>
 			<view class="box3"></view>
+
 		</view>
+		<uni-popup ref="sharepopup" type="bottom">
+			<share-btn :sharedataTemp="sharedata"></share-btn>
+		</uni-popup>
 	</view>
+
 </template>
 
 <script>
@@ -195,10 +200,11 @@
 			return {
 				videos1: [],
 				lists1: [],
-				videos2:[],
-				lists2:[],
-				videos3:[],
-				lists3:[],
+				videos2: [],
+				lists2: [],
+				videos3: [],
+				lists3: [],
+				sharedata: '',
 			};
 		},
 		created() {
@@ -210,6 +216,10 @@
 			this.getList3();
 		},
 		methods: {
+			//分享方法
+			open: function() {
+				this.$refs.sharepopup.open();
+			},
 			//https://openapp.fatiao.pro/api/v1/fatiao/index/list?id=3&p=1&notchannel=27&order=1&limit=1&channel_id=3
 			async getVideos1() {
 				let result = await myRequestGet('/api/v1/fatiao/index/list', {
@@ -285,7 +295,18 @@
 				});
 				console.log(result);
 				this.lists3 = result;
-			}
+			},
+			//去videos-zuj4页面
+			goVideos4(item) {
+				uni.navigateTo({
+					url: `/pages/videos-zuj4/videos-zuj4?id=${item.id}`
+				})
+			},
+			goLists4(item) {
+				uni.navigateTo({
+					url: `/pages/lists-zuj4/lists-zuj4?id=${item.id}`
+				})
+			},
 		}
 	}
 </script>
@@ -300,15 +321,19 @@
 		//第一列
 		.content {
 			padding: 20rpx;
+
 			//视频
 			.box1 {
 				height: 520rpx;
+
 				imput {
 					font-size: 32rpx;
 				}
+
 				.imgbox {
 					position: relative;
 					margin-top: 20rpx;
+
 					.imgbox_img {
 						border-radius: 10rpx;
 						width: 100%;
@@ -331,6 +356,7 @@
 				.channel {
 					margin-top: 10rpx;
 					width: 100%;
+
 					.author_name {
 						float: left;
 						font-size: 24rpx;
@@ -353,10 +379,12 @@
 						float: right;
 						margin-top: 7rpx;
 						display: flex;
+
 						//点赞
 						.zan {
 							color: #a4b0be;
 							font-size: 24rpx;
+
 							uni-icons {
 								margin-right: 8rpx;
 							}
@@ -372,6 +400,7 @@
 							font-weight: bold;
 							color: #747d8c;
 							font-size: 24rpx;
+
 							uni-icons {
 								margin-right: 8rpx;
 							}
@@ -379,6 +408,7 @@
 					}
 				}
 			}
+
 			//列表
 			.box2 {
 				.classify {
@@ -394,6 +424,7 @@
 					.explain {
 						margin: 24rpx 0 0 20rpx;
 						width: 440rpx;
+
 						.title {
 							font-size: 32rpx;
 						}
@@ -425,22 +456,27 @@
 								float: right;
 								margin-top: 7rpx;
 								display: flex;
+
 								.zan {
 									color: #a4b0be;
 									font-size: 24rpx;
+
 									uni-icons {
 										margin-right: 8rpx;
 									}
+
 									text {
 										margin-right: 8rpx;
 									}
 								}
+
 								//分享
 								.share {
 									float: right;
 									font-weight: bold;
 									font-size: 24rpx;
 									color: #747d8c;
+
 									uni-icons {
 										margin-right: 8rpx;
 									}

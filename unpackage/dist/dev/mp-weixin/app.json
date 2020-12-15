@@ -1,13 +1,19 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/shoucang/shoucang",
+    "pages/sorry/sorry",
+    "pages/videos-zuj4/videos-zuj4",
+    "pages/lists-zuj4/lists-zuj4",
+    "pages/feedback/feedback",
+    "pages/privacy/privacy"
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "科普小站",
-    "navigationBarBackgroundColor": "#0984e3"
+    "navigationBarBackgroundColor": "#74b9ff"
   },
   "tabBar": {
     "list": [
@@ -25,6 +31,7 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons"
+  }
 }
