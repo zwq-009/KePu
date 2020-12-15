@@ -1,119 +1,133 @@
 <template>
 	<view class="Box">
-
-			<!-- 如何画美人鱼-->
-			<view class="a" v-for="item in swipers" :key="item.id">
-				<text class="top">{{item.title}}</text>
-				<image class="im" :src="item.info.video_img" mode="widthFix"></image>
-				<view class="atim">{{item.video_length}}</view>
-				<view class="bto">
-					<text class="btoa">兴趣爱好</text>
-					<uni-icons type="hand-thumbsup" size="14" color="#a4b0be">fgsh</uni-icons>
-					<text>{{item.praise_num}}</text>
-					<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
-					<text>{{item.play_num}}</text>
-					<uni-icons type="weixin" size="14" color="#00aa00"></uni-icons>
-					<text class="fen">分享</text>
-				</view>
+		<!-- 如何画美人鱼-->
+		<view class="a" v-for="item in swipers" :key="item.id">
+			<text class="top">{{item.title}}</text>
+			<image class="im" :src="item.info.video_img" mode="widthFix"></image>
+			<view class="atim">{{item.video_length}}</view>
+			<view class="bto">
+				<text class="btoa">{{item.channel.name}}</text>
+				<uni-icons type="hand-thumbsup" size="14" color="#a4b0be">fgsh</uni-icons>
+				<text>{{item.praise_num}}</text>
+				<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
+				<text>{{item.play_num}}</text>
+				<uni-icons type="weixin" size="14" color="#00aa00" @click="shareOn"></uni-icons>
+				<text class="fen" @click="shareOn">分享</text>
 			</view>
+		</view>
 
-			<!-- 列表 -->
-			<view class="ab" v-for="item in swipers1" :key="item.id">
-				<view class="aba">
-					<image :src="item.info.cover_img" mode="widthFix"></image>
-					<view class="abr">
-						<view class="abrt">{{item.title}}</view>
-						<view class="abto">
-							<view class="abtot">兴趣爱好</view>
-							<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>
-							<view>{{item.praise_num}}</view>
-							<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
-							<view>7234</view>
-							<uni-icons type="weixin" size="15" color="#00aa00"></uni-icons>
-							<view class="fen">分享</view>
-						</view>
+		<!-- 列表 -->
+		<view class="ab" v-for="item in swipers1" :key="item.id">
+			<view class="aba">
+				<image :src="item.info.cover_img" mode="widthFix"></image>
+				<view class="abr">
+					<view class="abrt" @click="goDetail(item)">{{item.title}}</view>
+					<view class="abto">
+						<view class="abtot">{{item.channel.name}}</view>
+						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>
+						<view>{{item.praise_num}}</view>
+						<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
+						<view>7234</view>
+						<uni-icons type="weixin" size="15" color="#00aa00" @click="shareOn"></uni-icons>
+						<view class="fen" @click="shareOn">分享</view>
 					</view>
 				</view>
 			</view>
+		</view>
 
-			<!-- 如何画蛇-->
-			<view class="a" v-for="item in swipers2" :key="item.id">
-				<text class="top">{{item.title}}</text>
-				<image class="im" :src="item.info.video_img" mode="widthFix"></image>
-				<view class="atim">{{item.video_length}}</view>
-				<view class="bto">
-					<text class="btoa">兴趣爱好</text>
-					<uni-icons type="hand-thumbsup" size="18" color="#a4b0be">fgsh</uni-icons>
-					<text>{{item.praise_num}}</text>
-					<uni-icons type="eye" size="18" color="#a4b0be"></uni-icons>
-					<text>{{item.play_num}}</text>
-					<uni-icons type="weixin" size="18" color="#00aa00"></uni-icons>
-					<text class="fen">分享</text>
-				</view>
+		<!-- 如何画蛇-->
+		<view class="a" v-for="item in swipers2" :key="item.id">
+			<text class="top">{{item.title}}</text>
+			<image class="im" :src="item.info.video_img" mode="widthFix"></image>
+			<view class="atim">{{item.video_length}}</view>
+			<view class="bto">
+				<text class="btoa">兴趣爱好</text>
+				<uni-icons type="hand-thumbsup" size="18" color="#a4b0be">fgsh</uni-icons>
+				<text>{{item.praise_num}}</text>
+				<uni-icons type="eye" size="18" color="#a4b0be"></uni-icons>
+				<text>{{item.play_num}}</text>
+				<uni-icons type="weixin" size="18" color="#00aa00" @click="shareOn"></uni-icons>
+				<text class="fen" @click="shareOn">分享</text>
 			</view>
-			<!-- 画蛇列表 -->
-			<view class="ab" v-for="item in swipers3" :key="item.id">
-				<view class="aba">
-					<image :src="item.info.cover_img" mode="widthFix"></image>
-					<view class="abr">
-						<view class="abrt">{{item.title}}</view>
-						<view class="abto">
-							<view class="abtot">兴趣爱好</view>
-							<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>
-							<view>{{item.praise_num}}</view>
-							<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
-							<view>7234</view>
-							<uni-icons type="weixin" size="18" color="#00aa00"></uni-icons>
-							<view>分享</view>
-						</view>
+		</view>
+		<!-- 画蛇列表 -->
+		<view class="ab" v-for="item in swipers3" :key="item.id">
+			<view class="aba">
+				<image :src="item.info.cover_img" mode="widthFix"></image>
+				<view class="abr">
+					<view class="abrt">{{item.title}}</view>
+					<view class="abto">
+						<view class="abtot">兴趣爱好</view>
+						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>
+						<view>{{item.praise_num}}</view>
+						<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
+						<view>7234</view>
+						<uni-icons type="weixin" size="18" color="#00aa00" @click="shareOn"></uni-icons>
+						<view @click="shareOn">分享</view>
 					</view>
 				</view>
 			</view>
+		</view>
 
-			<!-- 如何画花朵-->
-			<view class="a" v-for="item in swipers4" :key="item.id">
-				<text class="top">{{item.title}}</text>
-				<image class="im" :src="item.info.video_img" mode="widthFix"></image>
-				<view class="atim">{{item.video_length}}</view>
-				<view class="bto">
-					<text class="btoa">兴趣爱好</text>
-					<uni-icons type="hand-thumbsup" size="18" color="#a4b0be">fgsh</uni-icons>
-					<text>{{item.praise_num}}</text>
-					<uni-icons type="eye" size="18" color="#a4b0be"></uni-icons>
-					<text>{{item.play_num}}</text>
-					<uni-icons type="weixin" size="18" color="#00aa00"></uni-icons>
-					<text class="fen">分享</text>
-				</view>
+		<!-- 如何画花朵-->
+		<view class="a" v-for="item in swipers4" :key="item.id">
+			<text class="top">{{item.title}}</text>
+			<image class="im" :src="item.info.video_img" mode="widthFix"></image>
+			<view class="atim">{{item.video_length}}</view>
+			<view class="bto">
+				<text class="btoa">兴趣爱好</text>
+				<uni-icons type="hand-thumbsup" size="18" color="#a4b0be">fgsh</uni-icons>
+				<text>{{item.praise_num}}</text>
+				<uni-icons type="eye" size="18" color="#a4b0be"></uni-icons>
+				<text>{{item.play_num}}</text>
+				<uni-icons type="weixin" size="18" color="#00aa00" @click="shareOn"></uni-icons>
+				<text class="fen" @click="shareOn">分享</text>
 			</view>
-			<!-- 玉米钓青鱼列表 -->
-			<view class="ab" v-for="item in swipers5" :key="item.id">
-				<view class="aba">
-					<image :src="item.info.cover_img" mode="widthFix"></image>
-					<view class="abr">
-						<view class="abrt">{{item.title}}</view>
-						<view class="abto">
-							<view class="abtot">兴趣爱好</view>
-							<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>
-							<view>{{item.praise_num}}</view>
-							<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
-							<view>7234</view>
-							<uni-icons type="weixin" size="18" color="#00aa00"></uni-icons>
-							<view>分享</view>
-						</view>
+		</view>
+		<!-- 玉米钓青鱼列表 -->
+		<view class="ab" v-for="item in swipers5" :key="item.id">
+			<view class="aba">
+				<image :src="item.info.cover_img" mode="widthFix"></image>
+				<view class="abr">
+					<view class="abrt">{{item.title}}</view>
+					<view class="abto">
+						<view class="abtot">兴趣爱好</view>
+						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>
+						<view>{{item.praise_num}}</view>
+						<uni-icons type="eye" size="14" color="#a4b0be"></uni-icons>
+						<view>7234</view>
+						<uni-icons type="weixin" size="18" color="#00aa00" @click="shareOn"></uni-icons>
+						<view @click="shareOn">分享</view>
 					</view>
 				</view>
 			</view>
+		</view>
+
+		<uni-popup ref="sharepopup" type="bottom">
+			<share-btn :sharedataTemp="sharedata"></share-btn>
+		</uni-popup>
 
 	</view>
 </template>
 
 <script>
+	import uniPopup from '../uni-popup/uni-popup.vue';
+	import shareBtn from '../share-btn/share-btn.vue';
 	import {
 		myRequestGet
 	} from '@/utils/request.js';
+
 	export default {
 		data() {
 			return {
+				sharedata: {
+					type: 1,
+					strShareUrl: "http://www.baidu.com",
+					strShareTitle: "分享标题",
+					strShareSummary: "分享总结",
+					strShareImageUrl: "http://www.xuelejia.com/xljapp/h5/static/aboutUsLogo.png"
+				},
+
 				swipers: [],
 				swipers1: [],
 				swipers2: [],
@@ -121,6 +135,9 @@
 				swipers4: [],
 				swipers5: [],
 			};
+		},
+		onLoad() {
+
 		},
 		created() {
 			this.getSwipers();
@@ -131,69 +148,81 @@
 			this.getSwipers5();
 		},
 		methods: {
+			shareOn() {
+				this.$refs.sharepopup.open();
+			},
+			components: {
+				uniPopup,
+				shareBtn
+			},
+			goDetail(item) {
+				uni.navigateTo({
+					url: `/pages/detail07/detail07?id=${item.id}`
+				})
+			},
 			async getSwipers() {
-				let result = await myRequestGet('/api/v1/fatiao/index/list',{
-					id:37,
-					p:1,
-					notchannel:27,
-					order:1,
-					limit:1,
-					channel_id:37
+				let result = await myRequestGet('/api/v1/fatiao/index/list', {
+					id: 37,
+					p: 1,
+					notchannel: 27,
+					order: 1,
+					limit: 1,
+					channel_id: 37
 				})
 				this.swipers = result;
 			},
 			async getSwipers1() {
-				let result = await myRequestGet('/api/v1/fatiao/article/list',{
-					id:37,
-					p:1,
-					notchannel:27,
-					order:1,
-					limit:6,
-					channel_id:37
+				let result = await myRequestGet('/api/v1/fatiao/article/list', {
+					id: 37,
+					p: 1,
+					notchannel: 27,
+					order: 1,
+					limit: 6,
+					channel_id: 37
 				});
 				this.swipers1 = result;
 			},
 			async getSwipers2() {
-				let result = await myRequestGet('/api/v1/fatiao/index/list',{
-					id:37,
-					p:2,
-					notchannel:27,
-					order:1,
-					limit:1,
-					channel_id:37
+				let result = await myRequestGet('/api/v1/fatiao/index/list', {
+					id: 37,
+					p: 2,
+					notchannel: 27,
+					order: 1,
+					limit: 1,
+					channel_id: 37
 				});
 				this.swipers2 = result;
 			},
 			async getSwipers3() {
-				let result = await myRequestGet('/api/v1/fatiao/article/list',{
-					id:37,
-					p:2,
-					notchannel:27,
-					order:1,
-					limit:6,
-					channel_id:37,
+				let result = await myRequestGet('/api/v1/fatiao/article/list', {
+					id: 37,
+					p: 2,
+					notchannel: 27,
+					order: 1,
+					limit: 6,
+					channel_id: 37,
 				})
 				this.swipers3 = result;
 			},
 			async getSwipers4() {
-				let result = await myRequestGet('/api/v1/fatiao/index/list',{
-					id:37,
-					p:3,
-					notchannel:27,
-					order:1,
-					limit:1,
-					channel_id:37,
+				let result = await myRequestGet('/api/v1/fatiao/index/list', {
+					id: 37,
+					p: 3,
+					notchannel: 27,
+					order: 1,
+					limit: 1,
+					channel_id: 37,
 				})
 				this.swipers4 = result;
 			},
 			async getSwipers5() {
-				let result = await myRequestGet('/api/v1/fatiao/article/list',{
-					id:37,
-					p:3,
-					notchannel:27,
-					order:1,
-					limit:6,
-					channel_id:37,
+				let result = await myRequestGet('/api/v1/fatiao/article/list', {
+					id: 37,
+					p: 3,
+					notchannel: 27,
+					order: 1,
+					limit: 6,
+					channel_id: 37,
 				})
 				this.swipers5 = result;
 			}
@@ -214,14 +243,15 @@
 			padding-top: 28rpx;
 
 			.top {
-				padding-left: 20rpx;
+				margin-left: 20rpx;
 				font-size: 40rpx;
 				font-weight: 540;
+				background: linear-gradient(0deg, #2854f0 0%, #fff 20%, #fff 100%);
 			}
 
 			.im {
 				width: 94%;
-				margin:15rpx 23rpx 0;
+				margin: 15rpx 23rpx 0;
 				border-radius: 20rpx;
 			}
 
@@ -245,9 +275,11 @@
 					font-size: 28rpx;
 					font-weight: 700;
 					color: #000007;
-					padding-left: 20rpx;
+					margin-left: 20rpx;
 					float: left;
+					background: linear-gradient(0deg, #0055ff 0%, #fff 20%, #fff 100%);
 				}
+
 				text {
 					opacity: 0.8;
 					font-size: 18rpx;
@@ -289,18 +321,21 @@
 					.abto {
 						text-align: left;
 						padding: 0 0 5rpx;
+
 						.abtot {
 							font-size: 19rpx;
 							font-weight: 600;
 							display: inline-block;
-							padding-right: 40rpx;
-						}					
+							margin-right: 11%;
+							background: linear-gradient(0deg, #0055ff 0%, #fff 40%, #fff 100%);
+						}
+
 						view {
 							font-weight: 550;
-							opacity: 0.6;
+							opacity: 0.7;
 							font-size: 17rpx;
 							display: inline-block;
-							padding-right: 5rpx;
+							padding-right: 0.8%;
 						}
 					}
 				}

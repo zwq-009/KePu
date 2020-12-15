@@ -2,6 +2,9 @@
 	"pages": [{
 			"path": "pages/index/index",
 			"style": {}
+		},{
+			"path": "pages/detail07/detail07",
+			"style": {}
 		},
 		{
 			"path": "pages/my/my",
@@ -9,8 +12,8 @@
 				"enablePullDownRefresh": false
 			}
 
-		}
-	    ,{
+		},
+		{
             "path" : "pages/shoucang/shoucang",
             "style" :                                                                                    
             {
