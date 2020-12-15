@@ -1935,6 +1935,7 @@ function normalizeComponent (
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 144:
 /*!********************************************************!*\
   !*** C:/Users/fanyi/Desktop/KePu/KePu/utils/format.js ***!
@@ -2326,6 +2327,8 @@ parseHtml;exports.default = _default;
 
 /***/ }),
 
+=======
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 /***/ 2:
 /*!******************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js ***!
@@ -8405,15 +8408,22 @@ module.exports = g;
 /***/ }),
 
 /***/ 4:
+<<<<<<< HEAD
 /*!***************************************************!*\
   !*** C:/Users/fanyi/Desktop/KePu/KePu/pages.json ***!
   \***************************************************/
+=======
+/*!*******************************************************!*\
+  !*** G:/Web前端/Uni-app案例/科普小程序项目/KePu/KePu/pages.json ***!
+  \*******************************************************/
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
+<<<<<<< HEAD
 
 /***/ 47:
 /*!*********************************************************!*\
@@ -8450,6 +8460,13 @@ function myRequestGet(url, data) {
 /*!**********************************************************************!*\
   !*** C:/Users/fanyi/Desktop/KePu/KePu/components/uni-icons/icons.js ***!
   \**********************************************************************/
+=======
+
+/***/ 46:
+/*!**************************************************************************!*\
+  !*** G:/Web前端/Uni-app案例/科普小程序项目/KePu/KePu/components/uni-icons/icons.js ***!
+  \**************************************************************************/
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8588,18 +8605,30 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 75:
+=======
+/***/ 82:
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! regenerator-runtime */ 76);
 
 /***/ }),
 
 /***/ 76:
+=======
+module.exports = __webpack_require__(/*! regenerator-runtime */ 83);
+
+/***/ }),
+
+/***/ 83:
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -8630,7 +8659,11 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! ./runtime */ 77);
+=======
+module.exports = __webpack_require__(/*! ./runtime */ 84);
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -8647,7 +8680,11 @@ if (hadRuntime) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 77:
+=======
+/***/ 84:
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -9377,6 +9414,40 @@ if (hadRuntime) {
 );
 
 
+<<<<<<< HEAD
+=======
+/***/ }),
+
+/***/ 85:
+/*!*************************************************************!*\
+  !*** G:/Web前端/Uni-app案例/科普小程序项目/KePu/KePu/utils/request.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.myRequestGet = myRequestGet;var baseUrl = "https://openapp.fatiao.pro";
+
+function myRequestGet(url, data) {
+  return new Promise(function (resolve, reject) {
+    uni.request({
+      url: baseUrl + url,
+      method: "GET",
+      data: data,
+      success: function success(res) {
+        // console.log("get请求到了数据",res)
+        resolve(res.data.data.list);
+      },
+      fail: function fail(err) {
+        console.log("没拿到数据");
+        reject(err);
+      } });
+
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 /***/ })
 
 }]);

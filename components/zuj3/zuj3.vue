@@ -1,5 +1,6 @@
 <template>
 	<view class="Box">
+<<<<<<< HEAD
 		<scroll-view scroll-y class="v1">
 			<!-- 请在这个大Box里自行写内容 -->
 			<view>
@@ -98,6 +99,18 @@
 				</view>
 			</view>
 		</scroll-view>
+=======
+		<!-- 请在这个大Box里自行写内容 -->
+		<view class="">
+			组件3
+		</view>
+		<view class="">
+			组件3
+		</view>
+		<view class="">
+			组件3
+		</view>
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 	</view>
 </template>
 
@@ -155,6 +168,7 @@
 </script>
 
 <style lang="scss">
+<<<<<<< HEAD
 	.Box {
 		margin-top: 10px;
 		border-top-left-radius: 10px;
@@ -311,3 +325,14 @@
 		}
 	}
 </style>
+=======
+.Box {
+	margin-top: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: 0 -1px 3px 4px #f4f4f5;
+	
+	
+}
+</style>
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c

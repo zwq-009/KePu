@@ -3,11 +3,15 @@
     "pages/index/index",
     "pages/my/my",
     "pages/shoucang/shoucang",
+<<<<<<< HEAD
     "pages/sorry/sorry",
     "pages/videos-zuj4/videos-zuj4",
     "pages/lists-zuj4/lists-zuj4",
     "pages/feedback/feedback",
     "pages/privacy/privacy"
+=======
+    "pages/sorry/sorry"
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
   ],
   "subPackages": [],
   "window": {
@@ -33,5 +37,10 @@
   },
   "usingComponents": {
     "uni-icons": "/components/uni-icons/uni-icons"
+<<<<<<< HEAD
   }
+=======
+  },
+  "sitemapLocation": "sitemap22.json"
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 }

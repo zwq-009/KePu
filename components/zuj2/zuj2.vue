@@ -1,6 +1,7 @@
 <template>
 	<view class="Box">
 		<!-- 请在这个大Box里自行写内容 -->
+<<<<<<< HEAD
 		<!-- 第一段苹果MAC -->
 		<view class="a" v-for="item in swipers" :key="item.id" @click="getA()">
 			<view class="aa">{{item.title}}</view>
@@ -91,6 +92,19 @@
 			</view>
 			<view class="b1"></view>
 			<view class="c"></view>
+=======
+
+		<view class="a" v-for="item in swipers" :key="item.id">
+			<text>{{item.title}}</text>
+			<image :src="item.info.video_img" mode="widthFix"></image>
+			<view class="a1">{{item.video_length}}</view>
+			<view class="a2">{{item.praise_num}}</view>
+		</view>
+		<view class="b" v-for="item in pinguos" :key="item.id">
+			<view>{{item.channel.name}}</view>
+			<image :src="item.info.cover_img" mode="widthFix"></image>
+			<text>{{item.title}}</text>
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 		</view>
 	</view>
 </template>
@@ -103,25 +117,33 @@
 		data() {
 			return {
 				swipers: {},
+<<<<<<< HEAD
 				pinguos: {},
 				chongs:{},
 				bijis:{},
 				dians:{},
 				mees:{}
+=======
+				pinguos: {}
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 			};
 		},
 		created() {
 			this.getSwipers();
 			this.getPinguos();
+<<<<<<< HEAD
 			this.getChongs();
 			this.getBijis();
 			this.getDians();
 			this.getMees();
+=======
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 		},
 		methods: {
 			async getSwipers() {
 				const res = await myRequestGet('/api/v1/fatiao/index/list?id=4&p=1&notchannel=27&order=1&limit=1&channel_id=4')
 				this.swipers = res
+<<<<<<< HEAD
 				
 			},
 			async getPinguos() {
@@ -154,11 +176,21 @@
 					url: '../../pages/a/a?id='+78
 				});
 			}
+=======
+			},
+			async getPinguos() {
+				const result = await myRequestGet(
+					'/api/v1/fatiao/article/list?id=4&p=1&notchannel=27&order=1&limit=6&channel_id=4')
+				this.pinguos = result
+			},
+
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 		}
 	}
 </script>
 
 <style lang="scss">
+<<<<<<< HEAD
 	.Box {
 		margin-top: 20rpx;
 		border-top-left-radius: 20rpx;
@@ -281,3 +313,37 @@
 		}
 	}
 </style>
+=======
+
+	.Box {
+		margin-top: 10px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		box-shadow: 0 -1px 3px 4px #f4f4f5;
+
+		.a {
+			position: relative;
+
+			.a1 {
+				position: absolute;
+				width: 35px;
+				height: 15px;
+				right: 25rpx;
+				font-size: 17rpx;
+				background-color: #807e7f;
+				border-radius: 25%;
+				color: white;
+				text-align:center;
+			}
+		}
+
+		.b {
+			image {
+				width: 250rpx;
+				border-radius: 5%;
+			}
+		}
+	}
+
+</style>
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c

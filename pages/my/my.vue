@@ -25,12 +25,20 @@
 			</view>
 		</view>
 		<view class="center-list">
+<<<<<<< HEAD
 			<view class="center-list-item border-bottom" @click="feedback">
+=======
+			<view class="center-list-item border-bottom" @click="none">
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 				<text class="list-icon">&#xe60b;</text>
 				<text class="list-text">帮助与反馈</text>
 				<text class="navigat-arrow">&#xe65e;</text>
 			</view>
+<<<<<<< HEAD
 			<view class="center-list-item border-bottom" @click="privacy">
+=======
+			<view class="center-list-item border-bottom" @click="none">
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 				<text class="list-icon">&#xe65f;</text>
 				<text class="list-text">服务条款及隐私</text>
 				<text class="navigat-arrow">&#xe65e;</text>
@@ -61,6 +69,7 @@ export default {
 				url: '../sorry/sorry'
 			});
 		},
+<<<<<<< HEAD
 		feedback(){
 			uni.navigateTo({
 				url: '../feedback/feedback'
@@ -71,6 +80,8 @@ export default {
 				url: '../privacy/privacy'
 			});
 		},
+=======
+>>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 		shoucang() {
 			uni.navigateTo({
 				url: '../shoucang/shoucang'
