@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/shoucang/shoucang",
+    "pages/sorry/sorry",
+    "pages/detail05/detail05",
+    "pages/vdetail05/vdetail05"
+  ],
+  "subPackages": [],
+  "window": {
+    "defaultTitle": "科普小站",
+    "titleBarColor": "#74b9ff"
+  },
+  "tabBar": {
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "static/首页.png",
+        "activeIcon": "static/首页a.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "name": "我的",
+        "icon": "static/个人.png",
+        "activeIcon": "static/个人a.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons"
+  }
+}

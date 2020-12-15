@@ -1,0 +1,1 @@
+<view class="Box"><view class="box"><view class="title">{{detail.title}}</view><view class="channel"><image class="channel_img" src="{{detail.channel.channel_img}}" mode></image><text class="channel_name">{{detail.channel.name+''}}</text><text class="data">2019-12-18</text></view><view class="content"><rich-text nodes="{{htmlNodes}}"></rich-text></view></view></view>

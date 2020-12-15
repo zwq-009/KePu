@@ -47,6 +47,8 @@
 </template>
 
 <script>
+
+
 export default {
 	data() {
 		return {
@@ -70,6 +72,7 @@ export default {
 		goLogin() {
 			if (!this.login) {
 				console.log('点击前往登录');
+				
 			}
 		}
 	}

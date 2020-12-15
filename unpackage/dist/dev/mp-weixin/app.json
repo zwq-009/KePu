@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/my/my",
     "pages/shoucang/shoucang",
-    "pages/sorry/sorry"
+    "pages/sorry/sorry",
+    "pages/detail05/detail05",
+    "pages/vdetail05/vdetail05"
   ],
   "subPackages": [],
   "window": {
@@ -29,6 +31,5 @@
   },
   "usingComponents": {
     "uni-icons": "/components/uni-icons/uni-icons"
-  },
-  "sitemapLocation": "sitemap22.json"
+  }
 }
