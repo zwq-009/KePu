@@ -2,9 +2,20 @@
 	"pages": [{
 			"path": "pages/index/index",
 			"style": {}
-		},{
+		}, {
+			"path": "pages/videos/videos7",
+			"style": {
+				"navigationBarTitleText": "视频-详情",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		}, {
 			"path": "pages/detail07/detail07",
-			"style": {}
+			"style": {
+				"navigationBarTitleText": "文本-详情",
+				"enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
 		},
 		{
 			"path": "pages/my/my",
@@ -14,24 +25,21 @@
 
 		},
 		{
-            "path" : "pages/shoucang/shoucang",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "我的收藏",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/sorry/sorry",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "敬请期待",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+			"path": "pages/shoucang/shoucang",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/sorry/sorry",
+			"style": {
+				"navigationBarTitleText": "敬请期待",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "科普小站",
