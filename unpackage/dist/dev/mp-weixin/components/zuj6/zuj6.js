@@ -276,8 +276,6 @@ var _request = __webpack_require__(/*! @/utils/request.js */ 64);function _inter
       this.$refs.sharepopup.open();
     },
     getSwipers: function getSwipers() {var _this = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var res;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (
-
-
                   (0, _request.myRequestGet)('/api/v1/fatiao/index/list?id=1&p=1&notchannel=27&order=1&limit=1&channel_id=1'));case 2:res = _context.sent;
                 console.log(res);
                 _this.swipers = res;case 5:case "end":return _context.stop();}}}, _callee);}))();

@@ -1,0 +1,47 @@
+/* 
+*********************************
+一、注意：
+1. 将iconfont生成的代码复制替换  病在"//at……"等前面加上"https:"
+二、如何使用：
+在style中添加引入：（路径根据页面调整）
+<style lang="scss">
+	@import '../../common/css/iconfont.css';
+</style>
+
+**********waq 2020.5.14**********
+ */
+/* https: */
+@font-face {
+  font-family: 'iconfont';  /* project id 1927633 */
+  src: url('https://at.alicdn.com/t/font_1927633_dhn4q4cb36.eot');
+  src: url('https://at.alicdn.com/t/font_1927633_dhn4q4cb36.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1927633_dhn4q4cb36.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1927633_dhn4q4cb36.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1927633_dhn4q4cb36.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1927633_dhn4q4cb36.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.msg:before {
+  content: "\eb97";
+}
+
+
+.view:before {
+	content: "\eb8a";
+}
+.praise:before {
+	content: "\ec7f";
+}
+.praised:before {
+	content: "\ec8c";
+}

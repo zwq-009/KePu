@@ -13,6 +13,11 @@
 			{{xqsj.info.video_note}}
 		</view>
 		<view class="li"></view>
+		<view class="bottom-item"  @click="clickPraise(detailInfo.IS_PRAISE)">
+			<view class="iconfont praised bottom-item-image" style="color:yellow" v-if="detailInfo.IS_PRAISE == '1'"></view>
+			<view class="iconfont praise bottom-item-image" v-else></view>
+			<text class="bottom-item-text">{{detailInfo.PRAISE_NUM}}</text>
+		</view>
 		<view class="fx" @click="open">
 			<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>
 			<text>分享</text>
@@ -29,13 +34,21 @@
 	import {
 		myRequestGet
 	} from '@/utils/request.js';
+	import data from '@/data';
+	import dateUtils from '@/common/utils/dateUtils.js';
 	export default {
 		data() {
 			return {
 				id: "",
 				xqsj: {},
 				sharedata: '',
+				detailInfo: {},
 			}
+		},
+
+		onShow: function() {
+			this.getData(); //获取数据
+
 		},
 		onLoad(options) {
 			this.id = options.id;
@@ -55,25 +68,67 @@
 			},
 			open: function() {
 				this.$refs.sharepopup.open();
-			}
-		}
+			},
+			getData() {
+				this.detailInfo = data.dataInfo;
+			},
+			clickPraise(isPraise) {
+				let praiseParam = '1';
+				let praiseNum = parseInt(this.detailInfo.PRAISE_NUM);
+				switch (isPraise) {
+					case '0':
+						praiseParam = '1';
+						praiseNum++;
+						break;
+					case '1':
+						praiseParam = '0';
+						praiseNum--;
+						break;
+				}
+				this.detailInfo.IS_PRAISE = praiseParam;
+				this.detailInfo.PRAISE_NUM = praiseNum--;
+			},
+		},
+		
 	}
 </script>
 
 
 <style lang="scss">
+	@import '../../common/css/iconfont.css';
+
 	.v1 {
-		.li{
+				.bottom-item {
+					height: 80rpx;
+					position: absolute;
+					bottom: -30rpx;
+					left: 30rpx;
+					text{
+						position: absolute;
+						bottom: 28rpx;
+						left: 20rpx;
+						font-weight: 100;
+						font-size: 40rpx;
+					}
+					.bottom-item-image {
+						font-size: 40rpx;
+						color: $uni-text-color;
+					}
+				}
+
+		.li {
 			position: absolute;
 			bottom: 70rpx;
 			left: 20rpx;
 			width: 90%;
 			border: 1px solid #DCDFE6;
-			background-color:#DCDFE6;
+			background-color: #DCDFE6;
 		}
+
 		.fx {
 			margin-top: 670rpx;
 			margin-left: 560rpx;
+
 			text {
 				font-size: 40rpx;
 				font-weight: 100;
