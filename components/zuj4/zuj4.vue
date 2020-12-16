@@ -3,7 +3,7 @@
 		<view class="content">
 			<view class="box1" @click="goVideos4(item)" v-for="item in videos1" :key="item.id">
 				<!-- 视频页面的标题 -->
-				<input type="text" value="初到新家爱宠如何饲养" />
+				<view class="title">{{item.title}}</view>
 				<!-- 视频封面 -->
 				<view class="imgbox">
 					<image class="imgbox_img" :src="item.info.video_img" mode="widthFix"></image>
@@ -64,7 +64,7 @@
 		<view class="content">
 			<view class="box1" @click="goVideos4(item)" v-for="item in videos2" :key="item.id">
 				<!-- 视频页面的标题 -->
-				<input type="text" value="如何给犬猫接种疫苗" />
+				<view class="title">{{item.title}}</view>
 				<!-- 视频封面 -->
 				<view class="imgbox">
 					<image class="imgbox_img" :src="item.info.video_img" mode="widthFix"></image>
@@ -125,7 +125,7 @@
 		<view class="content">
 			<view class="box1" @click="goVideos4(item)" v-for="item in videos3" :key="item.id">
 				<!-- 视频页面的标题 -->
-				<input type="text" value="宠物还容易感染什么疾病呢" />
+				<view class="title">{{item.title}}</view>
 				<!-- 视频封面 -->
 				<view class="imgbox">
 					<image class="imgbox_img" :src="item.info.video_img" mode="widthFix"></image>
@@ -317,16 +317,17 @@
 		border-top-left-radius: 20rpx;
 		border-top-right-radius: 10rpx;
 		box-shadow: 0 -2rpx 6rpx 8rpx #f4f4f5;
-
+		width: 100%;
+		background-color: #fff;
 		//第一列
 		.content {
+			margin-top: 10rpx;
 			padding: 20rpx;
-
 			//视频
 			.box1 {
 				height: 520rpx;
 
-				imput {
+				.title {
 					font-size: 32rpx;
 				}
 
@@ -492,6 +493,5 @@
 				border-top: 2rpx solid #bdc3c7;
 			}
 		}
-
 	}
 </style>

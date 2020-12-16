@@ -1,7 +1,7 @@
 <template>
 	<view class="Box">
 		<view class="video" >
-			<video :src="lists.info.video_url"></video>
+			<video :src="lists.info.video_url" autoplay="true" loop="true" enable-play-gesture="true" object-fit="cover" :poster-for-crawler="lists.info.video_img"></video>
 		</view>
 		<view class="content">
 			<view class="title">{{lists.title}}</view>
@@ -58,9 +58,9 @@
 			//获取数据
 			async getNewsDetail() {
 				const result = await myRequestGet('/api/v1/fatiao/index/detail?id=	' + this.id)
-				console.log(result)
+				// console.log(result)
 				//#ifdef MP-ALIPAY
-				this.htmlNodes = parse(this.newsDetail.content)
+				// this.htmlNodes = parse(this.newsDetail.content)
 				//#endif
 				this.lists = result
 			},
@@ -71,9 +71,12 @@
 <style lang="scss">
 	.Box{
 		.video{
-			background-color: #FFFFFF;
+			width: 100%;
+			height: 400rpx;
+			// background-color: #FFFFFF;
 			video{
 				width: 100%;
+				height: 100%;
 			}
 		}
 		.content{
@@ -95,11 +98,9 @@
 					top: -10rpx;
 					left: 0;
 				}
-			
 				.text_name {
 					margin-left: 70rpx;
 				}
-			
 				.text_time {
 					color: #a4b0be;
 					margin-left: 20rpx;

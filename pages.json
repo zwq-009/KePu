@@ -28,7 +28,6 @@
             }
             
         }
-<<<<<<< HEAD
         ,{
             "path" : "pages/videos-zuj4/videos-zuj4",
             "style" :                                                                                    
@@ -69,8 +68,6 @@
             }
             
         }
-=======
->>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

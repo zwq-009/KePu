@@ -3,7 +3,6 @@
 		<scroll-view scroll-y class="v1">
 			<!-- 请在这个大Box里自行写内容 -->
 			<view>
-<<<<<<< HEAD
 				<view v-for="(item,index) in swipers" :key="item.id">
 					<text>{{item.title}}</text>
 					<view class="vv">
@@ -18,27 +17,15 @@
 								</view>
 							</view>
 						</view>
-=======
-				<view v-for="item in swipers" :key="item.id">
-					<text>{{item.title}}</text>
-					<view class="vv">
-						<image :src="item.info.video_img" mode="widthFix"></image>
-						<view class="v2"><text>{{item.channel.name}}<text class="t1">109 8.15k</text></text></view>
->>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 						<view class="v6">{{item.video_length}}</view>
 					</view>
 				</view>
 			</view>
-<<<<<<< HEAD
 			<view v-for="item in swiperss" :key="item.id" class="v3" @click="goDetail(item)">
-=======
-			<view v-for="item in swiperss" :key="item.id" class="v3">
->>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 				<view class="v4">
 					<image :src="item.info.cover_img" mode="widthFix"></image>
 					<text>{{item.title}}</text>
 					<view class="v5"></view>
-<<<<<<< HEAD
 					<text class="yzz">{{item.channel.name}}</text>
 					<view class="ys"></view>
 					<view class="ttt1">
@@ -109,12 +96,6 @@
 						<uni-icons type="weixin" size="16" color="green"></uni-icons><text class="fx">分享</text>
 					</view>
 				</view>
-=======
-				</view>
-			</view>
-			<view class="">
-			
->>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 			</view>
 		</scroll-view>
 	</view>
@@ -128,7 +109,6 @@
 		data() {
 			return {
 				swipers: {},
-<<<<<<< HEAD
 				swiperss: {},
 				swipersss: {},
 				swiperssss: {},
@@ -136,22 +116,16 @@
 				shjj: {},
 				id: "",
 				//list:""
-=======
-				swiperss:{}
->>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 			};
 		},
 		created() {
 			this.getSwipers();
 			//console.log('组件6加载完毕');
 			this.getSwiperss();
-<<<<<<< HEAD
 			this.getSwipersss();
 			this.getSwiperssss();
 			this.getshj();
 			this.getshjj()
-=======
->>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 		},
 		methods: {
 			async getSwipers() {
@@ -161,7 +135,6 @@
 			},
 			async getSwiperss() {
 				const ress = await myRequestGet('/api/v1/fatiao/article/list?id=1&p=1¬channel=27&order=1&limit=6&channel_id=1')
-<<<<<<< HEAD
 				//console.log(ress)
 				this.swiperss = ress
 				//this.id=ress.data
@@ -192,10 +165,6 @@
 				uni.navigateTo({
 					url: `/pages/z6xq/z6xq?id=${item.id}`
 				})
-=======
-				console.log(ress)
-				this.swiperss = ress
->>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 			}
 		}
 	}
@@ -207,7 +176,6 @@
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 		box-shadow: 0 -1px 3px 4px #f4f4f5;
-<<<<<<< HEAD
 		margin-bottom: 30rpx;
 		.v1 {
 			.vv {
@@ -352,66 +320,6 @@
 				.t1 {
 					margin-left: 260rpx;
 					font-weight: 100;
-=======
-		.v1 {
-		
-			.vv{
-				position: relative;
-				.v6{
-					color: #FFFFFF;
-					border-radius: 5px;
-					position: absolute;
-					right: 36px;
-					bottom: 30px;
-					font-size: 10px;
-					width: 30px;
-					height: 20px;
-					background-color: #333333;
-					//opacity: 0.3;
-					z-index: 1;
-				}
-			}
-			.v3{
-				margin-top: 20px;
-			.v4{
-				width: 100%;
-				.v5{
-					clear: both;
-				}
-				//padding: px;
-				image{
-					width: 250rpx;
-					float: left;
-				}
-				text{
-					//float: right;
-					margin-right: 100rpx;
-					font-weight: 100;
-					
-				}
-			}
-			}
-			display: flex;
-			flex-direction: column;
-			text {
-				font-size: 15px;
-				margin-left: 17px;
-				font-weight: 900;
-			}
-			image {
-				border-radius: 5px;
-				width: 90%;
-				margin-left: 17px;
-				margin-top: 3px;
-			}
-			.v2{
-				text{
-					font-size: 10px;
-					font-weight: 900;
-				}
-				.t1{
-					margin-left:200px;
->>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 				}
 			}
 		}

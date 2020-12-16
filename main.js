@@ -1,9 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-<<<<<<< HEAD
 
-=======
->>>>>>> 7e97e21fdf305d44186a6dce94380a6437a5e76c
 import uniIcons from './components/uni-icons/uni-icons.vue'
 Vue.component('uniIcons',uniIcons)
 

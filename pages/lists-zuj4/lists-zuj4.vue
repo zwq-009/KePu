@@ -76,7 +76,7 @@
 				const result = await myRequestGet('/api/v1/fatiao/article/detail?id=	' + this.id)
 				console.log(result)
 				//#ifdef MP-ALIPAY
-				this.htmlNodes = parse(this.newsDetail.content)
+				// this.htmlNodes = parse(this.newsDetail.content)
 				//#endif
 				this.lists = result
 			},
@@ -131,7 +131,7 @@
 			.introduce {
 				margin-top: 20rpx;
 				font-size: 36rpx;
-				line-height: 2.8rem;
+				line-height: 2em;
 
 				.bottom {
 					margin-top: 50rpx;
