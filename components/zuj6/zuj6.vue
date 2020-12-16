@@ -6,24 +6,16 @@
 				<view v-for="(item,index) in swipers" :key="item.id">
 					<text>{{item.title}}</text>
 					<view class="vv">
-<<<<<<< HEAD
 						<image :src="item.info.video_img" mode="widthFix" @click="goshp(item)"></image>
-=======
-						<image :src="item.info.video_img" mode="widthFix"></image>
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 						<view class="v2">
 							<view class="xz">{{item.channel.name}}
 								<view class="yzsh"></view>
 								<view class="tt1">
 									<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
 									<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-<<<<<<< HEAD
 									<view class="fxgn" @click="open">
 										<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>分享
 									</view>
-=======
-									<uni-icons type="weixin" size="16" color="green"></uni-icons>分享
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 								</view>
 							</view>
 						</view>
@@ -31,10 +23,7 @@
 					</view>
 				</view>
 			</view>
-<<<<<<< HEAD
 			<view class="li"></view>
-=======
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 			<view v-for="item in swiperss" :key="item.id" class="v3" @click="goDetail(item)">
 				<view class="v4">
 					<image :src="item.info.cover_img" mode="widthFix" ></image>
@@ -75,43 +64,16 @@
 					<image :src="item.info.cover_img" mode="widthFix" ></image>
 					<text >{{item.title}}</text>
 					<view class="v5"></view>
-<<<<<<< HEAD
 					<text  class="yzz">{{item.channel.name}}</text>
 					<view  class="ys"></view>
 					<view class="ttt1">
 						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
 						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
 						<uni-icons type="redo" size="16" color="#636e72"></uni-icons><text class="fx" @click.stop="open">分享</text>
-=======
-					<text class="yzz">{{item.channel.name}}</text>
-					<view class="ys"></view>
-					<view class="ttt1">
-						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-						<uni-icons type="weixin" size="16" color="green"></uni-icons><text class="fx">分享</text>
-					</view>
-				</view>
-			</view>
-			<view v-for="item in swipersss" :key="item.id" class="v3">
-				<view class="vv">
-					<text>{{item.title}}</text>
-					<image :src="item.info.video_img" mode="widthFix"></image>
-					<view class="v8">{{item.video_length}}</view>
-					<view class="v2">
-						<view class="xz">{{item.channel.name}}
-						<view class="yzsh"></view>
-							<view class="tt1">
-								<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-								<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-								<uni-icons type="weixin" size="16" color="green"></uni-icons>分享
-							</view>
-						</view>
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 					</view>
 				</view>
 				<view class="li"></view>
 			</view>
-<<<<<<< HEAD
 			<view v-for="item in shj" :key="item.id" class="v3">
 				<view class="vv">
 					<text>{{item.title}}</text>
@@ -126,40 +88,11 @@
 								<view class="fxgn" @click="open">
 									<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>分享
 								</view>
-=======
-			<view v-for="item in swiperssss" :key="item.id" class="v3" @click="goDetail(item)">
-				<view class="v4">
-					<image :src="item.info.cover_img" mode="widthFix"></image>
-					<text>{{item.title}}</text>
-					<view class="v5"></view>
-					<text class="yzz">{{item.channel.name}}</text>
-					<view class="ys"></view>
-					<view class="ttt1">
-						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-						<uni-icons type="weixin" size="16" color="green"></uni-icons><text class="fx">分享</text>
-					</view>
-				</view>
-			</view>
-			<view v-for="item in shj" :key="item.id" class="v3">
-				<view class="vv">
-					<text>{{item.title}}</text>
-					<image :src="item.info.video_img" mode="widthFix"></image>
-					<view class="v9">{{item.video_length}}</view>
-					<view class="v2">
-						<view class="xz">{{item.channel.name}}
-						<view class="yzsh"></view>
-							<view class="tt1">
-								<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-								<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-								<uni-icons type="weixin" size="16" color="green"></uni-icons>分享
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 							</view>
 						</view>
 					</view>
 				</view>
 			</view>
-<<<<<<< HEAD
 			<view class="li"></view>
 			<view v-for="item in shjj" :key="item.id" class="v3" @click="goDetail(item)">
 				<view class="v4">
@@ -175,21 +108,6 @@
 					</view>
 				</view>
 				<view class="li"></view>
-=======
-			<view v-for="item in shjj" :key="item.id" class="v3" @click="goDetail(item)">
-				<view class="v4">
-					<image :src="item.info.cover_img" mode="widthFix"></image>
-					<text class="yz">{{item.title}}</text>
-					<view class="v5"></view>
-					<text class="yzz">{{item.channel.name}}</text>
-					<view class="ys"></view>
-					<view class="ttt1">
-						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
-						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
-						<uni-icons type="weixin" size="16" color="green"></uni-icons><text class="fx">分享</text>
-					</view>
-				</view>
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 			</view>
 		</scroll-view>
 		<view>
@@ -214,10 +132,7 @@
 				shj: {},
 				shjj: {},
 				id: "",
-<<<<<<< HEAD
 				sharedata: ''
-=======
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 				//list:""
 			};
 		},
@@ -235,8 +150,10 @@
 				this.$refs.sharepopup.open();
 			},
 			async getSwipers() {
-				const res = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=1¬channel=27&order=1&limit=1&channel_id=1')
-				//console.log(res)
+				//api/v1/fatiao/index/list?id=1&p=1¬channel=27&order=1&limit=1&channel_id=28
+				//api/v1/fatiao/index/list?id=4&p=1&notchannel=27&order=1&limit=1&channel_id=4'
+				const res = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=1&notchannel=27&order=1&limit=1&channel_id=1')
+				console.log(res)
 				this.swipers = res
 
 			},
@@ -272,14 +189,11 @@
 				uni.navigateTo({
 					url: `/pages/z6xq/z6xq?id=${item.id}`
 				})
-<<<<<<< HEAD
 			},
 			goshp(item) {
 				uni.navigateTo({
 					url: `/pages/z6shp/z6shp?id=${item.id}`
 				})
-=======
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 			}
 		}
 	}
@@ -294,14 +208,11 @@
 		margin-bottom: 30rpx;
 
 		.v1 {
-<<<<<<< HEAD
 			.li {
 				margin: 30rpx auto;
 				border: 1rpx solid #f4f4f4;
 				width: 90%;
 			}
-=======
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 
 			.vv {
 				position: relative;
@@ -311,11 +222,7 @@
 					border-radius: 5px;
 					position: absolute;
 					right: 56rpx;
-<<<<<<< HEAD
 					bottom: 70rpx;
-=======
-					bottom: 60rpx;
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 					font-size: 20rpx;
 					width: 80rpx;
 					height: 30rpx;
@@ -330,11 +237,7 @@
 					border-radius: 10rpx;
 					position: absolute;
 					right: 56rpx;
-<<<<<<< HEAD
 					bottom: 70rpx;
-=======
-					bottom: 60rpx;
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 					font-size: 20rpx;
 					width: 80rpx;
 					height: 30rpx;
@@ -344,39 +247,14 @@
 					line-height: 30rpx;
 				}
 
-<<<<<<< HEAD
-=======
-				// .v7 {
-				// 	color: #FFFFFF;
-				// 	border-radius: 10rpx;
-				// 	position: absolute;
-				// 	right: 60rpx;
-				// 	bottom: 20rpx;
-				// 	font-size: 20rpx;
-				// 	width: 80rpx;
-				// 	height: 30rpx;
-				// 	background-color: #333333;
-				// 	z-index: 1;
-				// 	text-align: center;
-				// 	line-height: 30rpx;
-				// }
-
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 				.v6 {
 					color: #FFFFFF;
 					border-radius: 10rpx;
 					position: absolute;
-<<<<<<< HEAD
 					right: 56rpx;
 					bottom: 70rpx;
 					font-size: 20rpx;
 					width: 80rpx;
-=======
-					right: 68rpx;
-					bottom: 60rpx;
-					font-size: 20rpx;
-					width: 60rpx;
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 					height: 40rpx;
 					background-color: #333333;
 					z-index: 1;
@@ -476,7 +354,6 @@
 						background-color: #007AFF;
 						opacity: 0.5;
 					}
-<<<<<<< HEAD
 				}
 
 				.tt1 {
@@ -492,15 +369,6 @@
 					}
 				}
 
-=======
-				}
-
-				.tt1 {
-					margin-left: 260rpx;
-					margin-top: -40rpx;
-				}
-
->>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
 				.t1 {
 					margin-left: 260rpx;
 					font-weight: 100;

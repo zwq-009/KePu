@@ -172,7 +172,7 @@
 		},
 		methods: {
 			async getSwipers() {
-				const res = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=1¬channel=27&order=1&limit=1&channel_id=28')
+				const res = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=1&notchannel=27&order=1&limit=1&channel_id=28')
 				//console.log(res)
 				this.swipers = res
 			},

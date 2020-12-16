@@ -117,6 +117,7 @@
 			};
 		},
 		created() {
+			console.log(333333333333333333333)
 			this.getSwipers();
 			this.getSwiperss();
 			this.getSwipersss();
@@ -126,11 +127,12 @@
 		},
 		methods: {
 			async getSwipers() {
-				const res = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=1¬channel=27&order=1&limit=1&channel_id=6')
+				const res = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=1&notchannel=27&order=1&limit=1&channel_id=6')
+				console.log(res,33333333333)
 				this.swipers = res
 			},
 			async getSwiperss() {
-				const ress = await myRequestGet('/api/v1/fatiao/article/list?id=1&p=1¬channel=27&order=1&limit=6&channel_id=6')
+				const ress = await myRequestGet('/api/v1/fatiao/article/list?id=1&p=1&notchannel=27&order=1&limit=6&channel_id=6')
 				this.swiperss = ress
 			},
 			async getSwipersss() {

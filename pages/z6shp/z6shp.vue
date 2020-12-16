@@ -12,6 +12,16 @@
 		<view class="v4">
 			{{xqsj.info.video_note}}
 		</view>
+		<view class="li"></view>
+		<view class="fx" @click="open">
+			<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>
+			<text>分享</text>
+		</view>
+		<view>
+			<uni-popup ref="sharepopup" type="bottom">
+				<share-btn :sharedataTemp="sharedata"></share-btn>
+			</uni-popup>
+		</view>
 	</view>
 </template>
 
@@ -24,6 +34,7 @@
 			return {
 				id: "",
 				xqsj: {},
+				sharedata: '',
 			}
 		},
 		onLoad(options) {
@@ -42,6 +53,9 @@
 				//#endif
 				this.xqsj = res
 			},
+			open: function() {
+				this.$refs.sharepopup.open();
+			}
 		}
 	}
 </script>
@@ -49,18 +63,40 @@
 
 <style lang="scss">
 	.v1 {
-		.v4{
+		.li{
+			position: absolute;
+			bottom: 70rpx;
+			left: 20rpx;
+			width: 90%;
+			border: 1px solid #DCDFE6;
+			background-color:#DCDFE6;
+		}
+		.fx {
+			margin-top: 670rpx;
+			margin-left: 560rpx;
+			text {
+				font-size: 40rpx;
+				font-weight: 100;
+				margin-left: 4rpx;
+			}
+		}
+
+		position: relative;
+
+		.v4 {
 			position: absolute;
 			top: 600rpx;
 			left: 20rpx;
-			font-size: 20px;
-			line-height: 2.3rem;
+			font-size: 40rpx;
+			line-height: 70rpx;
 			text-indent: 2em;
 			width: 95%;
 			font-weight: 100;
 		}
+
 		.v3 {
 			position: relative;
+
 			image {
 				width: 70rpx;
 				position: absolute;
@@ -88,7 +124,7 @@
 		// width: 100%;
 		// height: 500px;
 		text {
-			font-size: 25px;
+			font-size: 50rpx;
 			font-weight: 900;
 			margin-left: 30rpx;
 		}

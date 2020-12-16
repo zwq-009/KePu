@@ -2,13 +2,13 @@
 	<view class="Box">
 		<view class="top">
 			<view class="nav">
-				<view class="nav-item "><view class="item" :class="{ active: isActive == 1 }" @click="chenked(1)">家居</view></view>
-				<view class="nav-item "><view class="item" :class="{ active: isActive == 2 }" @click="chenked(2)">科技</view></view>
-				<view class="nav-item "><view class="item" :class="{ active: isActive == 3 }" @click="chenked(3)">美妆</view></view>
-				<view class="nav-item "><view class="item" :class="{ active: isActive == 4 }" @click="chenked(4)">萌宠</view></view>
-				<view class="nav-item "><view class="item" :class="{ active: isActive == 5 }" @click="chenked(5)">游戏</view></view>
-				<view class="nav-item "><view class="item" :class="{ active: isActive == 6 }" @click="chenked(6)">生活</view></view>
-				<view class="nav-item "><view class="item" :class="{ active: isActive == 7 }" @click="chenked(7)">兴趣</view></view>
+				<view class="nav-item "><view class="item" :class="{ active: isActive == 1 }"  @click="checked(1)">家居</view></view>
+				<view class="nav-item "><view class="item" :class="{ active: isActive == 2 }"  @click="checked(2)">科技</view></view>
+				<view class="nav-item "><view class="item" :class="{ active: isActive == 3 }"  @click="checked(3)">美妆</view></view>
+				<view class="nav-item "><view class="item" :class="{ active: isActive == 4 }"  @click="checked(4)">萌宠</view></view>
+				<view class="nav-item "><view class="item" :class="{ active: isActive == 5 }"  @click="checked(5)">游戏</view></view>
+				<view class="nav-item "><view class="item" :class="{ active: isActive == 6 }"  @click="checked(6)">生活</view></view>
+				<view class="nav-item "><view class="item" :class="{ active: isActive == 7 }"  @click="checked(7)">兴趣</view></view>
 			</view>
 		</view>
 		<!-- nav-item -->
@@ -36,8 +36,9 @@ export default {
 		return { isActive: 1 };
 	},
 	methods: {
-		chenked(type) {
-			this.isActive = type;
+		checked(t){
+			//console.log(t,"000000000000000000000")
+			this.isActive = t;
 		}
 	},
 	components: {
