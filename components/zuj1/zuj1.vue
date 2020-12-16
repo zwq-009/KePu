@@ -1,23 +1,14 @@
 <template>
 	<view class="Box">
-		<!-- 第一部分  瞎 -->
-		<view class="quanju">
-			<view class="jiaju">
-				<view class="fnx" v-for="item in swipers" :key="item.id" @click="goDetail(item)">
-					<text>{{item.title}}</text>
-					<view class="card">
-						<image class="i1" :src="item.info.video_img" mode="widthFix"></image>
-						<button class="time">{{item.video_length}}</button>
-					</view>
-				</view>
+		<!-- 第一部分 丰年虾 -->
+		<view class="first" v-for="item in swipers" :key="item.id" @click="goDetail(item)">
+			<text>{{item.title}}</text>
+			<view class="location">
+				<image :src="item.info.video_img" mode="widthFix"></image>
+				<button class="time">{{item.video_length}}</button>
 			</view>
-		</view>
-		<!-- 第二部分  兔纸-->
-		<view class="zoon">
-			<view class="town" v-for="item in swipers" :key="item.id" @click="goDetail(item)">
-				<view class="left">
-					<span class="xzhen">{{item.channel.name}}</span>
-				</view>
+			<view class="rail">
+				<view class="left">{{item.channel.name}}</view>
 				<!-- <view class="share" @click="open">
 						<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>
 						<text>分享</text>
@@ -28,49 +19,80 @@
 					<span class="t-icon t-icon-shipin"></span>
 					<text>{{item.play_num}}</text>
 					<span class="t-icon t-icon-weixin"></span>
-					<text style="color: #000;" @click="open">分享</text>
+					<text style="color: #000;">分享</text>
 				</view>
 			</view>
-			<view class="yang" v-for="item in swiperss" :key="item.id" @click="goZoon(item)">
-				<view class="tu">
-					<image :src="item.info.cover_img"></image>
-				</view>
-				<view class="tuzhi">
-					<view class="zen">{{item.title}}</view>
-					<view class="kongbai"></view>
-					<view class="sky">
-						<view class="me">{{item.channel.name}}</view>
-						<view class="you">
-							<span class="t-icon t-icon-zan"></span>
-							<text>{{item.praise_num}}</text>
-							<span class="t-icon t-icon-shipin"></span>
-							<text>{{item.play_num}}</text>
-							<span class="t-icon t-icon-weixin"></span>
-							<text style="color: #000;">分享</text>
-						</view>
+		</view>
+		<!-- 第二部分 兔纸 -->
+		<view class="second" v-for="item in rabbits" :key="item.id" @click="goZoon(item)">
+			<view class="cover">
+				<image :src="item.info.cover_img" mode="widthFix"></image>
+			</view>
+			<view class="list">
+				<view class="item">{{item.title}}</view>
+				<view class="item"></view>
+				<view class="item rail">
+					<view class="left">{{item.channel.name}}</view>
+					<view class="right">
+						<span class="t-icon t-icon-zan"></span>
+						<text>{{item.praise_num}}</text>
+						<span class="t-icon t-icon-shipin"></span>
+						<text>{{item.play_num}}</text>
+						<span class="t-icon t-icon-weixin"></span>
+						<text style="color: #000;">分享</text>
 					</view>
 				</view>
 			</view>
 		</view>
-
 		<!-- 第三部分 画眉 -->
-		<view class="quanju">
-			<view class="jiaju">
-				<view class="fnx" v-for="item in number" :key="item.id">
-					<text>{{item.title}}</text>
-					<view class="card">
-						<image class="i1" :src="item.info.video_img" mode="widthFix"></image>
-						<button class="time">{{item.video_length}}</button>
-					</view>
+		<view class="first" v-for="item in thrushs" :key="item.id">
+			<text>{{item.title}}</text>
+			<view class="location">
+				<image :src="item.info.video_img" mode="widthFix"></image>
+				<button class="time">{{item.video_length}}</button>
+			</view>
+			<view class="rail">
+				<view class="left">{{item.channel.name}}</view>
+				<view class="right">
+					<span class="t-icon t-icon-zan"></span>
+					<text>{{item.praise_num}}</text>
+					<span class="t-icon t-icon-shipin"></span>
+					<text>{{item.play_num}}</text>
+					<span class="t-icon t-icon-weixin"></span>
+					<text style="color: #000;">分享</text>
 				</view>
 			</view>
 		</view>
 		<!-- 第四部分 姬月季 -->
-		<view class="zoon">
-			<view class="town" v-for="item in number" :key="item.id">
-				<view class="left">
-					<span class="xzhen">{{item.channel.name}}</span>
+		<view class="second" v-for="item in roses" :key="item.id">
+			<view class="cover">
+				<image :src="item.info.cover_img" mode="widthFix"></image>
+			</view>
+			<view class="list">
+				<view class="item">{{item.title}}</view>
+				<view class="item"></view>
+				<view class="item rail">
+					<view class="left">{{item.channel.name}}</view>
+					<view class="right">
+						<span class="t-icon t-icon-zan"></span>
+						<text>{{item.praise_num}}</text>
+						<span class="t-icon t-icon-shipin"></span>
+						<text>{{item.play_num}}</text>
+						<span class="t-icon t-icon-weixin"></span>
+						<text style="color: #000;">分享</text>
+					</view>
 				</view>
+			</view>
+		</view>
+		<!-- 第五部分 小仓鼠 -->
+		<view class="first" v-for="item in  hamsters" :key="item.id">
+			<text>{{item.title}}</text>
+			<view class="location">
+				<image :src="item.info.video_img" mode="widthFix"></image>
+				<button class="time">{{item.video_length}}</button>
+			</view>
+			<view class="rail">
+				<view class="left">{{item.channel.name}}</view>
 				<view class="right">
 					<span class="t-icon t-icon-zan"></span>
 					<text>{{item.praise_num}}</text>
@@ -80,79 +102,29 @@
 					<text style="color: #000;">分享</text>
 				</view>
 			</view>
-			<view class="yang" v-for="item in numbers" :key="item.id">
-				<view class="tu">
-					<image :src="item.info.cover_img" mode=""></image>
-				</view>
-				<view class="tuzhi">
-					<view class="zen">{{item.title}}</view>
-					<view class="kongbai"></view>
-					<view class="sky">
-						<view class="me">{{item.channel.name}}</view>
-						<view class="you">
-							<span class="t-icon t-icon-zan"></span>
-							<text>{{item.praise_num}}</text>
-							<span class="t-icon t-icon-shipin"></span>
-							<text>{{item.play_num}}</text>
-							<span class="t-icon t-icon-weixin"></span>
-							<text style="color: #000;">分享</text>
-						</view>
-					</view>
-				</view>
-			</view>
 		</view>
-		<!-- 第五部分 小仓鼠-->
-		<view class="quanju">
-			<view class="jiaju">
-				<view class="fnx" v-for="item in log" :key="item.id">
-					<text>{{item.title}}</text>
-					<view class="card">
-						<image class="i1" :src="item.info.video_img" mode="widthFix"></image>
-						<button class="time">{{item.video_length}}</button>
-					</view>
-				</view>
+		<!-- 第六部分 鸡心果 -->
+		<view class="second" v-for="item in fruits" :key="item.id">
+			<view class="cover">
+				<image :src="item.info.cover_img" mode="widthFix"></image>
 			</view>
-		</view>
-		<!-- 第六部分 鸡心果-->
-		<view class="zoon">
-			<view class="town" v-for="item in log" :key="item.id">
-				<view class="left">
-					<span class="xzhen">{{item.channel.name}}</span>
-				</view>
-				<view class="right">
-					<span class="t-icon t-icon-zan"></span>
-					<text>{{item.praise_num}}</text>
-					<span class="t-icon t-icon-shipin"></span>
-					<text>{{item.play_num}}</text>
-					<span class="t-icon t-icon-weixin"></span>
-					<text style="color: #000;">分享</text>
-				</view>
-			</view>
-			<view class="yang" v-for="item in logs" :key="item.id">
-				<view class="tu">
-					<image :src="item.info.cover_img" mode=""></image>
-				</view>
-				<view class="tuzhi">
-					<view class="zen">{{item.title}}</view>
-					<view class="kongbai"></view>
-					<view class="sky">
-						<view class="me">{{item.channel.name}}</view>
-						<view class="you">
-							<span class="t-icon t-icon-zan"></span>
-							<text>{{item.praise_num}}</text>
-							<span class="t-icon t-icon-shipin"></span>
-							<text>{{item.play_num}}</text>
-							<span class="t-icon t-icon-weixin"></span>
-							<text style="color: #000;">分享</text>
-						</view>
+			<view class="list">
+				<view class="item">{{item.title}}</view>
+				<view class="item"></view>
+				<view class="item rail">
+					<view class="left">{{item.channel.name}}</view>
+					<view class="right">
+						<span class="t-icon t-icon-zan"></span>
+						<text>{{item.praise_num}}</text>
+						<span class="t-icon t-icon-shipin"></span>
+						<text>{{item.play_num}}</text>
+						<span class="t-icon t-icon-weixin"></span>
+						<text style="color: #000;">分享</text>
 					</view>
 				</view>
 			</view>
 		</view>
 	</view>
-
-	</view>
-
 </template>
 <script>
 	import {
@@ -162,68 +134,62 @@
 		data() {
 			return {
 				swipers: {},
-				swiperss: {},
-				number: {},
-				numbers: {},
-				log: {},
-				logs: {},
-				sharedata: '',
+				rabbits: {},
+				thrushs: {},
+				roses: {},
+				hamsters: {},
+				fruits: {}
 			};
 		},
 		created() {
 			this.getSwipers();
-			this.getSwiperss();
-			this.getNumber();
-			this.getNumbers();
-			this.getLog();
-			this.getLogs()
+			this.getRabbits();
+			this.getThrushs();
+			this.getRoses();
+			this.getHamsters();
+			this.getFruits();
 		},
 		methods: {
 			goDetail(item) {
 				uni.navigateTo({
-					url: `/pages/detal-01/detal-01?id=${item.id}`
+					url: `/pages/goodDetailOne/goodDetailOne?id=${item.id}`
 				})
 			},
 			goZoon(item) {
 				uni.navigateTo({
-					url: `/pages/zx-01/zx-01?id=${item.id}`
+					url: `/pages/Jump/Jump?id=${item.id}`
 				})
 			},
-			open: function() {
-						this.$refs.sharepopup.open();
-					},
+
 			async getSwipers() {
 				const res = await myRequestGet('/api/v1/fatiao/index/list?id=1&p=1¬channel=27&order=1&limit=1&channel_id=28')
 				//console.log(res)
 				this.swipers = res
 			},
-			async getSwiperss() {
-				const ress = await myRequestGet(
-					'/api/v1/fatiao/article/list?id=28&p=1&notchannel=27&order=1&limit=6&channel_id=28')
-				//console.log(ress)
-				this.swiperss = ress
-			},
-			async getNumber() {
-				const reg = await myRequestGet('/api/v1/fatiao/index/list?id=28&p=2&notchannel=27&order=1&limit=1&channel_id=28')
+			async getRabbits() {
+				const reg = await myRequestGet('/api/v1/fatiao/article/list?id=28&p=1&notchannel=27&order=1&limit=6&channel_id=28')
 				//console.log(reg)
-				this.number = reg
+				this.rabbits = reg
 			},
-			async getNumbers() {
-				const regs = await myRequestGet(
-					'/api/v1/fatiao/article/list?id=28&p=2&notchannel=27&order=1&limit=6&channel_id=28')
-				//console.log(regs)
-				this.numbers = regs
+			async getThrushs() {
+				const ref = await myRequestGet('/api/v1/fatiao/index/list?id=28&p=2&notchannel=27&order=1&limit=1&channel_id=28')
+				//console.log(ref)
+				this.thrushs = ref
 			},
-			async getLog() {
-				const roe = await myRequestGet('/api/v1/fatiao/index/list?id=28&p=3&notchannel=27&order=1&limit=1&channel_id=28')
-				//console.log(roe)
-				this.log = roe
+			async getRoses() {
+				const red = await myRequestGet('/api/v1/fatiao/article/list?id=28&p=2&notchannel=27&order=1&limit=6&channel_id=28')
+				//console.log(red)
+				this.roses = red
 			},
-			async getLogs() {
-				const roes = await myRequestGet(
-					'/api/v1/fatiao/article/list?id=28&p=3&notchannel=27&order=1&limit=6&channel_id=28')
-				//console.log(roes)
-				this.logs = roes
+			async getHamsters() {
+				const rec = await myRequestGet('/api/v1/fatiao/index/list?id=28&p=3&notchannel=27&order=1&limit=1&channel_id=28')
+				//console.log(rec)
+				this.hamsters = rec
+			},
+			async getFruits() {
+				const reb = await myRequestGet('/api/v1/fatiao/article/list?id=28&p=3&notchannel=27&order=1&limit=6&channel_id=28')
+				//console.log(reb)
+				this.fruits = reb
 			}
 		}
 	}
@@ -234,152 +200,113 @@
 		margin: 0;
 		padding: 0;
 	}
-
 	.Box {
 		margin-top: 10px;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 		box-shadow: 0 -1px 3px 4px #f4f4f5;
-
-		.quanju {
-			.jiaju {
-				display: flex;
-				width: 95%;
-				margin: 0 auto;
-
-				.fnx {
-					flex: 1;
-
+		.first {
+			width: 95%;
+			margin: 0 auto;
+			text {
+				display: block;
+				margin: 10px 0;
+				font-size: 16px;
+				color: #000;
+			}
+			.location {
+				position: relative;
+				image {
+					width: 100%;
+					border-radius: 5px;
+				}
+				.time {
+					position: absolute;
+					bottom: 11px;
+					right: 5px;
+					width: 52px;
+					height: 20px;
+					background-color: #7E7878;
+					border-radius: 40px;
+					text-align: center;
+					line-height: 20px;
+					font-size: 10px;
+					color: #fff;
+				}
+			}
+			.rail {
+				height: 40px;
+				border-bottom: 1px solid #000;
+				.left {
+					float: left;
+					font-size: 12px;
+					font-weight: 800;
+					width: 96rpx;
+					height: 40rpx;
+					line-height: 66rpx;
+					border-bottom:8px solid #74B9FF;
+				}
+				.right {
+					float: right;
+					width: 280rpx;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
 					text {
-						display: block;
-						margin: 12px 0px;
+						font-size: 12px;
+						color: #bbb;
 					}
-
-					.card {
-						position: relative;
-
-						.i1 {
-							width: 100%;
-							border-radius: 5px;
-						}
-
-						.time {
-							position: absolute;
-							bottom: 11px;
-							right: 5px;
-							width: 52px;
-							height: 20px;
-							background-color: #7E7878;
-							border-radius: 40px;
-							text-align: center;
-							line-height: 20px;
-							font-size: 10px;
-							color: #fff;
-						}
-					}
-
 				}
 			}
 		}
-
-
-		// 第二部分  动植小镇
-		.zoon {
+		.second {
+			margin: 10px auto;
 			width: 95%;
-			padding: 10px;
-
-			.town {
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				height: 25px;
-				border-bottom: 1px solid #000;
-
-				.left {
-					.xzhen {
-						font-size: 12px;
-						height: 12px;
-						line-height: 25px;
-						border-bottom: 5px solid #97B7FF;
-					}
-				}
-
-				.right {
-					display: flex;
-					width: 300rpx;
-					justify-content: space-between;
-					align-items: center;
-
-					span {
-						font-size: 12px;
-						color: #bbb;
-					}
-
-					text {
-						font-size: 12px;
-						color: #bbb;
-					}
+			height: 80px;
+			border-bottom: 1px solid #000;
+			.cover {
+				width: 33%;
+				float: left;
+				image {
+					width: 100%;
+					border-radius: 5px;
 				}
 			}
-
-			.yang {
-				display: flex;
-				margin-top: 12px;
-				border-bottom: 1px solid #000;
-
-				.tu {
-					image {
-						width: 250rpx;
-						height: 150rpx;
-						border-radius: 5px;
-					}
+			.list {
+				width: 65%;
+				float: right;
+				.item {
+					display: flex;
+					flex: 1;
+					height: 20px;
 				}
-
-				.tuzhi {
-					.zen {
-						margin-left: 10px;
-						font-size: 16px;
+				.rail {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					.left{
+						width: 96rpx;
+						font-size: 12px;
+						font-weight: 800;
+						height: 34rpx;
+						line-height: 50rpx;
+						border-bottom:8px solid #74B9FF;
 					}
-
-					.kongbai {
-						height: 40rpx;
-					}
-
-					.sky {
+					.right{
 						display: flex;
 						justify-content: space-between;
 						align-items: center;
-						width: 445rpx;
-						margin-left: 10px;
-
-						.me {
+						width: 280rpx;
+						text{
 							font-size: 12px;
-							line-height: 25px;
-							border-bottom: 5px solid #97B7FF;
-						}
-
-						.you {
-							display: flex;
-							width: 300rpx;
-							justify-content: space-between;
-
-							span {
-								font-size: 12px;
-								color: #bbb;
-							}
-
-							text {
-								font-size: 12px;
-								color: #bbb;
-							}
+							color: #bbb;
 						}
 					}
 				}
 			}
 		}
-
 	}
 </style>
-<uni-popup ref="sharepopup" type="bottom">
+<!-- <uni-popup ref="sharepopup" type="bottom">
 	<share-btn :sharedataTemp="sharedata"></share-btn>
-</uni-popup>
+</uni-popup> -->
