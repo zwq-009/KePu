@@ -2,7 +2,7 @@
 	<view class="Box">
 		<!-- 请在这个大Box里自行写内容 -->
 		<!-- 第一段苹果MAC -->
-		<view class="a" v-for="item in swipers" :key="item.id" @click="getA()">
+		<view class="a" v-for="item in swipers" :key="item.id" @click="getB(item)">
 			<view class="aa">{{item.title}}</view>
 			<image :src="item.info.video_img" mode="widthFix"></image>
 			<view class="aaa">{{item.channel.name}}</view>
@@ -11,13 +11,17 @@
 			<view class="aaa2">
 				<uni-icons type="hand-thumbsup" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.praise_num}}
 				<uni-icons type="eye-filled" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.play_num}}
-				<uni-icons type="weixin" size="14" color="#0abc64" class="aa2"></uni-icons>
-				<text class="fx">分享</text> 
+				<!-- <uni-icons type="weixin" size="14" color="#0abc64" class="aa2"></uni-icons> -->
+			</view>
+			<!-- 分享弹窗 -->
+			<view class="share" @click.stop="open">
+				<uni-icons type="weixin" size="14" color="#0abc64"></uni-icons>
+				<text @click="shareOn">分享</text>
 			</view>
 		</view>
 		<view class="c"></view>
 		<!-- 第一段图文 -->
-		<view class="b" v-for="item in pinguos" :key="item.id">
+		<view class="b" v-for="item in pinguos" :key="item.id" @click="getA(item)">
 			<!-- <view class="bb">{{item.channel.name}}</view> -->
 			<image :src="item.info.cover_img" mode="widthFix"></image>
 			<text>{{item.title}}</text>
@@ -26,14 +30,17 @@
 				<text class="bb">{{item.channel.name}}</text>
 				<uni-icons type="hand-thumbsup" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.praise_num}}
 				<uni-icons type="eye-filled" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.play_num}}
-				<uni-icons type="weixin" size="14" color="#0abc64" class="aa2"></uni-icons>分享
-				<!-- <text class="fx">分享</text> -->
+			</view>
+			<!-- 分享弹窗 -->
+			<view class="share" @click.stop="open">
+				<uni-icons type="weixin" size="14" color="#0abc64"></uni-icons>
+				<text @click="shareOn">分享</text>
 			</view>
 			<view class="b1"></view>
 			<view class="c"></view>
 		</view>
 		<!-- 第二段重装MAC -->
-		<view class="a" v-for="item in chongs" :key="item.id">
+		<view class="a" v-for="item in chongs" :key="item.id" @click="getB(item)">
 			<view class="aa">{{item.title}}</view>
 			<image :src="item.info.video_img" mode="widthFix"></image>
 			<view class="aaa">{{item.channel.name}}</view>
@@ -42,13 +49,16 @@
 			<view class="aaa2">
 				<uni-icons type="hand-thumbsup" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.praise_num}}
 				<uni-icons type="eye-filled" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.play_num}}
-				<uni-icons type="weixin" size="14" color="#0abc64" class="aa2"></uni-icons> 
-				<text class="fx">分享</text> 
+			</view>
+			<!-- 分享弹窗 -->
+			<view class="share" @click.stop="open">
+				<uni-icons type="weixin" size="14" color="#0abc64"></uni-icons>
+				<text @click="shareOn">分享</text>
 			</view>
 		</view>
 		<view class="c"></view>
 		<!-- 第二段图文 -->
-		<view class="b" v-for="item in bijis" :key="item.id">
+		<view class="b" v-for="item in bijis" :key="item.id" @click="getA(item)">
 			<image :src="item.info.cover_img" mode="widthFix"></image>
 			<text>{{item.title}}</text>
 			<view class="b2">
@@ -56,14 +66,17 @@
 				<text class="bb">{{item.channel.name}}</text>
 				<uni-icons type="hand-thumbsup" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.praise_num}}
 				<uni-icons type="eye-filled" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.play_num}}
-				<uni-icons type="weixin" size="14" color="#0abc64" class="aa2"></uni-icons>分享 
-				<!-- <text class="fx">分享</text> -->
+			</view>
+			<!-- 分享弹窗 -->
+			<view class="share" @click.stop="open">
+				<uni-icons type="weixin" size="14" color="#0abc64"></uni-icons>
+				<text @click="shareOn">分享</text>
 			</view>
 			<view class="b1"></view>
 			<view class="c"></view>
 		</view>
 		<!-- 第三段 -->
-		<view class="a" v-for="item in dians" :key="item.id">
+		<view class="a" v-for="item in dians" :key="item.id" @click="getB(item)">
 			<view class="aa">{{item.title}}</view>
 			<image :src="item.info.video_img" mode="widthFix"></image>
 			<view class="aaa">{{item.channel.name}}</view>
@@ -72,13 +85,16 @@
 			<view class="aaa2">
 				<uni-icons type="hand-thumbsup" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.praise_num}}
 				<uni-icons type="eye-filled" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.play_num}}
-				<uni-icons type="weixin" size="14" color="#0abc64" class="aa2"></uni-icons>
-				<text class="fx">分享</text> 
+			</view>
+			<!-- 分享弹窗 -->
+			<view class="share" @click.stop="open">
+				<uni-icons type="weixin" size="14" color="#0abc64"></uni-icons>
+				<text @click="shareOn">分享</text>
 			</view>
 		</view>
 		<view class="c"></view>
 		<!-- 第三段图文 -->
-		<view class="b" v-for="item in mees" :key="item.id">
+		<view class="b" v-for="item in mees" :key="item.id" @click="getA(item)">
 			<image :src="item.info.cover_img" mode="widthFix"></image>
 			<text>{{item.title}}</text>
 			<view class="b2">
@@ -86,11 +102,19 @@
 				<text class="bb">{{item.channel.name}}</text>
 				<uni-icons type="hand-thumbsup" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.praise_num}}
 				<uni-icons type="eye-filled" size="14" color="#a4b0be" class="aa2"></uni-icons>{{item.play_num}}
-				<uni-icons type="weixin" size="14" color="#0abc64" class="aa2"></uni-icons>分享
-				<!-- <text class="fx">分享</text> -->
+			</view>
+			<!-- 分享弹窗 -->
+			<view class="share" @click.stop="open">
+				<uni-icons type="weixin" size="14" color="#0abc64"></uni-icons>
+				<text @click="shareOn">分享</text>
 			</view>
 			<view class="b1"></view>
 			<view class="c"></view>
+		</view>
+		<view>
+			<uni-popup ref="sharepopup" type="bottom">
+				<share-btn :sharedataTemp="sharedata"></share-btn>
+			</uni-popup>
 		</view>
 	</view>
 </template>
@@ -99,16 +123,25 @@
 	import {
 		myRequestGet
 	} from '@/utils/request.js';
+	//引入插件
+	import uniPopup from '../uni-popup/uni-popup.vue';
+	import shareBtn from '../share-btn/share-btn.vue';
 	export default {
 		data() {
 			return {
 				swipers: {},
 				pinguos: {},
-				chongs:{},
-				bijis:{},
-				dians:{},
-				mees:{}
+				chongs: {},
+				bijis: {},
+				dians: {},
+				mees: {},
+				id: "",
+				sharedata: ''
 			};
+		},
+		components: {
+			uniPopup,
+			shareBtn
 		},
 		created() {
 			this.getSwipers();
@@ -119,10 +152,17 @@
 			this.getMees();
 		},
 		methods: {
+			shareOn() {
+				this.$refs.sharepopup.open();
+			},
+			// 分享弹窗的方法
+			// open: function() {
+			// 	this.$refs.sharepopup.open();
+			// },
 			async getSwipers() {
 				const res = await myRequestGet('/api/v1/fatiao/index/list?id=4&p=1&notchannel=27&order=1&limit=1&channel_id=4')
 				this.swipers = res
-				
+
 			},
 			async getPinguos() {
 				const res1 = await myRequestGet(
@@ -149,9 +189,14 @@
 					'/api/v1/fatiao/article/list?id=4&p=3&notchannel=27&order=1&limit=6&channel_id=4')
 				this.mees = res5
 			},
-			getA(){
+			getA(item) {
 				uni.navigateTo({
-					url: '../../pages/a/a?id='+78
+					url: `/pages/a/a?id=${item.id}`
+				});
+			},
+			getB(item) {
+				uni.navigateTo({
+					url: `/pages/b/b?id=${item.id}`
 				});
 			}
 		}
@@ -169,7 +214,24 @@
 
 		.a {
 			position: relative;
-			.aaaa{			//标题下划线样式
+
+			.share {
+				position: absolute;
+				margin-left: 250rpx;
+				right: 0;
+				bottom: -3rpx;
+
+				text {
+					position: relative;
+					right: 20rpx;
+					font-size: 28rpx;
+					color: #6e727b;
+					font-weight: 600;
+				}
+			}
+
+			.aaaa {
+				//标题下划线样式
 				position: absolute;
 				left: 0;
 				bottom: -4rpx;
@@ -178,6 +240,7 @@
 				background-color: #007AFF;
 				opacity: 0.5;
 			}
+
 			image {
 				// margin-left: 20px;
 				width: 710rpx;
@@ -205,23 +268,27 @@
 				text-align: center;
 				line-height: 30rpx;
 			}
-			.aaa2{
+
+			.aaa2 {
 				position: absolute;
-				right: 30rpx;
+				right: 126rpx;
 				bottom: 0;
 				font-size: 26rpx;
 				//color: #74b9ff;
 				color: #c7c7c7;
 				margin-left: 20rpx;
+
 				// padding: 10px;
-				.fx{
+				.fx {
 					font-weight: 800;
 					color: #656a73;
 				}
-				.aa2{
+
+				.aa2 {
 					margin-left: 20rpx;
 				}
 			}
+
 			.aaa {
 				font-size: 26rpx;
 				font-weight: 800;
@@ -229,10 +296,28 @@
 				width: 136rpx;
 			}
 		}
-
+		// 图文段的样式
 		.b {
-			position:relative;
-			.aaaa{
+			position: relative;
+
+			.share {
+				position: absolute;
+				margin-left: 250rpx;
+				right: 0;
+				top: 118rpx;
+				bottom: -3rpx;
+			
+				text {
+					position: relative;
+					right: 20rpx;
+					font-size: 28rpx;
+					color: #6e727b;
+					font-weight: 600;
+					margin-left: -1rpx;
+				}
+			}
+
+			.aaaa {
 				position: absolute;
 				left: 20rpx;
 				bottom: -4rpx;
@@ -241,21 +326,25 @@
 				background-color: #007AFF;
 				opacity: 0.5;
 			}
-			.b2{
+
+			.b2 {
 				font-size: 26rpx;
 				color: #c7c7c7;
-				position:absolute;
+				position: absolute;
 				bottom: 20rpx;
-				right: 20rpx;
-				.aa2{
+				right: 120rpx;
+
+				.aa2 {
 					right: -40rpx;
 				}
-				.fx{
+
+				.fx {
 					font-weight: 900;
 					color: #656a73;
 					font-size: 26rpx;
 				}
-				.bb{
+
+				.bb {
 					font-size: 26rpx;
 					font-weight: 800;
 					// border-bottom: 10rpx solid #74b9ff;
@@ -263,6 +352,7 @@
 					left: 0;
 				}
 			}
+
 			.b1 {
 				clear: both;
 			}
@@ -275,7 +365,7 @@
 			}
 
 			text {
-				margin-top: 20rpx;
+				margin-top: 26rpx;
 				margin-left: 20rpx;
 				font-size: 34rpx;
 				color: #3b3b3b;

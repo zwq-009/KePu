@@ -1,7 +1,7 @@
 <template>
 	<view class="k">
 		<!-- 视频 -->
-		<video :src="dvd.info.video_url" controls></video>
+		<video :src="dvd.info.video_url" controls autoplay="true"></video>
 		<view class="a">
 			<view class="b">{{dvd.title}}</view>
 			<view class="c">
@@ -17,6 +17,16 @@
 			<view class="h">
 				<uni-icons type="hand-thumbsup" size="14" color="#a4b0be" class="aa2"></uni-icons>{{dvd.praise_num}}
 			</view>
+			<!-- 分享弹窗 -->
+			<view class="share" @click.stop="open">
+				<uni-icons type="icon-weixin1" size="14" color="#0abc64"></uni-icons>
+				<text @click="shareOn">分享</text>
+			</view>
+		</view>
+		<view>
+			<uni-popup ref="sharepopup" type="bottom">
+				<share-btn :sharedataTemp="sharedata"></share-btn>
+			</uni-popup>
 		</view>
 	</view>
 </template>
@@ -25,11 +35,15 @@
 	import {
 		myRequestGet
 	} from '@/utils/request.js';
+	//引入插件
+	import uniPopup from '../../components/uni-popup/uni-popup.vue'
+	import shareBtn from '../../components/share-btn/share-btn.vue';
 	export default {
 		data() {
 			return {
 				id: '',
-				dvd: []
+				dvd: [],
+				sharedata:''
 			}
 		},
 		onLoad(options) {
@@ -45,6 +59,13 @@
 				//#endif
 				this.dvd = res
 			},
+			shareOn() {
+				this.$refs.sharepopup.open();
+			},
+		},
+		components: {
+			uniPopup,
+			shareBtn
 		},
 	}
 </script>
@@ -104,6 +125,14 @@
 				font-size: 16rpx;
 				color: #777777;
 				left: 20rpx;
+			}
+			.share{
+				position: absolute;
+				right: 20rpx;
+				bottom: -130rpx;
+				font-size: 26rpx;
+				color: #777777;
+				font-weight: 700;
 			}
 		}
 	}

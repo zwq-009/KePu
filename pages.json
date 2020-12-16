@@ -35,6 +35,13 @@
 				"enablePullDownRefresh": false
 			}
         }
+		,{
+		    "path" : "pages/b/b",
+		    "style" : {
+				"navigationBarTitleText": "发条·详情",
+				"enablePullDownRefresh": false
+			}
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
