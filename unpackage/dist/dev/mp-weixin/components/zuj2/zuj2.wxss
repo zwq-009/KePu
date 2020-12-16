@@ -25,9 +25,119 @@
 /* 透明度 */
 /* 文章场景相关 */
 .Box {
-  margin-top: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  box-shadow: 0 -1px 3px 4px #f4f4f5;
+  margin-top: 20rpx;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  box-shadow: 0 -2rpx 6rpx 8rpx #f4f4f5;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.Box .a {
+    position: relative;
+}
+.Box .a .aaaa {
+      position: absolute;
+      left: 0;
+      bottom: -4rpx;
+      height: 18rpx;
+      width: 127rpx;
+      background-color: #007AFF;
+      opacity: 0.5;
+}
+.Box .a image {
+      width: 710rpx;
+}
+.Box .a .aa {
+      margin-left: 10rpx;
+      padding-top: 30rpx;
+      font-size: 40rpx;
+}
+.Box .a .a1 {
+      position: absolute;
+      width: 90rpx;
+      height: 30rpx;
+      bottom: 60rpx;
+      right: 40rpx;
+      font-size: 22rpx;
+      background-color: #807e7f;
+      border-top-left-radius: 20rpx;
+      border-top-right-radius: 20rpx;
+      border-bottom-left-radius: 20rpx;
+      border-bottom-right-radius: 20rpx;
+      color: white;
+      text-align: center;
+      line-height: 30rpx;
+}
+.Box .a .aaa2 {
+      position: absolute;
+      right: 30rpx;
+      bottom: 0;
+      font-size: 26rpx;
+      color: #c7c7c7;
+      margin-left: 20rpx;
+}
+.Box .a .aaa2 .fx {
+        font-weight: 800;
+        color: #656a73;
+}
+.Box .a .aaa2 .aa2 {
+        margin-left: 20rpx;
+}
+.Box .a .aaa {
+      font-size: 26rpx;
+      font-weight: 800;
+      width: 136rpx;
+}
+.Box .b {
+    position: relative;
+}
+.Box .b .aaaa {
+      position: absolute;
+      left: 20rpx;
+      bottom: -4rpx;
+      height: 18rpx;
+      width: 127rpx;
+      background-color: #007AFF;
+      opacity: 0.5;
+}
+.Box .b .b2 {
+      font-size: 26rpx;
+      color: #c7c7c7;
+      position: absolute;
+      bottom: 20rpx;
+      right: 20rpx;
+}
+.Box .b .b2 .aa2 {
+        right: -40rpx;
+}
+.Box .b .b2 .fx {
+        font-weight: 900;
+        color: #656a73;
+        font-size: 26rpx;
+}
+.Box .b .b2 .bb {
+        font-size: 26rpx;
+        font-weight: 800;
+        width: 136rpx;
+        left: 0;
+}
+.Box .b .b1 {
+      clear: both;
+}
+.Box .b image {
+      margin-top: 20rpx;
+      width: 250rpx;
+      border-radius: 5%;
+      float: left;
+}
+.Box .b text {
+      margin-top: 20rpx;
+      margin-left: 20rpx;
+      font-size: 34rpx;
+      color: #3b3b3b;
+}
+.Box .c {
+    margin-top: 20rpx;
+    border: 1rpx solid #f4f4f4;
 }
 

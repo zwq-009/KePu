@@ -31,7 +31,11 @@
         ,{
             "path" : "pages/detail03/detail03",
             "style" : {}
-        }
+        },
+		{
+		    "path" : "pages/detailsp03/detailsp03",
+		    "style" : {}
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

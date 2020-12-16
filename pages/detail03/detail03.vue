@@ -1,15 +1,26 @@
 <template>
 	<view>
-		<view class="ft1">{{xq.title}}</view>
-		<view class="box1">
-			<image :src="xq.channel.channel_img" mode="widthFix"></image>
-			<text class="t1">{{xq.channel.name}}</text>
+		<view class="v1">{{xqsj.title}}</view>
+		<view class="v2">
+			<image :src="xqsj.channel.channel_img" mode="widthFix"></image>
+			<text class="t1">{{xqsj.channel.name}}</text>
+			<text class="t2">2018-12-05</text>
 		</view>
-		<!-- #infed H5 -->
-		<view class="wb">
+		<view class="c1">
+			<!-- #ifdef H5 -->
 			<rich-text :nodes="content"></rich-text>
+			<!-- #endif -->
+			<!-- #ifdef MP-WEIXIN -->
+			<rich-text :nodes="content"></rich-text>
+			<!-- #endif -->
+			<!-- #ifdef MP-ALIPAY -->
+			<rich-text :nodes="htmlNodes"></rich-text>
+			<!-- #endif -->
 		</view>
+		<view class="dx"></view>
+		<view></view>
 	</view>
+
 </template>
 
 <script>
@@ -24,31 +35,29 @@
 		data() {
 			return {
 				id: "",
-				xq: [],
-				content: ""
+				xqsj: {},
+				content: [],
+				htmlNodes: []
 			}
 		},
 		onLoad(options) {
 			this.id = options.id;
 			this.getNewsDetail()
 			this.getDetailContent()
-			//console.log(this.id)
+			console.log(this.id)
 		},
 		methods: {
 			async getNewsDetail() {
 				const res = await myRequestGet('/api/v1/fatiao/article/detail?id=' + this.id)
-				//console.log(res)
 				//#ifdef MP-ALIPAY
-				this.htmlNodes = parse(this.newsDetail.content)
 				//#endif
-				this.xq = res
+				this.xqsj = res
 			},
 			async getDetailContent() {
 				const res = await myRequestGet('/api/v1/fatiao/article/detail?id=' + this.id)
 				this.content = formatRichText(res.info.content)
-				console.log(this.content)
 				//#ifdef MP-ALIPAY
-				//支付宝小程序rich-text不支持字符串，需要是nodes数组
+				//支付宝小程序rich - text不支持字符串， 需要是nodes数组
 				this.htmlNodes = parse(this.content)
 				//#endif
 			},
@@ -56,38 +65,47 @@
 	}
 </script>
 
-<style lang="scss">
-	.ft1 {
-		font-size: 46rpx;
-		margin-left: 30rpx;
-		margin-top: 20rpx;
+<style lang="scss" scoped>
+	.dx{
+		border: 2rpx solid #BCBEC2;
+		background-color: #BCBEC2;
+		width: 95%;
+		margin: 0 auto;
+	}
+	.v1 {
+		font-size: 40rpx;
+		margin-left: 20rpx;
 	}
 
-	.box1 {
+	.c1 {
+		width: 90%;
+		margin: 70rpx auto 0rpx auto;
+		line-height: 70rpx;
+	}
+
+	.v2 {
 		position: relative;
 
 		image {
 			width: 50rpx;
 			position: absolute;
-			left: 30rpx;
-			top: 15rpx;
-			border-radius: 50%;
+			top: 10rpx;
+			left: 15rpx;
 		}
 
 		.t1 {
-			font-size: 14px;
+			font-size: 26rpx;
 			position: absolute;
 			top: 20rpx;
-			left: 90rpx;
+			left: 80rpx;
+		}
+
+		.t2 {
+			font-size: 26rpx;
+			position: absolute;
+			top: 20rpx;
+			left: 190rpx;
+			color: #C0C4CC;
 		}
 	}
-	.wb{
-		margin-top: 70rpx;
-		font-size: 16px;
-		font-weight: 600;
-		margin-left: 30rpx;
-		margin-right: 30rpx;
-		line-height: 70rpx;
-	}
-
 </style>

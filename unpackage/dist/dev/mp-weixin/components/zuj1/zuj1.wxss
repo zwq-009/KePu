@@ -30,4 +30,134 @@
   border-top-right-radius: 10px;
   box-shadow: 0 -1px 3px 4px #f4f4f5;
 }
+.Box .quanju .jiaju {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+.Box .quanju .jiaju .fnx {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+              flex: 1;
+}
+.Box .quanju .jiaju .fnx text {
+        display: block;
+        margin: 12px 0px;
+}
+.Box .quanju .jiaju .fnx .card {
+        position: relative;
+}
+.Box .quanju .jiaju .fnx .card .i1 {
+          width: 100%;
+          border-radius: 5px;
+}
+.Box .quanju .jiaju .fnx .card .time {
+          position: absolute;
+          bottom: 11px;
+          right: 5px;
+          width: 52px;
+          height: 20px;
+          background-color: #7E7878;
+          border-radius: 40px;
+          text-align: center;
+          line-height: 20px;
+          font-size: 10px;
+          color: #fff;
+}
+.Box .zoon {
+    width: 95%;
+    padding: 10px;
+}
+.Box .zoon .town {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+              align-items: center;
+      height: 25px;
+      border-bottom: 1px solid #000;
+}
+.Box .zoon .town .left .xzhen {
+        font-size: 12px;
+        height: 12px;
+        line-height: 25px;
+        border-bottom: 5px solid #97B7FF;
+}
+.Box .zoon .town .right {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        width: 300rpx;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+                justify-content: space-between;
+}
+.Box .zoon .town .right ._span {
+          font-size: 12px;
+          color: #bbb;
+}
+.Box .zoon .town .right text {
+          font-size: 12px;
+          color: #bbb;
+}
+.Box .zoon .yang {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      margin-top: 12px;
+      border-bottom: 1px solid #000;
+}
+.Box .zoon .yang .tu image {
+        width: 250rpx;
+        height: 150rpx;
+        border-radius: 5px;
+}
+.Box .zoon .yang .tuzhi .zen {
+        margin-left: 10px;
+        font-size: 16px;
+}
+.Box .zoon .yang .tuzhi .kongbai {
+        height: 40rpx;
+}
+.Box .zoon .yang .tuzhi .sky {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+                justify-content: space-between;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+                align-items: center;
+        width: 445rpx;
+        margin-left: 10px;
+}
+.Box .zoon .yang .tuzhi .sky .me {
+          font-size: 12px;
+          line-height: 25px;
+          border-bottom: 5px solid #97B7FF;
+}
+.Box .zoon .yang .tuzhi .sky .you {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: flex;
+          width: 300rpx;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+                  justify-content: space-between;
+}
+.Box .zoon .yang .tuzhi .sky .you ._span {
+            font-size: 12px;
+            color: #bbb;
+}
+.Box .zoon .yang .tuzhi .sky .you text {
+            font-size: 12px;
+            color: #bbb;
+}
 

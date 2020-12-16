@@ -239,7 +239,7 @@
 			// 点击进入视频详情页
 			goVideoDetail(item) {
 				uni.navigateTo({
-					url: `/pages/vdetail03/vdetail03?id=${item.id}`
+					url: `/pages/detailsp03/detailsp03?id=${item.id}`
 				});
 			},
 			async getVideos1() {

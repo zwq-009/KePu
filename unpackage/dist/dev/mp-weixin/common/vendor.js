@@ -8528,148 +8528,6 @@ main();
 
 /***/ }),
 
-/***/ 50:
-/*!********************************************************!*\
-  !*** G:/极客营/二阶段/项目/KePu/components/uni-icons/icons.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
-  "pulldown": "\uE588",
-  "refreshempty": "\uE461",
-  "back": "\uE471",
-  "forward": "\uE470",
-  "more": "\uE507",
-  "more-filled": "\uE537",
-  "scan": "\uE612",
-  "qq": "\uE264",
-  "weibo": "\uE260",
-  "weixin": "\uE261",
-  "pengyouquan": "\uE262",
-  "loop": "\uE565",
-  "refresh": "\uE407",
-  "refresh-filled": "\uE437",
-  "arrowthindown": "\uE585",
-  "arrowthinleft": "\uE586",
-  "arrowthinright": "\uE587",
-  "arrowthinup": "\uE584",
-  "undo-filled": "\uE7D6",
-  "undo": "\uE406",
-  "redo": "\uE405",
-  "redo-filled": "\uE7D9",
-  "bars": "\uE563",
-  "chatboxes": "\uE203",
-  "camera": "\uE301",
-  "chatboxes-filled": "\uE233",
-  "camera-filled": "\uE7EF",
-  "cart-filled": "\uE7F4",
-  "cart": "\uE7F5",
-  "checkbox-filled": "\uE442",
-  "checkbox": "\uE7FA",
-  "arrowleft": "\uE582",
-  "arrowdown": "\uE581",
-  "arrowright": "\uE583",
-  "smallcircle-filled": "\uE801",
-  "arrowup": "\uE580",
-  "circle": "\uE411",
-  "eye-filled": "\uE568",
-  "eye-slash-filled": "\uE822",
-  "eye-slash": "\uE823",
-  "eye": "\uE824",
-  "flag-filled": "\uE825",
-  "flag": "\uE508",
-  "gear-filled": "\uE532",
-  "reload": "\uE462",
-  "gear": "\uE502",
-  "hand-thumbsdown-filled": "\uE83B",
-  "hand-thumbsdown": "\uE83C",
-  "hand-thumbsup-filled": "\uE83D",
-  "heart-filled": "\uE83E",
-  "hand-thumbsup": "\uE83F",
-  "heart": "\uE840",
-  "home": "\uE500",
-  "info": "\uE504",
-  "home-filled": "\uE530",
-  "info-filled": "\uE534",
-  "circle-filled": "\uE441",
-  "chat-filled": "\uE847",
-  "chat": "\uE263",
-  "mail-open-filled": "\uE84D",
-  "email-filled": "\uE231",
-  "mail-open": "\uE84E",
-  "email": "\uE201",
-  "checkmarkempty": "\uE472",
-  "list": "\uE562",
-  "locked-filled": "\uE856",
-  "locked": "\uE506",
-  "map-filled": "\uE85C",
-  "map-pin": "\uE85E",
-  "map-pin-ellipse": "\uE864",
-  "map": "\uE364",
-  "minus-filled": "\uE440",
-  "mic-filled": "\uE332",
-  "minus": "\uE410",
-  "micoff": "\uE360",
-  "mic": "\uE302",
-  "clear": "\uE434",
-  "smallcircle": "\uE868",
-  "close": "\uE404",
-  "closeempty": "\uE460",
-  "paperclip": "\uE567",
-  "paperplane": "\uE503",
-  "paperplane-filled": "\uE86E",
-  "person-filled": "\uE131",
-  "contact-filled": "\uE130",
-  "person": "\uE101",
-  "contact": "\uE100",
-  "images-filled": "\uE87A",
-  "phone": "\uE200",
-  "images": "\uE87B",
-  "image": "\uE363",
-  "image-filled": "\uE877",
-  "location-filled": "\uE333",
-  "location": "\uE303",
-  "plus-filled": "\uE439",
-  "plus": "\uE409",
-  "plusempty": "\uE468",
-  "help-filled": "\uE535",
-  "help": "\uE505",
-  "navigate-filled": "\uE884",
-  "navigate": "\uE501",
-  "mic-slash-filled": "\uE892",
-  "search": "\uE466",
-  "settings": "\uE560",
-  "sound": "\uE590",
-  "sound-filled": "\uE8A1",
-  "spinner-cycle": "\uE465",
-  "download-filled": "\uE8A4",
-  "personadd-filled": "\uE132",
-  "videocam-filled": "\uE8AF",
-  "personadd": "\uE102",
-  "upload": "\uE402",
-  "upload-filled": "\uE8B1",
-  "starhalf": "\uE463",
-  "star-filled": "\uE438",
-  "star": "\uE408",
-  "trash": "\uE401",
-  "phone-filled": "\uE230",
-  "compose": "\uE400",
-  "videocam": "\uE300",
-  "trash-filled": "\uE8DC",
-  "download": "\uE403",
-  "chatbubble-filled": "\uE232",
-  "chatbubble": "\uE202",
-  "cloud-download": "\uE8E4",
-  "cloud-upload-filled": "\uE8E5",
-  "cloud-upload": "\uE8E6",
-  "cloud-download-filled": "\uE8E9",
-  "headphones": "\uE8BF",
-  "shop": "\uE609" };exports.default = _default;
-
-/***/ }),
-
 /***/ 6:
 /*!******************************************************!*\
   !*** ./node_modules/@dcloudio/uni-stat/package.json ***!
@@ -8681,31 +8539,19 @@ module.exports = {"_from":"@dcloudio/uni-stat@^2.0.0-alpha-24420191128001","_id"
 
 /***/ }),
 
-/***/ 7:
-/*!******************************************************!*\
-  !*** G:/极客营/二阶段/项目/KePu/pages.json?{"type":"style"} ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": { "zuj1": "/components/zuj1/zuj1", "zuj2": "/components/zuj2/zuj2", "zuj3": "/components/zuj3/zuj3", "zuj4": "/components/zuj4/zuj4", "zuj5": "/components/zuj5/zuj5", "zuj6": "/components/zuj6/zuj6", "zuj7": "/components/zuj7/zuj7" } }, "pages/my/my": { "enablePullDownRefresh": false, "usingComponents": {} }, "pages/shoucang/shoucang": { "navigationBarTitleText": "我的收藏", "enablePullDownRefresh": false, "usingComponents": {} }, "pages/sorry/sorry": { "navigationBarTitleText": "敬请期待", "enablePullDownRefresh": false, "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "科普小站", "navigationBarBackgroundColor": "#74b9ff" } };exports.default = _default;
-
-/***/ }),
-
-/***/ 72:
+/***/ 65:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
   \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! regenerator-runtime */ 73);
+module.exports = __webpack_require__(/*! regenerator-runtime */ 66);
 
 
 /***/ }),
 
-/***/ 73:
+/***/ 66:
 /*!************************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime-module.js ***!
   \************************************************************/
@@ -8736,7 +8582,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(/*! ./runtime */ 74);
+module.exports = __webpack_require__(/*! ./runtime */ 67);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -8753,7 +8599,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 74:
+/***/ 67:
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
   \*****************************************************/
@@ -9485,7 +9331,7 @@ if (hadRuntime) {
 
 /***/ }),
 
-/***/ 75:
+/***/ 68:
 /*!*******************************************!*\
   !*** G:/极客营/二阶段/项目/KePu/utils/request.js ***!
   \*******************************************/
@@ -9516,6 +9362,409 @@ function myRequestGet(url, data) {
 
 /***/ }),
 
+/***/ 69:
+/*!******************************************!*\
+  !*** G:/极客营/二阶段/项目/KePu/utils/format.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.formatRichText = formatRichText;function formatRichText(html) {
+  var html = new String(html);
+  var newContent = html.replace(/<img[^>]*>/gi, function (match, capture) {
+    match = match.replace(/style="[^"]+"/gi, '').replace(/style='[^']+'/gi, '');
+    match = match.replace(/width="[^"]+"/gi, '').replace(/width='[^']+'/gi, '');
+    match = match.replace(/height="[^"]+"/gi, '').replace(/height='[^']+'/gi, '');
+    return match;
+  });
+  newContent = newContent.replace(/style="[^"]+"/gi, function (match, capture) {
+    match = match.replace(/width:[^;]+;/gi, 'max-width:100%;').replace(/width:[^;]+;/gi, 'max-width:100%;');
+    return match;
+  });
+  newContent = newContent.replace(/<br[^>]*\/>/gi, '');
+  newContent = newContent.replace(/\<img/gi,
+  '<img style="max-width:100%;height:auto;display:inline-block;margin:10rpx auto;"');
+  return newContent;
+}
+
+/***/ }),
+
+/***/ 7:
+/*!******************************************************!*\
+  !*** G:/极客营/二阶段/项目/KePu/pages.json?{"type":"style"} ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": { "zuj1": "/components/zuj1/zuj1", "zuj2": "/components/zuj2/zuj2", "zuj3": "/components/zuj3/zuj3", "zuj4": "/components/zuj4/zuj4", "zuj5": "/components/zuj5/zuj5", "zuj6": "/components/zuj6/zuj6", "zuj7": "/components/zuj7/zuj7" } }, "pages/my/my": { "enablePullDownRefresh": false, "usingComponents": {} }, "pages/shoucang/shoucang": { "navigationBarTitleText": "我的收藏", "enablePullDownRefresh": false, "usingComponents": {} }, "pages/sorry/sorry": { "navigationBarTitleText": "敬请期待", "enablePullDownRefresh": false, "usingComponents": {} }, "pages/detail03/detail03": { "usingComponents": {} }, "pages/detailsp03/detailsp03": { "usingComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "科普小站", "navigationBarBackgroundColor": "#74b9ff" } };exports.default = _default;
+
+/***/ }),
+
+/***/ 70:
+/*!**********************************************!*\
+  !*** G:/极客营/二阶段/项目/KePu/utils/htmlparser.js ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; /*
+                                                                                                      * HTML5 Parser By Sam Blowes
+                                                                                                      *
+                                                                                                      * Designed for HTML5 documents
+                                                                                                      *
+                                                                                                      * Original code by John Resig (ejohn.org)
+                                                                                                      * http://ejohn.org/blog/pure-javascript-html-parser/
+                                                                                                      * Original code by Erik Arvidsson, Mozilla Public License
+                                                                                                      * http://erik.eae.net/simplehtmlparser/simplehtmlparser.js
+                                                                                                      *
+                                                                                                      * ----------------------------------------------------------------------------
+                                                                                                      * License
+                                                                                                      * ----------------------------------------------------------------------------
+                                                                                                      *
+                                                                                                      * This code is triple licensed using Apache Software License 2.0,
+                                                                                                      * Mozilla Public License or GNU Public License
+                                                                                                      *
+                                                                                                      * ////////////////////////////////////////////////////////////////////////////
+                                                                                                      *
+                                                                                                      * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+                                                                                                      * use this file except in compliance with the License.  You may obtain a copy
+                                                                                                      * of the License at http://www.apache.org/licenses/LICENSE-2.0
+                                                                                                      *
+                                                                                                      * ////////////////////////////////////////////////////////////////////////////
+                                                                                                      *
+                                                                                                      * The contents of this file are subject to the Mozilla Public License
+                                                                                                      * Version 1.1 (the "License"); you may not use this file except in
+                                                                                                      * compliance with the License. You may obtain a copy of the License at
+                                                                                                      * http://www.mozilla.org/MPL/
+                                                                                                      *
+                                                                                                      * Software distributed under the License is distributed on an "AS IS"
+                                                                                                      * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
+                                                                                                      * License for the specific language governing rights and limitations
+                                                                                                      * under the License.
+                                                                                                      *
+                                                                                                      * The Original Code is Simple HTML Parser.
+                                                                                                      *
+                                                                                                      * The Initial Developer of the Original Code is Erik Arvidsson.
+                                                                                                      * Portions created by Erik Arvidssson are Copyright (C) 2004. All Rights
+                                                                                                      * Reserved.
+                                                                                                      *
+                                                                                                      * ////////////////////////////////////////////////////////////////////////////
+                                                                                                      *
+                                                                                                      * This program is free software; you can redistribute it and/or
+                                                                                                      * modify it under the terms of the GNU General Public License
+                                                                                                      * as published by the Free Software Foundation; either version 2
+                                                                                                      * of the License, or (at your option) any later version.
+                                                                                                      *
+                                                                                                      * This program is distributed in the hope that it will be useful,
+                                                                                                      * but WITHOUT ANY WARRANTY; without even the implied warranty of
+                                                                                                      * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+                                                                                                      * GNU General Public License for more details.
+                                                                                                      *
+                                                                                                      * You should have received a copy of the GNU General Public License
+                                                                                                      * along with this program; if not, write to the Free Software
+                                                                                                      * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+                                                                                                      *
+                                                                                                      * ----------------------------------------------------------------------------
+                                                                                                      * Usage
+                                                                                                      * ----------------------------------------------------------------------------
+                                                                                                      *
+                                                                                                      * // Use like so:
+                                                                                                      * HTMLParser(htmlString, {
+                                                                                                      *     start: function(tag, attrs, unary) {},
+                                                                                                      *     end: function(tag) {},
+                                                                                                      *     chars: function(text) {},
+                                                                                                      *     comment: function(text) {}
+                                                                                                      * });
+                                                                                                      *
+                                                                                                      * // or to get an XML string:
+                                                                                                      * HTMLtoXML(htmlString);
+                                                                                                      *
+                                                                                                      * // or to get an XML DOM Document
+                                                                                                      * HTMLtoDOM(htmlString);
+                                                                                                      *
+                                                                                                      * // or to inject into an existing document/DOM node
+                                                                                                      * HTMLtoDOM(htmlString, document);
+                                                                                                      * HTMLtoDOM(htmlString, document.body);
+                                                                                                      *
+                                                                                                      */
+// Regular Expressions for parsing tags and attributes
+var startTag = /^<([-A-Za-z0-9_]+)((?:\s+[a-zA-Z_:][-a-zA-Z0-9_:.]*(?:\s*=\s*(?:(?:"[^"]*")|(?:'[^']*')|[^>\s]+))?)*)\s*(\/?)>/;
+var endTag = /^<\/([-A-Za-z0-9_]+)[^>]*>/;
+var attr = /([a-zA-Z_:][-a-zA-Z0-9_:.]*)(?:\s*=\s*(?:(?:"((?:\\.|[^"])*)")|(?:'((?:\\.|[^'])*)')|([^>\s]+)))?/g; // Empty Elements - HTML 5
+
+var empty = makeMap('area,base,basefont,br,col,frame,hr,img,input,link,meta,param,embed,command,keygen,source,track,wbr'); // Block Elements - HTML 5
+// fixed by xxx 将 ins 标签从块级名单中移除
+
+var block = makeMap('a,address,article,applet,aside,audio,blockquote,button,canvas,center,dd,del,dir,div,dl,dt,fieldset,figcaption,figure,footer,form,frameset,h1,h2,h3,h4,h5,h6,header,hgroup,hr,iframe,isindex,li,map,menu,noframes,noscript,object,ol,output,p,pre,section,script,table,tbody,td,tfoot,th,thead,tr,ul,video'); // Inline Elements - HTML 5
+
+var inline = makeMap('abbr,acronym,applet,b,basefont,bdo,big,br,button,cite,code,del,dfn,em,font,i,iframe,img,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var'); // Elements that you can, intentionally, leave open
+// (and which close themselves)
+
+var closeSelf = makeMap('colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr'); // Attributes that have their values filled in disabled="disabled"
+
+var fillAttrs = makeMap('checked,compact,declare,defer,disabled,ismap,multiple,nohref,noresize,noshade,nowrap,readonly,selected'); // Special Elements (can contain anything)
+
+var special = makeMap('script,style');
+function HTMLParser(html, handler) {
+  var index;
+  var chars;
+  var match;
+  var stack = [];
+  var last = html;
+
+  stack.last = function () {
+    return this[this.length - 1];
+  };
+
+  while (html) {
+    chars = true; // Make sure we're not in a script or style element
+
+    if (!stack.last() || !special[stack.last()]) {
+      // Comment
+      if (html.indexOf('<!--') == 0) {
+        index = html.indexOf('-->');
+
+        if (index >= 0) {
+          if (handler.comment) {
+            handler.comment(html.substring(4, index));
+          }
+
+          html = html.substring(index + 3);
+          chars = false;
+        } // end tag
+
+      } else if (html.indexOf('</') == 0) {
+        match = html.match(endTag);
+
+        if (match) {
+          html = html.substring(match[0].length);
+          match[0].replace(endTag, parseEndTag);
+          chars = false;
+        } // start tag
+
+      } else if (html.indexOf('<') == 0) {
+        match = html.match(startTag);
+
+        if (match) {
+          html = html.substring(match[0].length);
+          match[0].replace(startTag, parseStartTag);
+          chars = false;
+        }
+      }
+
+      if (chars) {
+        index = html.indexOf('<');
+        var text = index < 0 ? html : html.substring(0, index);
+        html = index < 0 ? '' : html.substring(index);
+
+        if (handler.chars) {
+          handler.chars(text);
+        }
+      }
+    } else {
+      html = html.replace(new RegExp('([\\s\\S]*?)<\/' + stack.last() + '[^>]*>'), function (all, text) {
+        text = text.replace(/<!--([\s\S]*?)-->|<!\[CDATA\[([\s\S]*?)]]>/g, '$1$2');
+
+        if (handler.chars) {
+          handler.chars(text);
+        }
+
+        return '';
+      });
+      parseEndTag('', stack.last());
+    }
+
+    if (html == last) {
+      throw 'Parse Error: ' + html;
+    }
+
+    last = html;
+  } // Clean up any remaining tags
+
+
+  parseEndTag();
+
+  function parseStartTag(tag, tagName, rest, unary) {
+    tagName = tagName.toLowerCase();
+
+    if (block[tagName]) {
+      while (stack.last() && inline[stack.last()]) {
+        parseEndTag('', stack.last());
+      }
+    }
+
+    if (closeSelf[tagName] && stack.last() == tagName) {
+      parseEndTag('', tagName);
+    }
+
+    unary = empty[tagName] || !!unary;
+
+    if (!unary) {
+      stack.push(tagName);
+    }
+
+    if (handler.start) {
+      var attrs = [];
+      rest.replace(attr, function (match, name) {
+        var value = arguments[2] ? arguments[2] : arguments[3] ? arguments[3] : arguments[4] ? arguments[4] : fillAttrs[name] ? name : '';
+        attrs.push({
+          name: name,
+          value: value,
+          escaped: value.replace(/(^|[^\\])"/g, '$1\\\"') // "
+        });
+
+      });
+
+      if (handler.start) {
+        handler.start(tagName, attrs, unary);
+      }
+    }
+  }
+
+  function parseEndTag(tag, tagName) {
+    // If no tag name is provided, clean shop
+    if (!tagName) {
+      var pos = 0;
+    } // Find the closest opened tag of the same type
+    else {
+        for (var pos = stack.length - 1; pos >= 0; pos--) {
+          if (stack[pos] == tagName) {
+            break;
+          }
+        }
+      }
+
+    if (pos >= 0) {
+      // Close all the open elements, up the stack
+      for (var i = stack.length - 1; i >= pos; i--) {
+        if (handler.end) {
+          handler.end(stack[i]);
+        }
+      } // Remove the open elements from the stack
+
+
+      stack.length = pos;
+    }
+  }
+}
+
+function makeMap(str) {
+  var obj = {};
+  var items = str.split(',');
+
+  for (var i = 0; i < items.length; i++) {
+    obj[items[i]] = true;
+  }
+
+  return obj;
+}
+
+function removeDOCTYPE(html) {
+  return html.replace(/<\?xml.*\?>\n/, '').replace(/<!doctype.*>\n/, '').replace(/<!DOCTYPE.*>\n/, '');
+}
+
+function parseAttrs(attrs) {
+  return attrs.reduce(function (pre, attr) {
+    var value = attr.value;
+    var name = attr.name;
+
+    if (pre[name]) {
+      pre[name] = pre[name] + " " + value;
+    } else {
+      pre[name] = value;
+    }
+
+    return pre;
+  }, {});
+}
+
+function parseHtml(html) {
+  html = removeDOCTYPE(html);
+  var stacks = [];
+  var results = {
+    node: 'root',
+    children: [] };
+
+  HTMLParser(html, {
+    start: function start(tag, attrs, unary) {
+      var node = {
+        name: tag };
+
+
+      if (attrs.length !== 0) {
+        node.attrs = parseAttrs(attrs);
+      }
+
+      if (unary) {
+        var parent = stacks[0] || results;
+
+        if (!parent.children) {
+          parent.children = [];
+        }
+
+        parent.children.push(node);
+      } else {
+        stacks.unshift(node);
+      }
+    },
+    end: function end(tag) {
+      var node = stacks.shift();
+      if (node.name !== tag) console.error('invalid state: mismatch end tag');
+
+      if (stacks.length === 0) {
+        results.children.push(node);
+      } else {
+        var parent = stacks[0];
+
+        if (!parent.children) {
+          parent.children = [];
+        }
+
+        parent.children.push(node);
+      }
+    },
+    chars: function chars(text) {
+      var node = {
+        type: 'text',
+        text: text };
+
+
+      if (stacks.length === 0) {
+        results.children.push(node);
+      } else {
+        var parent = stacks[0];
+
+        if (!parent.children) {
+          parent.children = [];
+        }
+
+        parent.children.push(node);
+      }
+    },
+    comment: function comment(text) {
+      var node = {
+        node: 'comment',
+        text: text };
+
+      var parent = stacks[0];
+
+      if (!parent.children) {
+        parent.children = [];
+      }
+
+      parent.children.push(node);
+    } });
+
+  return results.children;
+}var _default =
+
+parseHtml;exports.default = _default;
+
+/***/ }),
+
 /***/ 8:
 /*!*****************************************************!*\
   !*** G:/极客营/二阶段/项目/KePu/pages.json?{"type":"stat"} ***!
@@ -9525,6 +9774,148 @@ function myRequestGet(url, data) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "appid": "__UNI__EBBF300" };exports.default = _default;
+
+/***/ }),
+
+/***/ 86:
+/*!********************************************************!*\
+  !*** G:/极客营/二阶段/项目/KePu/components/uni-icons/icons.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = {
+  "pulldown": "\uE588",
+  "refreshempty": "\uE461",
+  "back": "\uE471",
+  "forward": "\uE470",
+  "more": "\uE507",
+  "more-filled": "\uE537",
+  "scan": "\uE612",
+  "qq": "\uE264",
+  "weibo": "\uE260",
+  "weixin": "\uE261",
+  "pengyouquan": "\uE262",
+  "loop": "\uE565",
+  "refresh": "\uE407",
+  "refresh-filled": "\uE437",
+  "arrowthindown": "\uE585",
+  "arrowthinleft": "\uE586",
+  "arrowthinright": "\uE587",
+  "arrowthinup": "\uE584",
+  "undo-filled": "\uE7D6",
+  "undo": "\uE406",
+  "redo": "\uE405",
+  "redo-filled": "\uE7D9",
+  "bars": "\uE563",
+  "chatboxes": "\uE203",
+  "camera": "\uE301",
+  "chatboxes-filled": "\uE233",
+  "camera-filled": "\uE7EF",
+  "cart-filled": "\uE7F4",
+  "cart": "\uE7F5",
+  "checkbox-filled": "\uE442",
+  "checkbox": "\uE7FA",
+  "arrowleft": "\uE582",
+  "arrowdown": "\uE581",
+  "arrowright": "\uE583",
+  "smallcircle-filled": "\uE801",
+  "arrowup": "\uE580",
+  "circle": "\uE411",
+  "eye-filled": "\uE568",
+  "eye-slash-filled": "\uE822",
+  "eye-slash": "\uE823",
+  "eye": "\uE824",
+  "flag-filled": "\uE825",
+  "flag": "\uE508",
+  "gear-filled": "\uE532",
+  "reload": "\uE462",
+  "gear": "\uE502",
+  "hand-thumbsdown-filled": "\uE83B",
+  "hand-thumbsdown": "\uE83C",
+  "hand-thumbsup-filled": "\uE83D",
+  "heart-filled": "\uE83E",
+  "hand-thumbsup": "\uE83F",
+  "heart": "\uE840",
+  "home": "\uE500",
+  "info": "\uE504",
+  "home-filled": "\uE530",
+  "info-filled": "\uE534",
+  "circle-filled": "\uE441",
+  "chat-filled": "\uE847",
+  "chat": "\uE263",
+  "mail-open-filled": "\uE84D",
+  "email-filled": "\uE231",
+  "mail-open": "\uE84E",
+  "email": "\uE201",
+  "checkmarkempty": "\uE472",
+  "list": "\uE562",
+  "locked-filled": "\uE856",
+  "locked": "\uE506",
+  "map-filled": "\uE85C",
+  "map-pin": "\uE85E",
+  "map-pin-ellipse": "\uE864",
+  "map": "\uE364",
+  "minus-filled": "\uE440",
+  "mic-filled": "\uE332",
+  "minus": "\uE410",
+  "micoff": "\uE360",
+  "mic": "\uE302",
+  "clear": "\uE434",
+  "smallcircle": "\uE868",
+  "close": "\uE404",
+  "closeempty": "\uE460",
+  "paperclip": "\uE567",
+  "paperplane": "\uE503",
+  "paperplane-filled": "\uE86E",
+  "person-filled": "\uE131",
+  "contact-filled": "\uE130",
+  "person": "\uE101",
+  "contact": "\uE100",
+  "images-filled": "\uE87A",
+  "phone": "\uE200",
+  "images": "\uE87B",
+  "image": "\uE363",
+  "image-filled": "\uE877",
+  "location-filled": "\uE333",
+  "location": "\uE303",
+  "plus-filled": "\uE439",
+  "plus": "\uE409",
+  "plusempty": "\uE468",
+  "help-filled": "\uE535",
+  "help": "\uE505",
+  "navigate-filled": "\uE884",
+  "navigate": "\uE501",
+  "mic-slash-filled": "\uE892",
+  "search": "\uE466",
+  "settings": "\uE560",
+  "sound": "\uE590",
+  "sound-filled": "\uE8A1",
+  "spinner-cycle": "\uE465",
+  "download-filled": "\uE8A4",
+  "personadd-filled": "\uE132",
+  "videocam-filled": "\uE8AF",
+  "personadd": "\uE102",
+  "upload": "\uE402",
+  "upload-filled": "\uE8B1",
+  "starhalf": "\uE463",
+  "star-filled": "\uE438",
+  "star": "\uE408",
+  "trash": "\uE401",
+  "phone-filled": "\uE230",
+  "compose": "\uE400",
+  "videocam": "\uE300",
+  "trash-filled": "\uE8DC",
+  "download": "\uE403",
+  "chatbubble-filled": "\uE232",
+  "chatbubble": "\uE202",
+  "cloud-download": "\uE8E4",
+  "cloud-upload-filled": "\uE8E5",
+  "cloud-upload": "\uE8E6",
+  "cloud-download-filled": "\uE8E9",
+  "headphones": "\uE8BF",
+  "shop": "\uE609" };exports.default = _default;
 
 /***/ })
 
