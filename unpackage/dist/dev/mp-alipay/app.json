@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/shoucang/shoucang",
+    "pages/sorry/sorry",
+    "pages/a/a"
+  ],
+  "subPackages": [],
+  "window": {
+    "defaultTitle": "生活科普馆",
+    "titleBarColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "static/首页.png",
+        "activeIcon": "static/首页a.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "name": "我的",
+        "icon": "static/个人.png",
+        "activeIcon": "static/个人a.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "uni-icons": "/components/uni-icons/uni-icons"
+  }
+}
