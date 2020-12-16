@@ -28,6 +28,33 @@
             }
             
         }
+        ,{
+            "path" : "pages/z6xq/z6xq",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+		,{
+		    "path" : "pages/z6shp/z6shp",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "详情",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/z6shp/z6shp",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

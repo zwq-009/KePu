@@ -156,7 +156,7 @@
 		</view>
 		<!-- 文章部分 -->
 		<view class="box2">
-			<view class="box2_item" v-for="item in article3" :key="item.id">
+			<view class="box2_item" v-for="item in article3" :key="item.id" @click="goDetail(item)">
 				<view class="img"><image :src="item.info.cover_img" mode="widthFix"></image></view>
 				<view class="right">
 					<view class="title">{{ item.title }}</view>
@@ -196,7 +196,8 @@ export default {
 			video2: [],
 			article2: [],
 			video3: [],
-			article3: []
+			article3: [],
+			id:""
 		};
 	},
 	created() {
@@ -273,6 +274,11 @@ export default {
 			});
 			console.log(result);
 			this.article3 = result;
+		},
+		goDetail(item) {
+			uni.navigateTo({
+				url: `/pages/z6xq/z6xq?id=${item.id}`
+			})
 		}
 	}
 };
