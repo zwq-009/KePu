@@ -4,7 +4,7 @@
 			"style": {}
 		},
 		{
-			"path": "pages/my/my",
+			"path": "pages/center/center",
 			"style": {
 				"enablePullDownRefresh": false
 			}
@@ -29,7 +29,7 @@
             
         }
         ,{
-            "path" : "pages/detail05/detail05",
+            "path" : "pages/ArticleDetail-Game/ArticleDetail-Game",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "详情",
@@ -39,11 +39,143 @@
             
         }
         ,{
-            "path" : "pages/vdetail05/vdetail05",
+            "path" : "pages/VideoDetail-Game/VideoDetail-Game",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/VideoDetail-FamilyLife/VideoDetail-FamilyLife",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/ArticleDetail-FamilyLife/ArticleDetail-FamilyLife",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/ArticleDetail-Technology/ArticleDetail-Technology",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/VideoDetail-Technology/VideoDetail-Technology",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/ArticleDetail-Beauty/ArticleDetail-Beauty",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/VideoDetail-Beauty/VideoDetail-Beauty",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/ArticleDetail-Animal/ArticleDetail-Animal",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/VideoDetail-Animal/VideoDetail-Animal",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/ArticleDetail-Life/ArticleDetail-Life",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/VideoDetail-Life/VideoDetail-Life",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/ArticleDetail-Interset/ArticleDetail-Interset",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/VideoDetail-Interset/VideoDetail-Interset",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "详情",
+                "enablePullDownRefresh": false,
+				"navigationBarBackgroundColor": "#fff"
+            }
+            
+        }
+        ,{
+            "path" : "pages/feedback/feedback",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "用户反馈",
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor":"#0984e3"
             }
             
         }
@@ -65,7 +197,7 @@
 			},
 			{
 				"text": "我的",
-				"pagePath": "pages/my/my",
+				"pagePath": "pages/center/center",
 				"iconPath": "static/个人.png",
 				"selectedIconPath": "static/个人a.png"
 			}

@@ -15,19 +15,19 @@
 			</view>
 			<view class="center-list-item border-bottom" @click="none">
 				<text class="list-icon">&#xe639;</text>
-				<text class="list-text">新消息通知</text>
+				<text class="list-text">消息通知</text>
 				<text class="navigat-arrow">&#xe65e;</text>
 			</view>
 			<view class="center-list-item border-bottom" @click="shoucang">
 				<text class="list-icon">&#xe639;</text>
-				<text class="list-text" style="font-weight: 550;">我的收藏</text>
+				<text class="list-text" >我的收藏</text>
 				<text class="navigat-arrow">&#xe65e;</text>
 			</view>
 		</view>
 		<view class="center-list">
-			<view class="center-list-item border-bottom" @click="none">
+			<view class="center-list-item border-bottom" @click="goFeedback">
 				<text class="list-icon">&#xe60b;</text>
-				<text class="list-text">帮助与反馈</text>
+				<text class="list-text">用户反馈</text>
 				<text class="navigat-arrow">&#xe65e;</text>
 			</view>
 			<view class="center-list-item border-bottom" @click="none">
@@ -35,9 +35,7 @@
 				<text class="list-text">服务条款及隐私</text>
 				<text class="navigat-arrow">&#xe65e;</text>
 			</view>
-		</view>
-		<view class="center-list">
-			<view class="center-list-item" @click="none">
+			<view class="center-list-item border-bottom" @click="none">
 				<text class="list-icon">&#xe614;</text>
 				<text class="list-text">关于</text>
 				<text class="navigat-arrow">&#xe65e;</text>
@@ -63,6 +61,11 @@ export default {
 				url: '../sorry/sorry'
 			});
 		},
+		goFeedback() {
+			uni.navigateTo({
+				url: '../feedback/feedback'
+			});
+		},
 		shoucang() {
 			uni.navigateTo({
 				url: '../shoucang/shoucang'
@@ -72,7 +75,6 @@ export default {
 		goLogin() {
 			if (!this.login) {
 				console.log('点击前往登录');
-				
 			}
 		}
 	}

@@ -216,72 +216,72 @@ export default {
 		// 点击进入文章详情页
 		goArticleDetail(item) {
 			uni.navigateTo({
-				url: `/pages/detail05/detail05?id=${item.id}`
+				url: `/pages/ArticleDetail-FamilyLife/ArticleDetail-FamilyLife?id=${item.id}`
 			});
 		},
 		// 点击进入视频详情页
 		goVideoDetail(item) {
 			uni.navigateTo({
-				url: `/pages/vdetail05/vdetail05?id=${item.id}`
+				url: `/pages/VideoDetail-FamilyLife/VideoDetail-FamilyLife?id=${item.id}`
 			});
 		},
 		async getVideos1() {
 			let result = await myRequestGet('/api/v1/fatiao/index/list', {
-				id: 26,
+				id: 28,
 				p: 1,
 				order: 1,
 				limit: 1,
-				channel_id: 26
+				channel_id: 28
 			});
 			this.video1 = result;
 		},
 		async getArticle1() {
 			let result = await myRequestGet('/api/v1/fatiao/article/list', {
-				id: 26,
+				id: 28,
 				p: 1,
 				order: 1,
 				limit: 6,
-				channel_id: 26
+				channel_id: 28
 			});
 			this.article1 = result;
 		},
 		async getVideos2() {
 			let result = await myRequestGet('/api/v1/fatiao/index/list', {
-				id: 26,
+				id: 28,
 				p: 2,
 				order: 1,
 				limit: 1,
-				channel_id: 26
+				channel_id: 28
 			});
 			this.video2 = result;
 		},
 		async getArticle2() {
 			let result = await myRequestGet('/api/v1/fatiao/article/list', {
-				id: 26,
+				id: 28,
 				p: 2,
 				order: 1,
 				limit: 6,
-				channel_id: 26
+				channel_id: 28
 			});
 			this.article2 = result;
 		},
 		async getVideos3() {
 			let result = await myRequestGet('/api/v1/fatiao/index/list', {
-				id: 26,
+				id: 28,
 				p: 3,
 				order: 1,
 				limit: 1,
-				channel_id: 26
+				channel_id: 28
 			});
 			this.video3 = result;
 		},
 		async getArticle3() {
 			let result = await myRequestGet('/api/v1/fatiao/article/list', {
-				id: 26,
+				id: 28,
 				p: 3,
 				order: 1,
 				limit: 6,
-				channel_id: 26
+				channel_id: 28
 			});
 			this.article3 = result;
 		},
@@ -292,7 +292,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .Box {
 	font-size: 30rpx;
 	font-weight: 550;
@@ -304,8 +304,7 @@ export default {
 	border-top-right-radius: 20rpx;
 	box-shadow: 0 -2rpx 6rpx 8rpx #f4f4f5;
 	padding-top: 12rpx;
-	// padding-left: 24rpx;
-	// padding-right: 24rpx;
+	background-color: #fff;
 	.box {
 		// 颜色为了看位置
 		// background-color: #eee;
