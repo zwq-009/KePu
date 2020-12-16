@@ -37,6 +37,7 @@
             }
             
         }
+<<<<<<< HEAD
 		,{
 		    "path" : "pages/z6shp/z6shp",
 		    "style" :                                                                                    
@@ -55,6 +56,8 @@
             }
             
         }
+=======
+>>>>>>> fa4687f331288e56125ff67ff204b3d210b39ee5
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
