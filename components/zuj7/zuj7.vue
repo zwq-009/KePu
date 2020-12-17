@@ -4,10 +4,10 @@
 		<view class="a" v-for="item in swipers" :key="item.id">
 			<text class="top">{{item.title}}</text>
 			<image @click="goVideo(item)" class="im" :src="item.info.video_img" mode="widthFix"></image>
-			<view class="atim">{{item.video_length}}</view>
+			<button class="atim">{{item.video_length}}</button>
 			<view class="bto">
 				<text class="btoa">{{item.channel.name}}</text>
-				<uni-icons type="hand-thumbsup" size="18" color="#a4b0be">fgsh</uni-icons>
+				<uni-icons type="hand-thumbsup" size="18" color="#a4b0be"></uni-icons>
 				<text>{{item.praise_num}}</text>
 				<uni-icons type="eye" size="18" color="#a4b0be"></uni-icons>
 				<text>{{item.play_num}}</text>
@@ -18,7 +18,7 @@
 
 		<!-- 列表 -->
 		<view class="ab" v-for="item in swipers1" :key="item.id">
-			<view class="aba" >
+			<view class="aba">
 				<view class="abim">
 					<image :src="item.info.cover_img" mode="widthFix" @click="goDetail(item)"></image>
 				</view>
@@ -43,10 +43,10 @@
 		<view class="a" v-for="item in swipers2" :key="item.id">
 			<text class="top">{{item.title}}</text>
 			<image class="im" :src="item.info.video_img" mode="widthFix"></image>
-			<view class="atim">{{item.video_length}}</view>
+			<button class="atim">{{item.video_length}}</button>
 			<view class="bto">
 				<text class="btoa">兴趣爱好</text>
-				<uni-icons type="hand-thumbsup" size="18" color="#a4b0be">fgsh</uni-icons>
+				<uni-icons type="hand-thumbsup" size="18" color="#a4b0be"></uni-icons>
 				<text>{{item.praise_num}}</text>
 				<uni-icons type="eye" size="18" color="#a4b0be"></uni-icons>
 				<text>{{item.play_num}}</text>
@@ -80,10 +80,10 @@
 		<view class="a" v-for="item in swipers4" :key="item.id">
 			<text class="top">{{item.title}}</text>
 			<image class="im" :src="item.info.video_img" mode="widthFix"></image>
-			<view class="atim">{{item.video_length}}</view>
+			<button class="atim">{{item.video_length}}</button>
 			<view class="bto">
 				<text class="btoa">兴趣爱好</text>
-				<uni-icons type="hand-thumbsup" size="18" color="#a4b0be">fgsh</uni-icons>
+				<uni-icons type="hand-thumbsup" size="18" color="#a4b0be"></uni-icons>
 				<text>{{item.praise_num}}</text>
 				<uni-icons type="eye" size="18" color="#a4b0be"></uni-icons>
 				<text>{{item.play_num}}</text>
@@ -131,6 +131,13 @@
 	export default {
 		data() {
 			return {
+				sharedata: {
+					type: 1,
+					strShareUrl: "http://www.baidu.com",
+					strShareTitle: "分享标题",
+					strShareSummary: "分享总结",
+					strShareImageUrl: "http://www.xuelejia.com/xljapp/h5/static/aboutUsLogo.png"
+				},
 				swipers: [],
 				swipers1: [],
 				swipers2: [],
@@ -155,6 +162,9 @@
 			shareBtn
 		},
 		methods: {
+			getImgUrl(icon) {
+				return "https:" + icon;
+			},
 			shareOn: function() {
 				this.$refs.sharepopup.open();
 			},
@@ -240,10 +250,11 @@
 </script>
 <style lang="scss" scoped>
 	.Box {
-		margin-top: 10rpx;
-		border-top-left-radius: 10rpx;
-		border-top-right-radius: 10rpx;
-		box-shadow: 0 -1px 3px 4px #f4f4f5;
+		width: 100%;
+		margin-top: 2%;
+		border-top-left-radius: 2%;
+		border-top-right-radius: 2%;
+		box-shadow: 0 -1% 10% 5% #f4f4f5;
 		background-color: #eef5f5;
 
 		.a {
@@ -251,7 +262,7 @@
 			padding-top: 28rpx;
 
 			.top {
-				margin-left: 20rpx;
+				margin-left: 4%;
 				font-size: 40rpx;
 				font-weight: 540;
 				background: linear-gradient(0deg, #2854f0 0%, #fff 20%, #eef5f5 100%);
@@ -264,20 +275,21 @@
 			}
 
 			.atim {
+				text-align: center;
+				width: 13%;
 				margin: -55rpx 50rpx 0;
-				padding: 0 10rpx;
-				border-radius: 200rpx;
-				font-size: 3rpx;
-				position: relative;
+				padding: 0 0.5% 0;
+				border-radius: 50px;
+				font-size: 1%;
+				line-height: 40rpx;
 				color: #FFFFFF;
 				background-color: #64646c;
 				float: right;
 			}
 
 			.bto {
-				height: 60rpx;
 				text-align: right;
-				padding: 5rpx 20rpx 0 0;
+				padding: 2% 2% 2% 0;
 
 				.btoa {
 					font-size: 28rpx;
@@ -287,6 +299,7 @@
 					float: left;
 					background: linear-gradient(0deg, #0055ff 0%, #eef5f5 20%, #eef5f5 100%);
 				}
+
 				text {
 					opacity: 0.8;
 					font-size: 27rpx;
@@ -309,24 +322,29 @@
 			background-color: #eef5f5;
 
 			.aba {
-				height: 151rpx;
+				// height: 151rpx;
 				margin-left: 0.7%;
+				display: flex;
 
 				.abim {
+					flex: 1;
+
 					image {
-						// padding: 1% 1%;
-						width: 33%;
+						width: 97%;
 						border-radius: 20rpx;
 						float: left;
 					}
 				}
 
 				.abr {
+					flex: 2;
 					margin-left: 0.7%;
 					float: left;
-					width: 65%;
+					display: flex;
+					flex-direction: column;
 
 					.abrt {
+						flex: 3;
 						font-size: 38rpx;
 						font-weight: 600;
 						color: #5b6356;
@@ -334,6 +352,7 @@
 					}
 
 					.abto {
+						flex: 1;
 						text-align: right;
 						margin: 0 2% 0 0;
 
@@ -347,6 +366,7 @@
 						.abtor {
 							font-size: 19rpx;
 							margin: 0 0 1%;
+
 							view {
 								font-weight: 550;
 								opacity: 0.7;
