@@ -15,7 +15,7 @@
 		<view class="nav_item" v-if="isActive == 1"><zuj1></zuj1></view>
 		<view class="nav_item" v-if="isActive == 2"><zuj2></zuj2></view>
 		<view class="nav_item" v-if="isActive == 3"><zuj3></zuj3></view>
-		<view class="nav_item" v-if="isActive == 4"><zuj4></zuj4></view>
+		<view class="nav_item" v-if="isActive == 4"><Animal></Animal></view>
 		<view class="nav_item" v-if="isActive == 5"><zuj5></zuj5></view>
 		<view class="nav_item" v-if="isActive == 6"><zuj6></zuj6></view>
 		<view class="nav_item" v-if="isActive == 7"><zuj7></zuj7></view>
@@ -26,7 +26,7 @@
 import zuj1 from '@/components/zuj1/zuj1.vue';
 import zuj2 from '@/components/zuj2/zuj2.vue';
 import zuj3 from '@/components/zuj3/zuj3.vue';
-import zuj4 from '@/components/zuj4/zuj4.vue';
+import Animal from '@/components/Animal/Animal.vue';
 import zuj5 from '@/components/zuj5/zuj5.vue';
 import zuj6 from '@/components/zuj6/zuj6.vue';
 import zuj7 from '@/components/zuj7/zuj7.vue';
@@ -44,7 +44,7 @@ export default {
 		zuj1,
 		zuj2,
 		zuj3,
-		zuj4,
+		Animal,
 		zuj5,
 		zuj6,
 		zuj7

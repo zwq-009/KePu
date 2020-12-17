@@ -29,7 +29,7 @@
             
         }
         ,{
-            "path" : "pages/videos-zuj4/videos-zuj4",
+            "path" : "pages/VideoDetail-Animal/VideoDetail-Animal",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "视频-详情",
@@ -39,7 +39,7 @@
             
         }
         ,{
-            "path" : "pages/lists-zuj4/lists-zuj4",
+            "path" : "pages/ArticleDetail-Animal/ArticleDetail-Animal",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "列表-详情",

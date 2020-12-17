@@ -182,7 +182,6 @@
 				</view>
 			</view>
 			<view class="box3"></view>
-
 		</view>
 		<uni-popup ref="sharepopup" type="bottom">
 			<share-btn :sharedataTemp="sharedata"></share-btn>
@@ -296,15 +295,16 @@
 				console.log(result);
 				this.lists3 = result;
 			},
-			//去videos-zuj4页面
+			//去VideoDetail-Animal页面
 			goVideos4(item) {
 				uni.navigateTo({
-					url: `/pages/videos-zuj4/videos-zuj4?id=${item.id}`
+					url: `/pages/VideoDetail-Animal/VideoDetail-Animal?id=${item.id}`
 				})
 			},
+			//去ArticleDetail-Animal
 			goLists4(item) {
 				uni.navigateTo({
-					url: `/pages/lists-zuj4/lists-zuj4?id=${item.id}`
+					url: `/pages/ArticleDetail-Animal/ArticleDetail-Animal?id=${item.id}`
 				})
 			},
 		}
