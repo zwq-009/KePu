@@ -201,7 +201,7 @@
 	import {
 		myRequestGet
 	} from '@/utils/request.js';
-	import uniPopup from '..//uni-popup/uni-popup.vue';
+	import uniPopup from '../uni-popup/uni-popup.vue';
 	import shareBtn from '../share-btn/share-btn.vue';
 	
 	export default {
@@ -335,8 +335,6 @@
 		// padding-left: 24rpx;
 		// padding-right: 24rpx;
 		.box {
-			// 颜色为了看位置
-			// background-color: #eee;
 			width: auto;
 			margin-top: 20rpx;
 			margin-left: 24rpx;
