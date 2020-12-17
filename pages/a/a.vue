@@ -1,12 +1,12 @@
 <template>
 	<view class="a">
-		<!-- 文本内容 -->
-		<view class="b">{{fat.title}}</view>
+		<!-- 文本页面 -->
+		<view class="b">{{fat&&fat.title}}</view>
 		<view class="c">
-			<image :src="fat.channel.channel_img" mode="widthFix"></image>
+			<image :src="fat.channel&&fat.channel.channel_img" mode="widthFix"></image>
 		</view>
 		<text class="d">
-			{{fat.channel.name}}
+			{{fat.channel&&fat.channel.name}}
 		</text>
 		<text class="e">2020-12-15</text>
 		<view class="f">
@@ -19,11 +19,23 @@
 		<view class="h">
 			<uni-icons type="eye-filled" size="14" color="#a4b0be" class="aa2">
 			</uni-icons>
-			{{fat.play_num}}
+			{{fat&&fat.play_num}}
+			<!-- 点赞构造 -->
 			<view class="i">
-				<uni-icons type="hand-thumbsup" size="14" color="#a4b0be" class="aa2">
+				<text class="iconfont icon-dianzan" @click="addone()" :style="flag?'color:yellow':''"></text>{{fat&&fat.praise_num}}
+				<!-- <uni-icons type="hand-thumbsup" size="14" color="#a4b0be" class="aa2">
 				</uni-icons>
-				{{fat.praise_num}}
+				{{fat.praise_num}} -->
+				<!-- 分享弹窗 -->
+				<view class="share" @click.stop="open">
+					<uni-icons type="weixin" size="14" color="#0abc64"></uni-icons>
+					<text @click="shareOn">分享</text>
+				</view>
+			</view>
+			<view>
+				<uni-popup ref="sharepopup" type="bottom">
+					<share-btn :sharedataTemp="sharedata"></share-btn>
+				</uni-popup>
 			</view>
 		</view>
 	</view>
@@ -33,6 +45,9 @@
 	import {
 		myRequestGet
 	} from '@/utils/request.js';
+	//引入插件
+	import uniPopup from '../../components/uni-popup/uni-popup.vue'
+	import shareBtn from '../../components/share-btn/share-btn.vue';
 	import {
 		formatRichText
 	} from '@/utils/format.js'
@@ -42,7 +57,9 @@
 			return {
 				id: "",
 				fat: [],
-				content: []
+				content: [],
+				flag: false,
+				sharedata: ''
 			}
 		},
 		onLoad(options) {
@@ -52,6 +69,18 @@
 			console.log(this.id)
 		},
 		methods: {
+			one() {
+				this.flag = !this.flag
+			},
+			addone(i) {
+				if (this.flag == false) {
+					this.fat.praise_num = parseInt(this.fat.praise_num) + 1
+					this.flag = true
+				} else {
+					this.fat.praise_num = this.fat.praise_num - 1
+					this.flag = false
+				}
+			},
 			async getNewsDetail() {
 				const res = await myRequestGet('/api/v1/fatiao/article/detail?id=' + this.id)
 				console.log(res)
@@ -69,7 +98,14 @@
 				this.htmlNodes = parse(this.content)
 				//#endif
 			},
-		}
+			shareOn() {
+				this.$refs.sharepopup.open();
+			}
+		},
+		components: {
+			uniPopup,
+			shareBtn
+		},
 	}
 </script>
 
@@ -124,12 +160,18 @@
 			font-size: 16rpx;
 			color: #777777;
 			left: 20rpx;
-			
+
 
 			.i {
 				position: absolute;
 				top: 0rpx;
 				left: 100rpx;
+
+				.share {
+					position: relative;
+					right: -460rpx;
+					top: -30rpx;
+				}
 			}
 		}
 	}
