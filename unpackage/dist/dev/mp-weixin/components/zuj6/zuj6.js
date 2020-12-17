@@ -283,11 +283,11 @@ var _request = __webpack_require__(/*! @/utils/request.js */ 64);function _inter
     },
     getSwiperss: function getSwiperss() {var _this2 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {var ress;return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
                   (0, _request.myRequestGet)('/api/v1/fatiao/article/list?id=1&p=1¬channel=27&order=1&limit=6&channel_id=1'));case 2:ress = _context2.sent;
-                //console.log(ress)
+                console.log(ress);
                 _this2.swiperss = ress;
                 //this.id=ress.data
                 //console.log(ress.data.list[0])
-              case 4:case "end":return _context2.stop();}}}, _callee2);}))();},
+              case 5:case "end":return _context2.stop();}}}, _callee2);}))();},
     getSwipersss: function getSwipersss() {var _this3 = this;return _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var resss;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:_context3.next = 2;return (
                   (0, _request.myRequestGet)('/api/v1/fatiao/index/list?id=1&p=2&notchannel=27&order=1&limit=1&channel_id=1'));case 2:resss = _context3.sent;
                 //console.log(resss)

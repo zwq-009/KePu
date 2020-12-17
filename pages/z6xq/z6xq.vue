@@ -18,10 +18,8 @@
 			<!-- #endif -->
 		</view>
 		<view class="dx"></view>
-		<view class="bottom-item" @click="clickPraise(detailInfo.IS_PRAISE)">
-			<view class="iconfont praised bottom-item-image" style="color:yellow" v-if="detailInfo.IS_PRAISE == '1'"></view>
-			<view class="iconfont praise bottom-item-image" v-else></view>
-			<text class="bottom-item-text">{{ detailInfo.PRAISE_NUM }}</text>
+		<view class="dd">
+			<text class="iconfont icon-dianzan" @click="addone()" :style="flag?'color:blue':''"></text>{{xqsj.play_num}}
 		</view>
 		<view class="fx" @click="open">
 			<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>
@@ -43,8 +41,6 @@
 		formatRichText
 	} from '@/utils/format.js'
 	import parse from '@/utils/htmlparser.js';
-	import data from '@/data';
-	import dateUtils from '@/common/utils/dateUtils.js';
 	export default {
 		data() {
 			return {
@@ -53,7 +49,7 @@
 				content: [],
 				htmlNodes: [],
 				sharedata: '',
-				detailInfo: {},
+				flag: false
 			}
 		},
 		onLoad(options) {
@@ -62,11 +58,19 @@
 			this.getDetailContent()
 			console.log(this.id)
 		},
-		onShow: function() {
-			this.getData(); //获取数据
-
-		},
 		methods: {
+			one() {
+				this.flag = !this.flag
+			},
+			addone(i) {
+				if (this.flag == false) {
+					this.xqsj.play_num = parseInt(this.xqsj.play_num) + 1
+					this.flag = true
+				} else {
+					this.xqsj.play_num = this.xqsj.play_num - 1
+					this.flag = false
+				}
+			},
 			async getNewsDetail() {
 				const res = await myRequestGet('/api/v1/fatiao/article/detail?id=' + this.id)
 				// console.log(res)
@@ -88,56 +92,34 @@
 			open: function() {
 				this.$refs.sharepopup.open();
 			},
-			getData() {
-				this.detailInfo = data.dataInfo;
-			},
-			clickPraise(isPraise) {
-				let praiseParam = '1';
-				let praiseNum = parseInt(this.detailInfo.PRAISE_NUM);
-				switch (isPraise) {
-					case '0':
-						praiseParam = '1';
-						praiseNum++;
-						break;
-					case '1':
-						praiseParam = '0';
-						praiseNum--;
-						break;
-				}
-				this.detailInfo.IS_PRAISE = praiseParam;
-				this.detailInfo.PRAISE_NUM = praiseNum--;
-			},
+
 		}
 	}
 </script>
 
 <style lang="scss" scoped>
-	@import '../../common/css/iconfont.css';
-
 	.v {
-		position: relative;
-		.bottom-item {
-			height: 80rpx;
-			position: absolute;
-			bottom: 18rpx;
-			left: 30rpx;
-			text {
-				font-weight: 100;
-				font-size: 40rpx;
-				position: absolute;
-				bottom: 30rpx;
-				left: 50rpx;
-			}
+		.dd {
+			// padding: 20rpx;
+			// margin-bottom: -50rpx;
+			margin-left: 30rpx;
+			margin-top: 20rpx;
 
-			.bottom-item-image {
-				font-size: 40rpx;
-				color: $uni-text-color;
-			}
+			// wz1 {
+			// 	margin-left: 100rpx;
+			// }
+
+			// image {
+			// 	position: absolute;
+			// 	bottom: 0rpx;
+			// 	left: 0rpx;
+			// 	width: 50%;
+			// }
 		}
 
 		.fx {
 			margin-left: 600rpx;
-			margin-top: 30rpx;
+			margin-top: -40rpx;
 			height: 100rpx;
 		}
 

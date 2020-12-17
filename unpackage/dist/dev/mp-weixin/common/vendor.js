@@ -904,7 +904,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -1932,130 +1932,6 @@ function normalizeComponent (
   }
 }
 
-
-/***/ }),
-
-/***/ 158:
-/*!******************************************************!*\
-  !*** C:/Users/14346/Desktop/新建文件夹/KuPu/KePu/data.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var url3 = 'https://openapp.fatiao.pro/api/v1/fatiao/index/list?id=1&p=1&notchannel=27&order=1&limit=1&channel_id=1';
-
-var dataInfo = {
-  "IS_PRAISE": "0", //是否点赞
-  "PRAISE_NUM": "1" //点赞数
-};var _default =
-
-{
-  dataInfo: dataInfo };exports.default = _default;
-
-/***/ }),
-
-/***/ 159:
-/*!************************************************************************!*\
-  !*** C:/Users/14346/Desktop/新建文件夹/KuPu/KePu/common/utils/dateUtils.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * 使用说明
- * 1. 引用:
- * import dateUtils from '@/common/utils/dateUtils.js';
- */
-
-/**
-     * 圈子时间格式
-     * @param {Object} dateString 
-     * 注意:参数如果兼容手机端 dateString必须是时间时间戳或者 “yyy-MM-DD”格式;H5端dateString格式不限制
-     * 
-     */
-function fromCurrentTime(dateString) {
-  dateString = parseInt(dateString) * 1000;
-  var date = new Date(dateString).getTime();
-  var currentDate = new Date().getTime();
-  var spaceTime = Math.abs(currentDate - date) / 1000; //把相差的毫秒数转换为秒数
-  if (spaceTime < 60) {
-    // 间隔时间小于1小时
-    // 返回分钟数
-    return '刚刚';
-  }
-  if (spaceTime < 3600) {
-    // 间隔时间小于1小时
-    // 返回分钟数
-    var time = parseInt(spaceTime / 60);
-    return time + '分钟前';
-
-  } else if (spaceTime < 86400) {
-    // 间隔时间小于1天
-    // 返回小时数
-    var _time = parseInt(spaceTime / 60 / 60);
-    return _time + '小时前';
-  } else if (spaceTime < 172800) {
-    // 间隔时间小于2天
-    // 返回天数
-    var _time2 = parseInt(spaceTime / 60 / 60 / 24);
-    return '昨天';
-  } else {
-    // 间隔时间大于2天
-    var _time3 = parseInt(spaceTime / 60 / 60 / 24);
-    return _time3 + '天前';
-  }
-
-}
-
-/**
-   *  距离当前时间天数
-   * @param {Object} dateString 
-   * 注意:参数如果兼容手机端 dateString必须是时间时间戳或者 “yyy-MM-DD”格式;H5端dateString格式不限制
-   * 
-   */
-function diffDay(dateString) {
-  var startDate = new Date();
-  var endDate = new Date(dateString);
-  return parseInt(Math.abs(endDate - startDate) / 1000 / 60 / 60 / 24); //把相差的毫秒数转换为天数
-}
-
-
-
-
-/**
-   * 格式化日期  
-   * @param {Object} fmt
-   * @param {Object} date
-   */
-function dateFormat(fmt, date) {
-  console.log(fmt, date);
-  var ret;
-  var opt = {
-    "Y+": date.getFullYear().toString(), // 年
-    "m+": (date.getMonth() + 1).toString(), // 月
-    "d+": date.getDate().toString(), // 日
-    "H+": date.getHours().toString(), // 时
-    "M+": date.getMinutes().toString(), // 分
-    "S+": date.getSeconds().toString() // 秒
-    // 有其他格式化字符需求可以继续添加，必须转化成字符串
-  };
-  for (var k in opt) {
-    ret = new RegExp("(" + k + ")").exec(fmt);
-    if (ret) {
-      fmt = fmt.replace(ret[1], ret[1].length == 1 ? opt[k] : opt[k].padStart(ret[1].length, "0"));
-    };
-  };
-  return fmt;
-}
-
-var dateUtils = {
-  fromCurrentTime: fromCurrentTime,
-  diffDay: diffDay,
-  dateFormat: dateFormat
-  // gotoAppSetting: gotoAppPermissionSetting
-};
-module.exports = dateUtils;
 
 /***/ }),
 
@@ -7585,7 +7461,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7606,14 +7482,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7699,7 +7575,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_NAME":"KePu","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));

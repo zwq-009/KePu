@@ -26,11 +26,11 @@
 			<view class="li"></view>
 			<view v-for="item in swiperss" :key="item.id" class="v3" @click="goDetail(item)">
 				<view class="v4">
-					<image :src="item.info.cover_img" mode="widthFix" ></image>
-					<text >{{item.title}}</text>
+					<image :src="item.info.cover_img" mode="widthFix"></image>
+					<text>{{item.title}}</text>
 					<view class="v5"></view>
-					<text  class="yzz">{{item.channel.name}}</text>
-					<view class="ys" ></view>
+					<text class="yzz">{{item.channel.name}}</text>
+					<view class="ys"></view>
 					<view class="ttt1">
 						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
 						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
@@ -61,11 +61,11 @@
 			<view class="li"></view>
 			<view v-for="item in swiperssss" :key="item.id" class="v3" @click="goDetail(item)">
 				<view class="v4">
-					<image :src="item.info.cover_img" mode="widthFix" ></image>
-					<text >{{item.title}}</text>
+					<image :src="item.info.cover_img" mode="widthFix"></image>
+					<text>{{item.title}}</text>
 					<view class="v5"></view>
-					<text  class="yzz">{{item.channel.name}}</text>
-					<view  class="ys"></view>
+					<text class="yzz">{{item.channel.name}}</text>
+					<view class="ys"></view>
 					<view class="ttt1">
 						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
 						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
@@ -94,13 +94,13 @@
 				</view>
 			</view>
 			<view class="li"></view>
-			<view v-for="item in shjj" :key="item.id" class="v3" @click="goDetail(item)">
+			<view v-for="item in shjj" :key="item.id" class="v3" @click="goDetail(item)" >
 				<view class="v4">
 					<image :src="item.info.cover_img" mode="widthFix"></image>
-					<text  class="yz">{{item.title}}</text>
+					<text class="yz">{{item.title}}</text>
 					<view class="v5"></view>
-					<text  class="yzz">{{item.channel.name}}</text>
-					<view  class="ys"></view>
+					<text class="yzz">{{item.channel.name}}</text>
+					<view class="ys"></view>
 					<view class="ttt1">
 						<uni-icons type="hand-thumbsup" size="14" color="#a4b0be"></uni-icons>{{item.play_num}}
 						<uni-icons type="eye" size="16" color="#a4b0be"></uni-icons>{{item.praise_num}}
@@ -132,7 +132,7 @@
 				shj: {},
 				shjj: {},
 				id: "",
-				sharedata: ''
+				sharedata: '',
 				//list:""
 			};
 		},
@@ -157,7 +157,7 @@
 			},
 			async getSwiperss() {
 				const ress = await myRequestGet('/api/v1/fatiao/article/list?id=1&p=1¬channel=27&order=1&limit=6&channel_id=1')
-				//console.log(ress)
+				console.log(ress)
 				this.swiperss = ress
 				//this.id=ress.data
 				//console.log(ress.data.list[0])
@@ -192,7 +192,7 @@
 				uni.navigateTo({
 					url: `/pages/z6shp/z6shp?id=${item.id}`
 				})
-			}
+			},
 		}
 	}
 </script>
