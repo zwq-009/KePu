@@ -20,12 +20,12 @@
 			<uni-icons type="redo" size="28rpx" color="#636e72"></uni-icons>
 			<text>分享</text>
 		</view>
-		<view class="lii"></view>
-
+		
 
 
 		<!-- 猜你喜欢视频页面 -->
 		<view class="cnxh">
+			<view class="lii"></view>
 			<text>猜你喜欢</text>
 			<view v-for="item in xqsjj" :key="item.id" @click="goshp(item)">
 				<image :src="item.video_img"></image>
@@ -160,11 +160,20 @@
 	.v1 {
 		.cnxh {
 			position: relative;
+			.lii {
+				position: absolute;
+				top: -25rpx;
+				// left: 20rpx;
+				width: 100%;
+				height: 10rpx;
+				border: 1px solid #DCDFE6;
+				background-color: #DCDFE6;
+			}
 
 			.cnxhfx {
 				position: absolute;
 				right: 50rpx;
-				top: 560rpx;
+				bottom: 0rpx;
 
 				text {
 					margin-left: 0rpx;
@@ -179,7 +188,6 @@
 				margin-top: -18rpx;
 				opacity: 0.5;
 			}
-
 			.cnxht1 {
 				font-size: 30rpx;
 			}
@@ -239,10 +247,9 @@
 
 				image {
 					width: 250rpx;
-					height: 200rpx;
+					height: 140rpx;
 					float: left;
 					border-radius: 10rpx;
-					// background-color: #333333;
 				}
 
 				text {
@@ -279,19 +286,19 @@
 			top: 750rpx;
 			left: 20rpx;
 			width: 90%;
-			border: 1px solid #DCDFE6;
+			border: 2rpx solid #DCDFE6;
 			background-color: #DCDFE6;
 		}
 
-		.lii {
-			position: absolute;
-			top: 830rpx;
-			// left: 20rpx;
-			width: 100%;
-			height: 10rpx;
-			border: 1px solid #DCDFE6;
-			background-color: #DCDFE6;
-		}
+		// .lii {
+		// 	position: absolute;
+		// 	top: 830rpx;
+		// 	// left: 20rpx;
+		// 	width: 100%;
+		// 	height: 10rpx;
+		// 	border: 2rpx solid #DCDFE6;
+		// 	background-color: #DCDFE6;
+		// }
 
 		.fx {
 			margin-top: 290rpx;
@@ -328,7 +335,7 @@
 			}
 
 			.t1 {
-				font-size: 14px;
+				font-size: 28rpx;
 				font-weight: 100;
 				position: absolute;
 				top: 20rpx;
@@ -336,7 +343,7 @@
 			}
 
 			.t2 {
-				font-size: 14px;
+				font-size: 28rpx;
 				font-weight: 100;
 				position: absolute;
 				left: 215rpx;
