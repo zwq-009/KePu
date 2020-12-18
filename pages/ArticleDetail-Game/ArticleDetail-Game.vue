@@ -11,7 +11,7 @@
 				</view>
 			</view>
 			<view class="content">
-				<!-- #ifdef H5 -->
+				<!-- #ifdef H5/APP-PLUS -->
 				<rich-text :nodes="content"></rich-text>
 				<!-- #endif -->
 				<!-- #ifdef MP-WEIXIN -->

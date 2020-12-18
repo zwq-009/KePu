@@ -30,12 +30,12 @@
 				<text class="list-text">用户反馈</text>
 				<text class="navigat-arrow">&#xe65e;</text>
 			</view>
-			<view class="center-list-item border-bottom" @click="none">
+			<view class="center-list-item border-bottom" @click="goPrivacy">
 				<text class="list-icon">&#xe65f;</text>
 				<text class="list-text">服务条款及隐私</text>
 				<text class="navigat-arrow">&#xe65e;</text>
 			</view>
-			<view class="center-list-item border-bottom" @click="none">
+			<view class="center-list-item border-bottom" @click="goAbout">
 				<text class="list-icon">&#xe614;</text>
 				<text class="list-text">关于</text>
 				<text class="navigat-arrow">&#xe65e;</text>
@@ -59,6 +59,16 @@ export default {
 		none() {
 			uni.navigateTo({
 				url: '../sorry/sorry'
+			});
+		},
+		goPrivacy() {
+			uni.navigateTo({
+				url: '../privacy/privacy'
+			});
+		},
+		goAbout() {
+			uni.navigateTo({
+				url: '../about/about'
 			});
 		},
 		goFeedback() {

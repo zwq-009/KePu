@@ -4,6 +4,9 @@ import App from './App'
 import uniIcons from './components/uni-icons/uni-icons.vue'
 Vue.component('uniIcons', uniIcons)
 
+import share from 'utils/share.js'
+Vue.mixin(share)
+
 //引入插件
 import uniPopup from './components/uni-popup/uni-popup.vue';
 import shareBtn from './components/share-btn/share-btn.vue';

@@ -36,7 +36,7 @@ export default {
 					icon: '/static/复制链接.png',
 					name: 'copy'
 				}
-			],
+			]
 			// sharedataTemp: {
 			// 	type: 0,
 			// 	strShareUrl: 'https://uniapp.dcloud.io',
