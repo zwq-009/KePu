@@ -105,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/uni-icons/uni-icons":1,"components/uni-transition/uni-transition":1,"components/zuj1/zuj1":1,"components/zuj2/zuj2":1,"components/zuj3/zuj3":1,"components/zuj4/zuj4":1,"components/zuj5/zuj5":1,"components/zuj6/zuj6":1,"components/zuj7/zuj7":1,"components/share-btn/share-btn":1,"components/uni-popup/uni-popup":1};
+/******/ 		var cssChunks = {"components/uni-icons/uni-icons":1,"components/uni-transition/uni-transition":1,"components/Animal/Animal":1,"components/Beauty/Beauty":1,"components/FamilyLife/FamilyLife":1,"components/Game/Game":1,"components/Interset/Interset":1,"components/Life/Life":1,"components/Technology/Technology":1,"components/uni-icon":1,"components/share-btn/share-btn":1,"components/uni-popup/uni-popup":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/uni-icons/uni-icons":"components/uni-icons/uni-icons","components/uni-transition/uni-transition":"components/uni-transition/uni-transition","components/zuj1/zuj1":"components/zuj1/zuj1","components/zuj2/zuj2":"components/zuj2/zuj2","components/zuj3/zuj3":"components/zuj3/zuj3","components/zuj4/zuj4":"components/zuj4/zuj4","components/zuj5/zuj5":"components/zuj5/zuj5","components/zuj6/zuj6":"components/zuj6/zuj6","components/zuj7/zuj7":"components/zuj7/zuj7","components/share-btn/share-btn":"components/share-btn/share-btn","components/uni-popup/uni-popup":"components/uni-popup/uni-popup"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/uni-icons/uni-icons":"components/uni-icons/uni-icons","components/uni-transition/uni-transition":"components/uni-transition/uni-transition","components/Animal/Animal":"components/Animal/Animal","components/Beauty/Beauty":"components/Beauty/Beauty","components/FamilyLife/FamilyLife":"components/FamilyLife/FamilyLife","components/Game/Game":"components/Game/Game","components/Interset/Interset":"components/Interset/Interset","components/Life/Life":"components/Life/Life","components/Technology/Technology":"components/Technology/Technology","components/uni-icon":"components/uni-icon","components/share-btn/share-btn":"components/share-btn/share-btn","components/uni-popup/uni-popup":"components/uni-popup/uni-popup"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
